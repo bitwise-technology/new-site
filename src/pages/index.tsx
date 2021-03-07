@@ -1,5 +1,19 @@
-import Home from 'ui/pages/Home'
+import React from 'react'
+import Header from 'ui/components/Header'
 
-export default function HomeRoute() {
-  return <Home />
+const Home = () => {
+  return (
+    <div
+      style={{
+        backgroundColor: '#F0F0F0',
+        height: '100vh',
+        maxWidth: '1440px',
+        margin: 'auto'
+      }}
+    >
+      <Header />
+    </div>
+  )
 }
+
+export default Home
