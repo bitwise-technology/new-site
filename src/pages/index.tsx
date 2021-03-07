@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from 'ui/components/Header'
 import Motto from 'ui/components/Motto'
+import Partners from 'ui/components/Partners'
 import Services from 'ui/components/Services'
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
       <Header />
       <Motto />
       <Services />
+      <Partners />
     </div>
   )
 }
