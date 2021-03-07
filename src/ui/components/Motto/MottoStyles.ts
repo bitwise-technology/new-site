@@ -46,6 +46,8 @@ export const StyledButton = styled.button`
     border: none;
     border-radius: 1rem;
     outline: none;
+
+    margin-bottom: 12rem;
   }
 `
 
