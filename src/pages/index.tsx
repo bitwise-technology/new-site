@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from 'ui/components/Header'
+import Motto from 'ui/components/Motto'
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       }}
     >
       <Header />
+      <Motto />
     </div>
   )
 }
