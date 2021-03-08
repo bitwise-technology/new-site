@@ -1,6 +1,7 @@
 import React from 'react'
 import BitwiseInfo from 'ui/components/BitwiseInfo'
 import CallToActionSection from 'ui/components/CallToActionSection'
+import Copyright from 'ui/components/Copyright'
 import Header from 'ui/components/Header'
 import Motto from 'ui/components/Motto'
 import Partners from 'ui/components/Partners'
@@ -21,6 +22,7 @@ const Home = () => {
       <Partners />
       <CallToActionSection />
       <BitwiseInfo />
+      <Copyright />
     </div>
   )
 }
