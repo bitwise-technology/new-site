@@ -1,4 +1,5 @@
 import React from 'react'
+import CallToActionSection from 'ui/components/CallToActionSection'
 import Header from 'ui/components/Header'
 import Motto from 'ui/components/Motto'
 import Partners from 'ui/components/Partners'
@@ -17,6 +18,7 @@ const Home = () => {
       <Motto />
       <Services />
       <Partners />
+      <CallToActionSection />
     </div>
   )
 }
