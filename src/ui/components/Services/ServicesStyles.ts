@@ -26,9 +26,9 @@ export const ServicesTitle = styled.h2`
     &::after {
       content: '';
       position: absolute;
-      right: 10%;
-      top: 90%;
-      width: 50%;
+      right: 0;
+      top: 80%;
+      width: 73%;
       border-bottom: 1px solid #fff;
       height: 1px;
     }
@@ -70,9 +70,13 @@ export const ServiceDescription = styled.p`
   @media screen and (min-width: 1200px) {
     color: #f0f0f0;
 
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
 
     padding-left: 1.1rem;
+
+    text-align: left;
+
     max-width: 18rem;
   }
 `
