@@ -29,6 +29,7 @@ export const MottoPhrase = styled.p`
     font-size: 1.6rem;
     letter-spacing: 0.1rem;
     word-spacing: 0.1rem;
+    line-height: 2.5rem;
 
     color: #8b738c;
   }
