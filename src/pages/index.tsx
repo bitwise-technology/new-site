@@ -1,4 +1,5 @@
 import React from 'react'
+import BitwiseInfo from 'ui/components/BitwiseInfo'
 import CallToActionSection from 'ui/components/CallToActionSection'
 import Header from 'ui/components/Header'
 import Motto from 'ui/components/Motto'
@@ -19,6 +20,7 @@ const Home = () => {
       <Services />
       <Partners />
       <CallToActionSection />
+      <BitwiseInfo />
     </div>
   )
 }
