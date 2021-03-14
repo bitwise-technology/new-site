@@ -1,4 +1,6 @@
+import { ContactModalContext } from 'contexts/ContactModal'
 import Image from 'next/image'
+import { useContext } from 'react'
 import { BreakLine } from '../Motto/MottoStyles'
 import {
   ButtonsContainer,
@@ -12,6 +14,13 @@ import {
 } from './CallToActionSectionStyles'
 
 const CallToActionSection = () => {
+  const { setShowContactModal } = useContext(ContactModalContext)
+
+  const openModal = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault()
+    setShowContactModal && setShowContactModal(true)
+  }
+
   return (
     <CallToActionSectionContainer>
       <CallToActionSectionTexts>
@@ -28,7 +37,9 @@ const CallToActionSection = () => {
           escalar o seu negócio.
         </CallToActionSectionDescription>
         <ButtonsContainer>
-          <StyledButton>QUERO FALAR COM UM CONSULTOR </StyledButton>
+          <StyledButton onClick={openModal}>
+            QUERO FALAR COM UM CONSULTOR{' '}
+          </StyledButton>
           <StyledButtonInverted>
             QUERO TRABALHAR NA BITWISE
           </StyledButtonInverted>

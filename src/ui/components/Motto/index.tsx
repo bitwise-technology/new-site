@@ -1,3 +1,6 @@
+import { ContactModalContext } from 'contexts/ContactModal'
+import { useContext } from 'react'
+
 import {
   BreakLine,
   MottoContainer,
@@ -7,6 +10,13 @@ import {
 } from './MottoStyles'
 
 const Motto = () => {
+  const { setShowContactModal } = useContext(ContactModalContext)
+
+  const handleOpenModal = (event: React.MouseEvent<Element>) => {
+    event.preventDefault()
+    setShowContactModal && setShowContactModal(true)
+  }
+
   return (
     <MottoContainer data-testid="motto-button">
       <MottoTitle data-testid="motto-title">
@@ -18,7 +28,7 @@ const Motto = () => {
         <BreakLine /> cultura e liberdade. Nosso desafio é transformar
         <BreakLine /> ideias em resultados reais.
       </MottoPhrase>
-      <StyledButton data-testid="motto-button">
+      <StyledButton onClick={handleOpenModal} data-testid="motto-button">
         Falar com um consultor
       </StyledButton>
     </MottoContainer>
