@@ -36,7 +36,7 @@ export const ContactModalTitle = styled.h3`
 
 export const ContactModalLogoContainer = styled.div``
 
-export const ContactModalBody = styled.div``
+export const ContactModalForm = styled.form``
 
 export const ContactModalInputs = styled.div`
   @media screen and (min-width: 1200px) {

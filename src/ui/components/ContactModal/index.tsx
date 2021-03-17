@@ -1,12 +1,14 @@
 import { ContactModalContext } from 'contexts/ContactModal'
 import Image from 'next/image'
-import { useContext, useState } from 'react'
+import { useContext, useMemo, useState } from 'react'
+import { validateEmail } from 'helpers/validators/email/EmailValidator'
+import { validatePhone } from 'helpers/validators/phone/PhoneValidator'
 import Input from '../Input'
 import RadioInput from '../RadioInput'
 import TextAreaInput from '../TextAreaInput'
 import {
   BreakLine,
-  ContactModalBody,
+  ContactModalForm,
   ContactModalClose,
   ContactModalContainer,
   ContactModalHeader,
@@ -19,6 +21,7 @@ import {
   StyledSubmitButton,
   SubmitButtonContainer
 } from './ContactModalStyles'
+import { phoneMask } from 'helpers/masks/phone/PhoneMask'
 
 interface ContactInfo {
   name: string
@@ -27,6 +30,7 @@ interface ContactInfo {
   phone: string
   wayOfContact: string
   message: string
+  [key: string]: string
 }
 
 const ContactModal = () => {
@@ -48,13 +52,51 @@ const ContactModal = () => {
     phone: ''
   })
 
+  const validators = useMemo(
+    () => ({
+      email: validateEmail,
+      phone: validatePhone
+    }),
+    []
+  )
+
+  const masks = useMemo(
+    () => ({
+      phone: phoneMask
+    }),
+    []
+  )
+
   const handleInputChange = ({
     target: input
   }: React.ChangeEvent<HTMLInputElement>) => {
+    const inputName = input.name
+    let inputValue = input.value
+
+    Object.entries(masks).map(([inputToApplyMask, maskFunction]) => {
+      if (inputName === inputToApplyMask) {
+        inputValue = maskFunction(inputValue)
+      }
+    })
+
     setContactInfo((oldContactInfo) => ({
       ...oldContactInfo,
-      [input.name]: input.value
+      [inputName]: inputValue
     }))
+  }
+
+  const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+
+    let isFormValid = false
+
+    Object.entries(validators).forEach(([validateValue, validatorFuction]) => {
+      isFormValid = validatorFuction(contactInfo[validateValue])
+    })
+
+    if (!isFormValid) {
+      return
+    }
   }
 
   return (
@@ -77,7 +119,7 @@ const ContactModal = () => {
           />
         </ContactModalLogoContainer>
       </ContactModalHeader>
-      <ContactModalBody>
+      <ContactModalForm onSubmit={handleFormSubmit}>
         <ContactModalInputs>
           <Input
             data-testid="contact_input"
@@ -161,7 +203,7 @@ const ContactModal = () => {
         <SubmitButtonContainer>
           <StyledSubmitButton type="submit">Enviar</StyledSubmitButton>
         </SubmitButtonContainer>
-      </ContactModalBody>
+      </ContactModalForm>
     </ContactModalContainer>
   )
 }
