@@ -9,6 +9,7 @@ import Header from 'ui/components/Header'
 import Motto from 'ui/components/Motto'
 import Partners from 'ui/components/Partners'
 import Services from 'ui/components/Services'
+import WhereWeAre from 'ui/components/WhereWeAre'
 
 const Home = () => {
   return (
@@ -26,6 +27,7 @@ const Home = () => {
         <Motto />
         <Services />
         <Partners />
+        <WhereWeAre />
         <CallToActionSection />
         <BitwiseInfo />
         <Copyright />
