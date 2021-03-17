@@ -1,90 +1,110 @@
 import styled from 'styled-components'
 
 export const CallToActionSectionContainer = styled.section`
-  @media screen and (min-width: 1200px) {
-    padding-top: 8.7rem;
+  padding-top: 8.7rem;
 
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 1rem;
+
+  @media screen and (min-width: 768px) {
+    align-items: center;
+  }
+
+  @media screen and (min-width: 992px) {
     width: 80%;
 
     margin: auto;
 
-    display: flex;
+    flex-direction: row;
+
+    padding: 0;
   }
 `
 
 export const CallToActionSectionTexts = styled.div`
-  @media screen and (min-width: 1200px) {
+  margin: 2rem;
+
+  @media screen and (min-width: 992px) {
     flex: 1;
+    margin: 0;
   }
 `
 
 export const CallToActionSectionTitle = styled.h3`
-  @media screen and (min-width: 1200px) {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  color: #534554;
+  @media screen and (min-width: 992px) {
     font-size: 3.2rem;
     line-height: 5.6rem;
-    color: #534554;
   }
 `
 
 export const CallToActionSectionDescription = styled.p`
-  @media screen and (min-width: 1200px) {
-    margin-top: 1.4rem;
+  margin-top: 1.4rem;
 
-    font-size: 1.8rem;
+  font-size: 1.8rem;
 
-    color: #534554;
+  color: #534554;
 
-    max-width: 48rem;
-    line-height: 3.1rem;
+  max-width: 48rem;
+  line-height: 3.1rem;
 
-    text-align: justify;
-  }
+  text-align: justify;
 `
 
 export const ButtonsContainer = styled.div`
-  @media screen and (min-width: 1200px) {
-    display: flex;
-    flex-direction: column;
-  }
+  display: flex;
+  flex-direction: column;
 `
 
 export const StyledButton = styled.button`
-  @media screen and (min-width: 1200px) {
-    background-color: #890877;
+  background-color: #890877;
 
-    color: #fff;
-    font-size: 1.4rem;
-    font-weight: bold;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
 
-    padding: 1.8rem;
-    border: none;
-    border-radius: 1rem;
-    outline: none;
+  padding: 1.8rem;
+  border: none;
+  border-radius: 1rem;
+  outline: none;
 
-    margin-top: 4.9rem;
-    margin-bottom: 1rem;
-  }
+  margin-top: 4.9rem;
+  margin-bottom: 1rem;
 `
 
 export const StyledButtonInverted = styled.button`
-  @media screen and (min-width: 1200px) {
-    color: #640055;
-    font-size: 1.4rem;
-    font-weight: bold;
+  color: #640055;
+  font-size: 1.4rem;
+  font-weight: bold;
 
-    padding: 1.8rem;
-    border: 3px solid #640055;
-    border-radius: 1rem;
-    outline: none;
-  }
+  padding: 1.8rem;
+  border: 3px solid #640055;
+  border-radius: 1rem;
+  outline: none;
 `
 
 export const CallToActionSectionImageContainer = styled.div`
-  @media screen and (min-width: 1200px) {
+  width: 60%;
+  align-self: center;
+  padding: 1rem;
+  margin: 2rem 0;
+  order: -1;
+  @media screen and (min-width: 992px) {
+    order: 0;
     flex: 1;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
+    width: 100%;
+    align-self: initial;
+    padding: 0;
+    margin: 0;
   }
 `
 
