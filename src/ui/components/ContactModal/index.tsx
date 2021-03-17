@@ -195,10 +195,7 @@ const ContactModal = () => {
         </ContactModalRadioInputs>
 
         <ContactModalTextAreaContainer>
-          <TextAreaInput
-            style={{ width: '40%', height: '10vh' }}
-            label="Escreva o que você espera que a Bitwise faça pelo seu negócio:"
-          />
+          <TextAreaInput label="Escreva o que você espera que a Bitwise faça pelo seu negócio:" />
         </ContactModalTextAreaContainer>
         <SubmitButtonContainer>
           <StyledSubmitButton type="submit">Enviar</StyledSubmitButton>
