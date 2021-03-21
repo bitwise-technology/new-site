@@ -1,13 +1,15 @@
-import Image from 'next/image'
-
 import {
   Service,
   ServiceDescription,
+  ServiceImageBox,
   ServicesBox,
   ServicesContainer,
   ServicesTitle,
+  ServiceText,
   ServiceTitle
 } from './ServicesStyles'
+
+import Image from 'next/image'
 
 interface IService {
   title: string
@@ -56,20 +58,30 @@ const Services = () => {
     <ServicesContainer>
       <ServicesTitle>Nossos Serviços</ServicesTitle>
       <ServicesBox data-testid="services-box">
-        {services.map(({ title, titleBorderColor, description, image }) => (
-          <Service key={title}>
-            <Image
-              src={`/img/${image}.svg`}
-              layout="intrinsic"
-              width={68}
-              height={62}
-            />
-            <ServiceTitle titleBorderColor={titleBorderColor}>
-              {title}
-            </ServiceTitle>
-            <ServiceDescription>{description}</ServiceDescription>
-          </Service>
-        ))}
+        {services.map(
+          ({ title, titleBorderColor, description, image }, index) => {
+            const isOdd = index % 2 !== 0
+
+            return (
+              <Service key={title}>
+                <ServiceImageBox>
+                  <Image
+                    src={`/img/${image}.svg`}
+                    layout="intrinsic"
+                    width={100}
+                    height={70}
+                  />
+                </ServiceImageBox>
+                <ServiceText style={{ order: isOdd ? -1 : 1 }}>
+                  <ServiceTitle titleBorderColor={titleBorderColor}>
+                    {title}
+                  </ServiceTitle>
+                  <ServiceDescription>{description}</ServiceDescription>
+                </ServiceText>
+              </Service>
+            )
+          }
+        )}
       </ServicesBox>
     </ServicesContainer>
   )
