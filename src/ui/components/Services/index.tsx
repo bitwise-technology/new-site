@@ -1,6 +1,7 @@
 import {
   Service,
   ServiceDescription,
+  ServiceImageBox,
   ServicesBox,
   ServicesContainer,
   ServicesTitle,
@@ -63,12 +64,14 @@ const Services = () => {
 
             return (
               <Service key={title}>
-                <Image
-                  src={`/img/${image}.svg`}
-                  layout="intrinsic"
-                  width={100}
-                  height={70}
-                />
+                <ServiceImageBox>
+                  <Image
+                    src={`/img/${image}.svg`}
+                    layout="intrinsic"
+                    width={100}
+                    height={70}
+                  />
+                </ServiceImageBox>
                 <ServiceText style={{ order: isOdd ? -1 : 1 }}>
                   <ServiceTitle titleBorderColor={titleBorderColor}>
                     {title}

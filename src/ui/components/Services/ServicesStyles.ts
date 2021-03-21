@@ -71,9 +71,11 @@ export const ServicesBox = styled.div`
 
 export const Service = styled.div`
   display: flex;
-  justify-content: space-between;
-  margin: 1rem 0;
+  align-items: center;
+  margin: 1.6rem 0;
   @media screen and (min-width: 768px) {
+    justify-content: space-between;
+
     text-align: center;
     display: block;
   }
@@ -86,10 +88,23 @@ export const Service = styled.div`
 export const ServiceText = styled.div`
   display: flex;
   flex-direction: column;
+  flex: 1;
+  margin: 0 1rem;
 
   @media screen and (min-width: 1200px) {
     display: block;
     padding-left: 0;
+  }
+`
+
+export const ServiceImageBox = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+
+  @media screen and (min-width: 768px) {
+    display: block;
   }
 `
 
