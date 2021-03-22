@@ -1,42 +1,56 @@
 import styled from 'styled-components'
 
 export const ContactModalContainer = styled.div`
-  @media screen and (min-width: 1200px) {
-    position: fixed;
-    right: 0;
-    top: 5%;
-    z-index: 1;
-    width: 60%;
+  position: absolute;
+  right: 0;
+  top: 0%;
+  z-index: 1;
+  width: 100%;
+  background-color: #fff;
 
-    background-color: #fff;
-    transition: all 0.5s;
+  max-width: 100%;
+  overflow: hidden;
+
+  transition: all 0.5s;
+
+  @media screen and (min-width: 1200px) {
+    top: 5%;
+    width: 60%;
   }
 `
 
 export const ContactModalHeader = styled.header`
-  @media screen and (min-width: 1200px) {
-    background-image: linear-gradient(359.39deg, #efeeee 0.46%, #ffffff 99.42%);
+  background-image: linear-gradient(359.39deg, #efeeee 0.46%, #ffffff 99.42%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
+  padding: 4rem 1rem;
 `
 
 export const ContactModalTitle = styled.h3`
+  color: #735775;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  strong {
+    font-weight: bold;
+  }
+
   @media screen and (min-width: 1200px) {
-    color: #735775;
     font-size: 3rem;
     line-height: 4rem;
-    strong {
-      font-weight: bold;
-    }
   }
 `
 
 export const ContactModalLogoContainer = styled.div``
 
-export const ContactModalForm = styled.form``
+export const ContactModalForm = styled.form`
+  padding: 1rem;
+
+  @media screen and (min-width: 768px) {
+    padding: 0%;
+  }
+`
 
 export const ContactModalInputs = styled.div`
   @media screen and (min-width: 1200px) {
@@ -51,18 +65,18 @@ export const ContactModalInputs = styled.div`
 `
 
 export const ContactModalRadioInputs = styled.div`
+  margin: 3rem auto;
+
   @media screen and (min-width: 1200px) {
     width: 95%;
-    margin: 3rem auto;
   }
 `
 
 export const ContactModalRadioInputsText = styled.p`
-  @media screen and (min-width: 1200px) {
-    font-size: 1.4rem;
-    line-height: 2rem;
-    color: #5a3d5c;
-  }
+  font-size: 1.4rem;
+  line-height: 2rem;
+
+  color: #5a3d5c;
 `
 
 export const ContactModalTextAreaContainer = styled.div`
@@ -70,16 +84,27 @@ export const ContactModalTextAreaContainer = styled.div`
   flex-direction: column;
   width: 95%;
   margin: auto;
+
+  & > textarea {
+    width: 100%;
+    height: 10rem;
+    @media screen and (min-width: 768px) {
+      width: 40%;
+    }
+  }
 `
 
 export const ContactModalClose = styled.span`
+  position: absolute;
+  right: 5%;
+  top: 0%;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 1rem;
+
   @media screen and (min-width: 1200px) {
-    position: absolute;
-    right: 5%;
     top: 2%;
     font-size: 1.5rem;
-    cursor: pointer;
-    padding: 1rem;
   }
 `
 
@@ -90,19 +115,17 @@ export const SubmitButtonContainer = styled.div`
 `
 
 export const StyledSubmitButton = styled.button`
-  @media screen and (min-width: 1200px) {
-    background-color: #890877;
+  background-color: #890877;
 
-    color: #fff;
-    font-size: 1.4rem;
+  color: #fff;
+  font-size: 1.4rem;
 
-    width: 9rem;
-    height: 5rem;
+  width: 9rem;
+  height: 5rem;
 
-    border: none;
-    border-radius: 1rem;
-    outline: none;
-  }
+  border: none;
+  border-radius: 1rem;
+  outline: none;
 `
 
 export const BreakLine = styled.span`
