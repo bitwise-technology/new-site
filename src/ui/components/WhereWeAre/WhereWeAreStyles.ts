@@ -5,9 +5,9 @@ export const WhereWeAreContainer = styled.section`
     display: flex;
 
     background-image: url('/img/Mapa Mundi.svg');
-    background-size: auto;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: 30% 0%;
+    background-position: 28% center;
 
     height: 48rem;
   }
@@ -37,7 +37,7 @@ export const WhereWeArePhrase = styled.p`
 
     color: #640055;
 
-    font-size: 5.6rem;
+    font-size: 5.8rem;
     font-family: 'Gotham';
     font-weight: 500;
     line-height: 5.6rem;
@@ -51,6 +51,12 @@ export const WhereWeArePhrase = styled.p`
 
     strong {
       font-family: 'Gotham-Bold';
+    }
+
+    small {
+      margin-top: 1rem;
+      font-size: 4rem;
+      font-weight: 600;
     }
   }
 `
@@ -73,7 +79,7 @@ export const BlinkTextCursor = keyframes`
 export const TypeWriterEffect = styled.span`
   overflow: hidden;
   max-width: fit-content;
-  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  border-right: 6px solid rgba(255, 255, 255, 0.75);
   padding-right: 0.3rem;
   animation: ${TypeWriter} 5s steps(40, end) forwards,
     ${BlinkTextCursor} 0.75s step-end infinite;

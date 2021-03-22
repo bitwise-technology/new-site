@@ -11,8 +11,8 @@ const Partners = () => {
           src="/img/PartnersLogo.svg"
           alt="Marcas que já utilizaram algum serviço"
           layout="intrinsic"
-          width={1140}
-          height={44}
+          width={1600}
+          height={70}
         />
       </PartnersBox>
     </PartnersContainer>

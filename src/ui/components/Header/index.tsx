@@ -7,11 +7,8 @@ import {
   HeaderContainer,
   Language,
   LanguagesContainer,
-  LinkItem,
   LinksAndLanguagesContainer,
-  LinksList,
-  LogoContainer,
-  StyledLink
+  LogoContainer
 } from './HeaderStyles'
 
 const Header = () => {

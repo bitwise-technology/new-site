@@ -70,8 +70,8 @@ const Services = () => {
                     <Image
                       src={`/img/${image}.svg`}
                       layout="intrinsic"
-                      width={100}
-                      height={70}
+                      width={110}
+                      height={80}
                     />
                   </ServiceImageBox>
                   <ServiceText style={{ order: isOdd ? -1 : 1 }}>

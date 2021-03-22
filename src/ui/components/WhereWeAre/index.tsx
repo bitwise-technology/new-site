@@ -21,7 +21,7 @@ const WhereWeAre = () => {
         <BreakLine />
         <TypeWriterEffect>Nômades</TypeWriterEffect>
         <BreakLine />
-        100% Remoto
+        <small>Somos 100% Remoto</small>
       </WhereWeArePhrase>
     </WhereWeAreContainer>
   )

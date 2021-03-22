@@ -2,8 +2,6 @@ import styled from 'styled-components'
 
 export const CallToActionSectionContainerWrapper = styled.div`
   background-color: #fbfbfb;
-
-  padding-bottom: 15rem;
 `
 
 export const CallToActionSectionContainer = styled.section`
@@ -12,8 +10,6 @@ export const CallToActionSectionContainer = styled.section`
   flex-direction: column;
 
   font-family: 'Gotham';
-
-  padding: 1rem;
 
   @media screen and (min-width: 768px) {
     align-items: center;
@@ -26,7 +22,7 @@ export const CallToActionSectionContainer = styled.section`
 
     flex-direction: row;
 
-    padding-top: 8.7rem;
+    height: 90vh;
   }
 `
 
@@ -44,28 +40,45 @@ export const CallToActionSectionTitle = styled.h3`
   line-height: 3rem;
   color: #534554;
   @media screen and (min-width: 992px) {
-    font-size: 3.2rem;
+    font-size: 3rem;
+    line-height: 5.6rem;
+  }
+  @media screen and (min-width: 1600px) {
+    font-size: 3.6rem;
     line-height: 5.6rem;
   }
 `
 
 export const CallToActionSectionDescription = styled.p`
   margin-top: 1.4rem;
-
-  font-size: 1.8rem;
-
   color: #534554;
 
-  max-width: 48rem;
-  line-height: 3.1rem;
+  max-width: 53rem;
+  line-height: 4rem;
+
+  font-size: 1.4rem;
+  line-height: 3rem;
+
+  max-width: 40rem;
 
   text-align: justify;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 2rem;
+    line-height: 4rem;
+
+    max-width: 53rem;
+  }
 `
 
 export const ButtonsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 48rem;
+  max-width: 40rem;
+
+  @media screen and (min-wdith: 1200px) {
+    max-width: 53rem;
+  }
 `
 
 export const StyledButton = styled.button`

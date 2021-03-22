@@ -34,6 +34,10 @@ export const ServicesTitle = styled.h2`
     margin: auto;
     position: relative;
 
+    padding-top: 5rem;
+
+    font-size: 2.2rem;
+
     text-align: left;
 
     &::after {
@@ -67,7 +71,7 @@ export const ServicesBox = styled.div`
   @media screen and (min-width: 1200px) {
     justify-content: space-between;
     flex-wrap: nowrap;
-
+    margin-top: 5rem;
     & > * {
       width: auto;
     }
@@ -130,6 +134,12 @@ export const ServiceTitle = styled.h3<{ titleBorderColor: string }>`
   margin: 1.5rem 0;
 
   @media screen and (min-width: 1200px) {
+    font-size: 1.6rem;
+  }
+
+  @media screen and (min-width: 1600px) {
+    font-size: 1.9rem;
+    font-weight: 500;
     margin: 1.5rem 0;
   }
 `
@@ -151,13 +161,14 @@ export const ServiceDescription = styled.p`
   }
 
   @media screen and (min-width: 1200px) {
-    color: #f0f0f0;
-
     font-size: 1.2rem;
-    line-height: 2rem;
 
-    padding-left: 1.1rem;
+    max-width: 21rem;
+  }
 
-    max-width: 18rem;
+  @media screen and (min-width: 1600px) {
+    font-size: 1.4rem;
+
+    max-width: 21rem;
   }
 `

@@ -73,4 +73,16 @@ export const GlobalStyles = createGlobalStyle`
         font-size: 62.5%;
         scroll-behavior: smooth;
     }
+
+    @media screen and (min-width: 1200px){
+        html{
+            font-size: 65%;
+        }
+    }
+
+    @media screen and (min-width: 1600px){
+        html{
+            font-size: 70%;
+        }
+    }
 `

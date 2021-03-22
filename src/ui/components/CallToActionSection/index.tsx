@@ -48,7 +48,7 @@ const CallToActionSection = () => {
           </ButtonsContainer>
         </CallToActionSectionTexts>
         <CallToActionSectionImageContainer>
-          <Image src="/img/Logo Faça Acontecer.svg" width={421} height={200} />
+          <Image src="/img/Logo Faça Acontecer.svg" width={401} height={201} />
         </CallToActionSectionImageContainer>
       </CallToActionSectionContainer>
     </CallToActionSectionContainerWrapper>

@@ -11,7 +11,7 @@ export const PartnersTitle = styled.p`
     color: #372e38;
     font-weight: 400;
     font-family: 'Gotham';
-    font-size: 1.6rem;
+    font-size: 1.9rem;
 
     margin-bottom: 3rem;
   }

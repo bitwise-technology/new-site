@@ -18,7 +18,6 @@ const Home = () => {
         style={{
           position: 'relative',
           backgroundColor: '#F0F0F0',
-          maxWidth: '1440px',
           margin: 'auto'
         }}
       >
