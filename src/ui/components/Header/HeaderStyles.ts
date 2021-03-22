@@ -2,34 +2,28 @@ import styled from 'styled-components'
 
 export const HeaderContainer = styled.header`
   font-family: 'Gotham';
-  @media screen and (min-width: 1200px) {
-    width: 80%;
+  width: 80%;
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    padding-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding-top: 4rem;
 
-    font-size: 1.6rem;
-  }
+  font-size: 1.6rem;
 `
 
 export const LogoContainer = styled.div`
-  @media screen and (min-width: 1200px) {
-    flex: 1;
-  }
+  flex: 1;
 `
 
 export const LinksAndLanguagesContainer = styled.div`
-  @media screen and (min-width: 1200px) {
-    flex: 1;
+  flex: 1;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 `
 
 export const LinksList = styled.ul`
@@ -57,12 +51,10 @@ export const StyledLink = styled.a`
 `
 
 export const LanguagesContainer = styled.div`
-  @media screen and (min-width: 1200px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #a51c92;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #a51c92;
 `
 
 export const Language = styled.span`

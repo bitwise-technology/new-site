@@ -27,29 +27,6 @@ const Header = () => {
         />
       </LogoContainer>
       <LinksAndLanguagesContainer>
-        <LinksList data-testid="navigation">
-          <LinkItem>
-            <Link href="/">
-              <StyledLink>Sobre</StyledLink>
-            </Link>
-          </LinkItem>
-          <LinkItem>
-            <Link href="/">
-              <StyledLink>Cases</StyledLink>
-            </Link>
-          </LinkItem>
-          <LinkItem>
-            <Link href="/">
-              <StyledLink>Contato</StyledLink>
-            </Link>
-          </LinkItem>
-          <LinkItem>
-            <Link href="/">
-              <StyledLink>Blog</StyledLink>
-            </Link>
-          </LinkItem>
-        </LinksList>
-
         <LanguagesContainer data-testid="languages">
           <Language>PT</Language> | <Language>EN</Language>
         </LanguagesContainer>
