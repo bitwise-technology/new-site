@@ -10,6 +10,7 @@ import Motto from 'ui/components/Motto'
 import Partners from 'ui/components/Partners'
 import Services from 'ui/components/Services'
 import WhereWeAre from 'ui/components/WhereWeAre'
+import ProgrammingLanguages from 'ui/components/ProgrammingLanguages'
 
 const Home = () => {
   return (
@@ -27,6 +28,7 @@ const Home = () => {
         <Services />
         <Partners />
         <WhereWeAre />
+        <ProgrammingLanguages />
         <CallToActionSection />
         <BitwiseInfo />
         <Copyright />
