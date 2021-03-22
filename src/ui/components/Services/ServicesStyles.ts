@@ -1,8 +1,13 @@
 import styled from 'styled-components'
 
+export const ServicesContainerWrapper = styled.div`
+  background-image: linear-gradient(to bottom, #f0f0f0, #fbfbfb);
+  padding-bottom: 9rem;
+`
+
 export const ServicesContainer = styled.section`
   background-color: #534554;
-
+  font-family: 'Gotham';
   @media screen and (min-width: 1200px) {
     border-radius: 1rem;
 
@@ -124,10 +129,6 @@ export const ServiceTitle = styled.h3<{ titleBorderColor: string }>`
 
   margin: 1.5rem 0;
 
-  @media screen and (min-width: 768px) {
-    border: none;
-  }
-
   @media screen and (min-width: 1200px) {
     margin: 1.5rem 0;
   }
@@ -152,7 +153,7 @@ export const ServiceDescription = styled.p`
   @media screen and (min-width: 1200px) {
     color: #f0f0f0;
 
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     line-height: 2rem;
 
     padding-left: 1.1rem;

@@ -4,6 +4,7 @@ export const CopyrightWrapper = styled.div`
   width: 100%;
   background-color: #1c171c;
   padding-top: 6rem;
+  font-family: 'Gotham';
   padding-bottom: 6rem;
 `
 

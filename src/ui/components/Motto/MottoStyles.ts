@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const MottoContainer = styled.section`
+  font-family: 'Gotham';
   @media screen and (min-width: 1200px) {
     width: 70%;
 
@@ -16,7 +17,7 @@ export const MottoTitle = styled.h1`
     letter-spacing: -3px;
 
     strong {
-      font-weight: bold;
+      font-family: 'Gotham-Bold';
     }
   }
 `

@@ -37,7 +37,7 @@ const BitwiseInfo = () => {
           <Country>Brasil</Country>
           <Street> R. Raphael Dias da Silva, 75</Street>
           <Reference> 3º andar • Sala 306 e 308</Reference>
-          <State>Sorocaba/SP</State>
+          <State> Campolim • Sorocaba/SP</State>
         </Address>
         <Address data-testid="address">
           <Country>CANADÁ </Country>

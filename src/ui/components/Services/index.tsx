@@ -4,6 +4,7 @@ import {
   ServiceImageBox,
   ServicesBox,
   ServicesContainer,
+  ServicesContainerWrapper,
   ServicesTitle,
   ServiceText,
   ServiceTitle
@@ -55,35 +56,37 @@ const Services = () => {
   ]
 
   return (
-    <ServicesContainer>
-      <ServicesTitle>Nossos Serviços</ServicesTitle>
-      <ServicesBox data-testid="services-box">
-        {services.map(
-          ({ title, titleBorderColor, description, image }, index) => {
-            const isOdd = index % 2 !== 0
+    <ServicesContainerWrapper>
+      <ServicesContainer>
+        <ServicesTitle>Nossos Serviços</ServicesTitle>
+        <ServicesBox data-testid="services-box">
+          {services.map(
+            ({ title, titleBorderColor, description, image }, index) => {
+              const isOdd = index % 2 !== 0
 
-            return (
-              <Service key={title}>
-                <ServiceImageBox>
-                  <Image
-                    src={`/img/${image}.svg`}
-                    layout="intrinsic"
-                    width={100}
-                    height={70}
-                  />
-                </ServiceImageBox>
-                <ServiceText style={{ order: isOdd ? -1 : 1 }}>
-                  <ServiceTitle titleBorderColor={titleBorderColor}>
-                    {title}
-                  </ServiceTitle>
-                  <ServiceDescription>{description}</ServiceDescription>
-                </ServiceText>
-              </Service>
-            )
-          }
-        )}
-      </ServicesBox>
-    </ServicesContainer>
+              return (
+                <Service key={title}>
+                  <ServiceImageBox>
+                    <Image
+                      src={`/img/${image}.svg`}
+                      layout="intrinsic"
+                      width={100}
+                      height={70}
+                    />
+                  </ServiceImageBox>
+                  <ServiceText style={{ order: isOdd ? -1 : 1 }}>
+                    <ServiceTitle titleBorderColor={titleBorderColor}>
+                      {title}
+                    </ServiceTitle>
+                    <ServiceDescription>{description}</ServiceDescription>
+                  </ServiceText>
+                </Service>
+              )
+            }
+          )}
+        </ServicesBox>
+      </ServicesContainer>
+    </ServicesContainerWrapper>
   )
 }
 

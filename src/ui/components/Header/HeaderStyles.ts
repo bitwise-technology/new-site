@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 
 export const HeaderContainer = styled.header`
+  font-family: 'Gotham';
   @media screen and (min-width: 1200px) {
-    width: 90%;
+    width: 80%;
 
     display: flex;
     flex-direction: row;
@@ -27,7 +28,7 @@ export const LinksAndLanguagesContainer = styled.div`
 
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: flex-end;
   }
 `
 
@@ -35,11 +36,15 @@ export const LinksList = styled.ul`
   @media screen and (min-width: 1200px) {
     display: flex;
     flex: 1;
-    justify-content: space-evenly;
+    justify-content: center;
   }
 `
 
-export const LinkItem = styled.li``
+export const LinkItem = styled.li`
+  &:not(:last-child) {
+    margin-right: 2rem;
+  }
+`
 
 export const StyledLink = styled.a`
   @media screen and (min-width: 1200px) {
@@ -53,7 +58,6 @@ export const StyledLink = styled.a`
 
 export const LanguagesContainer = styled.div`
   @media screen and (min-width: 1200px) {
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;

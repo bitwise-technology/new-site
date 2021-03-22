@@ -15,6 +15,11 @@ function App({ Component, pageProps }: AppProps) {
           name="description"
           content="A simple Next.js Boilerplate Ready to production"
         />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+          rel="stylesheet"
+        ></link>
       </Head>
       <GlobalStyles />
       <Component {...pageProps} />

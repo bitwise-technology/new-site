@@ -1,11 +1,17 @@
 import styled from 'styled-components'
 
-export const CallToActionSectionContainer = styled.section`
-  padding-top: 8.7rem;
+export const CallToActionSectionContainerWrapper = styled.div`
+  background-color: #fbfbfb;
 
+  padding-bottom: 15rem;
+`
+
+export const CallToActionSectionContainer = styled.section`
   display: flex;
 
   flex-direction: column;
+
+  font-family: 'Gotham';
 
   padding: 1rem;
 
@@ -20,7 +26,7 @@ export const CallToActionSectionContainer = styled.section`
 
     flex-direction: row;
 
-    padding: 0;
+    padding-top: 8.7rem;
   }
 `
 
@@ -59,6 +65,7 @@ export const CallToActionSectionDescription = styled.p`
 export const ButtonsContainer = styled.div`
   display: flex;
   flex-direction: column;
+  max-width: 48rem;
 `
 
 export const StyledButton = styled.button`

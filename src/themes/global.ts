@@ -1,6 +1,25 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyles = createGlobalStyle`
+
+    @font-face {
+        font-family: "Gotham-Bold";
+        src: url(/fonts/Gotham/Gotham-Bold.otf);
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "Gotham-Medium";
+        src: url(/fonts/Gotham/Gotham-Medium.otf);
+
+    }
+
+    @font-face {
+        font-family: "Gotham";
+        src: url(/fonts/Gotham/Gotham-Book.otf);
+    }
+
     * {
         font-family: 'Gotham' sans-serif;
     }

@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 
 export const PartnersContainer = styled.section`
-  @media screen and (min-width: 1200px) {
-    margin-top: 9rem;
-  }
+  background-color: #fbfbfb;
+  padding-bottom: 9.5rem;
 `
 
 export const PartnersTitle = styled.p`
@@ -11,6 +10,7 @@ export const PartnersTitle = styled.p`
     text-align: center;
     color: #372e38;
     font-weight: 400;
+    font-family: 'Gotham';
     font-size: 1.6rem;
 
     margin-bottom: 3rem;
