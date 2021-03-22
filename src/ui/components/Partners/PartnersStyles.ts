@@ -16,33 +16,43 @@ export const PartnersTitle = styled.p`
 `
 
 const ScrollAnimation = keyframes`
-	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-100px * 7))}
+	0% { transform: translateX(100px); }
+	100% { transform: translateX(calc(-100px * 19))}
 `
 
 export const PartnersBox = styled.div`
   display: flex;
   justify-content: space-between;
+  max-width: 80%;
 
   width: 80%;
 
   margin: auto;
 
-  @media screen and (max-width: 768px) {
+  .mobile-only {
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
     overflow: scroll;
     scrollbar-width: none;
     ::-webkit-scrollbar {
       display: none;
     }
     position: relative;
+    align-items: center;
   }
 
   img {
     display: inline-block;
+
     margin: 0 1rem;
 
-    @media screen and (max-width: 768px) {
-      animation: ${ScrollAnimation} 12s linear infinite;
+    @media screen and (max-width: 1200px) {
+      max-width: 100px;
+      animation: ${ScrollAnimation} 30s linear infinite;
     }
   }
   @media screen and (min-width: 1200px) {

@@ -11,6 +11,16 @@ const Partners = () => {
     'Pao de acucar',
     'Fiat',
     'Dettol',
+    'Vivo',
+    'Facens',
+    'Newton',
+    'Net',
+    'Wizard',
+    'BSToys',
+    'Santander',
+    'Pao de acucar',
+    'Fiat',
+    'Dettol',
     'Vivo'
   ]
 
@@ -18,9 +28,10 @@ const Partners = () => {
     <PartnersContainer>
       <PartnersTitle>Onde levamos a inovação</PartnersTitle>
       <PartnersBox>
-        {partners.map((partner) => (
+        {partners.map((partner, index) => (
           <img
-            key={partner}
+            className={index >= partners.length / 2 ? 'mobile-only' : ''}
+            key={index}
             src={`/img/partners/${partner}.svg`}
             alt={`Logo da Marca ${partner}`}
           />
