@@ -8,7 +8,8 @@ import {
   Street,
   Reference,
   State,
-  InfoContainerWrapper
+  InfoContainerWrapper,
+  BackToTop
 } from './BitwiseInfoStyles'
 
 import Image from 'next/image'
@@ -45,6 +46,8 @@ const BitwiseInfo = () => {
           <Reference> Bureau 315, Sala 609</Reference>
           <State>Quebec</State>
         </Address>
+
+        <BackToTop>Voltar ao topo</BackToTop>
       </InfoContainer>
     </InfoContainerWrapper>
   )

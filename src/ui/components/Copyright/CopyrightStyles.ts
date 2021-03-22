@@ -21,6 +21,12 @@ export const CopyrightText = styled.p`
   font-size: 1.2rem;
 
   line-height: 2rem;
+
+  @media screen and (max-width: 768px) {
+    width: 20rem;
+    word-wrap: break-word;
+    padding: 0.1rem;
+  }
 `
 
 export const SocialMedias = styled.div`
@@ -39,4 +45,8 @@ export const BackToTop = styled.button`
   background: none;
   outline: none;
   border: none;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `
