@@ -1,19 +1,30 @@
-import Image from 'next/image'
-
 import { PartnersBox, PartnersContainer, PartnersTitle } from './PartnersStyles'
 
 const Partners = () => {
+  const partners = [
+    'Facens',
+    'Newton',
+    'Net',
+    'Wizard',
+    'BSToys',
+    'Santander',
+    'Pao de acucar',
+    'Fiat',
+    'Dettol',
+    'Vivo'
+  ]
+
   return (
     <PartnersContainer>
       <PartnersTitle>Onde levamos a inovação</PartnersTitle>
       <PartnersBox>
-        <Image
-          src="/img/PartnersLogo.svg"
-          alt="Marcas que já utilizaram algum serviço"
-          layout="intrinsic"
-          width={1600}
-          height={70}
-        />
+        {partners.map((partner) => (
+          <img
+            key={partner}
+            src={`/img/partners/${partner}.svg`}
+            alt={`Logo da Marca ${partner}`}
+          />
+        ))}
       </PartnersBox>
     </PartnersContainer>
   )

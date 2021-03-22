@@ -109,11 +109,15 @@ export const StyledButtonInverted = styled.button`
 `
 
 export const CallToActionSectionImageContainer = styled.div`
-  width: 60%;
+  max-width: 60%;
   align-self: center;
   padding: 1rem;
   margin: 2rem 0;
   order: -1;
+
+  img {
+    max-width: 100%;
+  }
   @media screen and (min-width: 992px) {
     order: 0;
     flex: 1;
