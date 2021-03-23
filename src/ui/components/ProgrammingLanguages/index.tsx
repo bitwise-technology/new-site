@@ -1,9 +1,7 @@
-import Image from 'next/image'
 import {
   LanguageText,
   LanguageBox,
   LanguageDescription,
-  LanguageImage,
   LanguageName,
   Languages,
   ProgrammingLanguagesContainer,
@@ -57,9 +55,7 @@ const ProgrammingLanguages = () => {
         {languages.map(({ name, description, image }) => {
           return (
             <LanguageBox key={name}>
-              <LanguageImage>
-                <Image src={image} width={35} height={35} />
-              </LanguageImage>
+              <img src={image} />
               <LanguageText>
                 <LanguageName>{name}</LanguageName>
                 <LanguageDescription>{description}</LanguageDescription>

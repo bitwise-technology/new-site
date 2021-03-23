@@ -117,6 +117,7 @@ export const CallToActionSectionImageContainer = styled.div`
 
   img {
     max-width: 100%;
+    width: 90%;
   }
   @media screen and (min-width: 992px) {
     order: 0;
