@@ -76,7 +76,7 @@ export const ButtonsContainer = styled.div`
   flex-direction: column;
   max-width: 40rem;
 
-  @media screen and (min-wdith: 1200px) {
+  @media screen and (min-width: 1200px) {
     max-width: 53rem;
   }
 `
