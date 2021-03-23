@@ -23,7 +23,7 @@ export const MottoTitle = styled.h1`
   }
   @media screen and (min-width: 1200px) {
     line-height: normal;
-    font-size: 5.6rem;
+    font-size: 6.5rem;
   }
 `
 
