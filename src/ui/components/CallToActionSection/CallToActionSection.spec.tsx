@@ -1,4 +1,5 @@
-import { render } from '@testing-library/react'
+import { fireEvent, render } from '@testing-library/react'
+import ContactModalProvider from 'contexts/ContactModal'
 import CallToActionSection from '.'
 
 describe('CallToActionSection', () => {
@@ -22,5 +23,22 @@ describe('CallToActionSection', () => {
     expect(callToActionSectionDescription.textContent).toBe(
       'Nós nascemos em 2015, para mudar o dia a dia das pessoas através de tecnologia.Hoje, com o mesmo objetivo, impactamos empresas através da nossa experiência e tecnologia em diferentes áreas. Temos uma equipe proativa e disposta a resolver problemas complexos para expandir e escalar o seu negócio.'
     )
+  })
+
+  test('should open modal', async () => {
+    const setShowContactModal = jest.fn()
+    const showContactModal = false
+
+    const wrapper = render(
+      <ContactModalProvider value={{ setShowContactModal, showContactModal }}>
+        <CallToActionSection />
+      </ContactModalProvider>
+    )
+
+    const button = await wrapper.findByTestId('open-modal-button')
+
+    fireEvent.click(button)
+
+    expect(setShowContactModal).toBeCalledWith(true)
   })
 })

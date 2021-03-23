@@ -1,4 +1,5 @@
-import { render } from '@testing-library/react'
+import { fireEvent, render } from '@testing-library/react'
+import ContactModalProvider from 'contexts/ContactModal'
 import Motto from '.'
 
 describe('Motto', () => {
@@ -22,5 +23,22 @@ describe('Motto', () => {
     const { getByText } = render(<Motto />)
 
     expect(getByText('Falar com um consultor')).toBeTruthy()
+  })
+
+  test('should open modal', async () => {
+    const setShowContactModal = jest.fn()
+    const showContactModal = false
+
+    const wrapper = render(
+      <ContactModalProvider value={{ setShowContactModal, showContactModal }}>
+        <Motto />
+      </ContactModalProvider>
+    )
+
+    const button = await wrapper.findByText('Falar com um consultor')
+
+    fireEvent.click(button)
+
+    expect(setShowContactModal).toBeCalledWith(true)
   })
 })

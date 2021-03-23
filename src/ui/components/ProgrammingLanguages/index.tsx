@@ -53,7 +53,7 @@ const ProgrammingLanguages = () => {
   return (
     <ProgrammingLanguagesContainer>
       <ProgrammingLanguagesTitle>Nossa Stack</ProgrammingLanguagesTitle>
-      <Languages>
+      <Languages data-testid="languages">
         {languages.map(({ name, description, image }) => {
           return (
             <LanguageBox key={name}>

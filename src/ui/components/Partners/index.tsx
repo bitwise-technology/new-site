@@ -27,7 +27,7 @@ const Partners = () => {
   return (
     <PartnersContainer>
       <PartnersTitle>Onde levamos a inovação</PartnersTitle>
-      <PartnersBox>
+      <PartnersBox data-testid="partners">
         {partners.map((partner, index) => (
           <img
             className={index >= partners.length / 2 ? 'mobile-only' : ''}

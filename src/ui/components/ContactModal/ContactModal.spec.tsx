@@ -183,9 +183,9 @@ describe('Contact Modal', () => {
 
     expect(input.value).toBe('')
 
-    fireEvent.change(input, { target: { value: 'any_value' } })
+    fireEvent.change(input, { target: { value: '84999347805' } })
 
-    expect(input.value).toBe('any_value')
+    expect(input.value).toBe('(84) 99934-7805')
   })
 
   test('should update radio inputs properly', async () => {

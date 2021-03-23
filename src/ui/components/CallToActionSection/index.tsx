@@ -1,5 +1,4 @@
 import { ContactModalContext } from 'contexts/ContactModal'
-import Image from 'next/image'
 import { useContext } from 'react'
 import { BreakLine } from '../Motto/MottoStyles'
 import {
@@ -39,7 +38,7 @@ const CallToActionSection = () => {
             escalar o seu negócio.
           </CallToActionSectionDescription>
           <ButtonsContainer>
-            <StyledButton onClick={openModal}>
+            <StyledButton data-testid="open-modal-button" onClick={openModal}>
               QUERO FALAR COM UM CONSULTOR{' '}
             </StyledButton>
             <StyledButtonInverted>

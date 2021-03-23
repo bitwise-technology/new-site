@@ -8,11 +8,10 @@ describe('Partners', () => {
     expect(partnersTitle.textContent).toBe('Onde levamos a inovação')
   })
 
-  test('Should render partners image', async () => {
+  test('Should render partners images', async () => {
     const wrapper = render(<Partners />)
-    const partnersImage = await wrapper.findByAltText(
-      'Marcas que já utilizaram algum serviço'
-    )
-    expect(partnersImage).toBeTruthy()
+    const partners = await wrapper.findByTestId('partners')
+    expect(partners).toBeTruthy()
+    expect(partners.childElementCount).toBe(20)
   })
 })
