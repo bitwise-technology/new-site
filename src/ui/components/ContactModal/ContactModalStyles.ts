@@ -127,7 +127,3 @@ export const StyledSubmitButton = styled.button`
   border-radius: 1rem;
   outline: none;
 `
-
-export const BreakLine = styled.span`
-  display: block;
-`

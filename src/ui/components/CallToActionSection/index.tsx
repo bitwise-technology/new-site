@@ -1,6 +1,7 @@
 import { ContactModalContext } from 'contexts/ContactModal'
 import { useContext } from 'react'
-import { BreakLine } from '../Motto/MottoStyles'
+import strings from '../../../languages/language'
+import parse from 'html-react-parser'
 import {
   ButtonsContainer,
   CallToActionSectionContainer,
@@ -12,8 +13,11 @@ import {
   StyledButton,
   StyledButtonInverted
 } from './CallToActionSectionStyles'
+import { LanguagesContext } from 'contexts/LanguagesContext'
 
 const CallToActionSection = () => {
+  const { selectedLanguage } = useContext(LanguagesContext)
+
   const { setShowContactModal } = useContext(ContactModalContext)
 
   const openModal = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -21,28 +25,24 @@ const CallToActionSection = () => {
     setShowContactModal && setShowContactModal(true)
   }
 
+  const callToActionStrings = strings[selectedLanguage].call_to_action
+
   return (
     <CallToActionSectionContainerWrapper>
       <CallToActionSectionContainer>
         <CallToActionSectionTexts>
           <CallToActionSectionTitle data-testid="CallToActionSectionTitle">
-            O digital é por nossa conta!
+            {callToActionStrings.title}
           </CallToActionSectionTitle>
           <CallToActionSectionDescription data-testid="CallToActionSectionDescription">
-            Nós nascemos em 2015, para mudar o dia a dia das pessoas através de
-            tecnologia.
-            <BreakLine />
-            Hoje, com o mesmo objetivo, impactamos empresas através da nossa
-            experiência e tecnologia em diferentes áreas. Temos uma equipe
-            proativa e disposta a resolver problemas complexos para expandir e
-            escalar o seu negócio.
+            {parse(callToActionStrings.description)}
           </CallToActionSectionDescription>
           <ButtonsContainer>
             <StyledButton data-testid="open-modal-button" onClick={openModal}>
-              QUERO FALAR COM UM CONSULTOR{' '}
+              {callToActionStrings.talk_to_consultant}
             </StyledButton>
             <StyledButtonInverted>
-              QUERO TRABALHAR NA BITWISE
+              {callToActionStrings.work_with_us}
             </StyledButtonInverted>
           </ButtonsContainer>
         </CallToActionSectionTexts>

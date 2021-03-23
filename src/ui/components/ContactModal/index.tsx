@@ -7,7 +7,6 @@ import Input from '../Input'
 import RadioInput from '../RadioInput'
 import TextAreaInput from '../TextAreaInput'
 import {
-  BreakLine,
   ContactModalForm,
   ContactModalClose,
   ContactModalContainer,
@@ -22,6 +21,10 @@ import {
   SubmitButtonContainer
 } from './ContactModalStyles'
 import { phoneMask } from 'helpers/masks/phone/PhoneMask'
+import { LanguagesContext } from 'contexts/LanguagesContext'
+
+import strings from '../../../languages/language'
+import parse from 'html-react-parser'
 
 interface ContactInfo {
   name: string
@@ -34,6 +37,8 @@ interface ContactInfo {
 }
 
 const ContactModal = () => {
+  const { selectedLanguage } = useContext(LanguagesContext)
+
   const { showContactModal, setShowContactModal } = useContext(
     ContactModalContext
   )
@@ -99,6 +104,8 @@ const ContactModal = () => {
     }
   }
 
+  const modalStrings = strings[selectedLanguage].contact_modal
+
   return (
     <ContactModalContainer
       data-testid="contact_modal"
@@ -106,10 +113,7 @@ const ContactModal = () => {
     >
       <ContactModalClose onClick={handleCloseModal}>X</ContactModalClose>
       <ContactModalHeader>
-        <ContactModalTitle>
-          Preencha o formulário e inicie <BreakLine /> a sua{' '}
-          <strong> transformação digital </strong>
-        </ContactModalTitle>
+        <ContactModalTitle>{parse(modalStrings.title)}</ContactModalTitle>
         <ContactModalLogoContainer>
           <Image
             src="/img/Logo.svg"
@@ -123,62 +127,62 @@ const ContactModal = () => {
         <ContactModalInputs>
           <Input
             data-testid="contact_input"
-            label="Nome"
+            label={modalStrings.inputs.name.label}
             value={contactInfo.name}
             onChange={handleInputChange}
             name="name"
             id="name"
             required
-            placeholder="Digite seu nome..."
+            placeholder={modalStrings.inputs.name.placeholder}
             autoComplete="off"
             type="text"
           />
           <Input
             data-testid="contact_input"
-            label="Empresa"
+            label={modalStrings.inputs.company.label}
             value={contactInfo.company}
             onChange={handleInputChange}
             required
             name="company"
             id="company"
-            placeholder="Digite o nome da sua empresa..."
+            placeholder={modalStrings.inputs.company.placeholder}
             autoComplete="off"
             type="text"
           />
           <Input
             data-testid="contact_input"
-            label="Email"
+            label={modalStrings.inputs.email.label}
             value={contactInfo.email}
             onChange={handleInputChange}
             name="email"
             id="email"
             required
-            placeholder="Digite seu email..."
+            placeholder={modalStrings.inputs.email.placeholder}
             autoComplete="off"
             type="email"
           />
           <Input
             data-testid="contact_input"
-            label="Telefone"
+            label={modalStrings.inputs.phone.label}
             value={contactInfo.phone}
             onChange={handleInputChange}
             required
             name="phone"
             id="phone"
-            placeholder="Digite seu telefone..."
+            placeholder={modalStrings.inputs.phone.placeholder}
             autoComplete="off"
             type="phone"
           />
         </ContactModalInputs>
         <ContactModalRadioInputs>
           <ContactModalRadioInputsText>
-            Tenho preferência pelo contato por :
+            {modalStrings.preferred_contact_way.title}
           </ContactModalRadioInputsText>
           <RadioInput
             data-testid="contact_radio_input"
             name="wayOfContact"
             id="wayOfContact__email"
-            label="Email"
+            label={modalStrings.preferred_contact_way.radio.first}
             value="email"
             isChecked={contactInfo.wayOfContact === 'email' ? true : false}
             onChange={handleInputChange}
@@ -187,7 +191,7 @@ const ContactModal = () => {
             data-testid="contact_radio_input"
             name="wayOfContact"
             id="wayOfContact__id"
-            label="Telefone"
+            label={modalStrings.preferred_contact_way.radio.second}
             value="phone"
             isChecked={contactInfo.wayOfContact === 'phone' ? true : false}
             onChange={handleInputChange}
@@ -195,10 +199,12 @@ const ContactModal = () => {
         </ContactModalRadioInputs>
 
         <ContactModalTextAreaContainer>
-          <TextAreaInput label="Escreva o que você espera que a Bitwise faça pelo seu negócio:" />
+          <TextAreaInput label={modalStrings.what_customer_want_from_bitwise} />
         </ContactModalTextAreaContainer>
         <SubmitButtonContainer>
-          <StyledSubmitButton type="submit">Enviar</StyledSubmitButton>
+          <StyledSubmitButton type="submit">
+            {modalStrings.button}
+          </StyledSubmitButton>
         </SubmitButtonContainer>
       </ContactModalForm>
     </ContactModalContainer>

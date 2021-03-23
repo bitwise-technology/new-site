@@ -1,8 +1,12 @@
 import { ContactModalContext } from 'contexts/ContactModal'
+import { LanguagesContext } from 'contexts/LanguagesContext'
 import { useContext } from 'react'
 
+import parse from 'html-react-parser'
+
+import strings from '../../../languages/language'
+
 import {
-  BreakLine,
   MottoContainer,
   MottoPhrase,
   MottoTitle,
@@ -10,6 +14,7 @@ import {
 } from './MottoStyles'
 
 const Motto = () => {
+  const { selectedLanguage } = useContext(LanguagesContext)
   const { setShowContactModal } = useContext(ContactModalContext)
 
   const handleOpenModal = (event: React.MouseEvent<Element>) => {
@@ -17,19 +22,18 @@ const Motto = () => {
     setShowContactModal && setShowContactModal(true)
   }
 
+  const mottoStrings = strings[selectedLanguage].motto
+
   return (
     <MottoContainer data-testid="motto-button">
       <MottoTitle data-testid="motto-title">
-        Inovação, Design e<BreakLine /> Tecnologia que{' '}
-        <strong>transforma!</strong>
+        {parse(mottoStrings.title)}
       </MottoTitle>
       <MottoPhrase data-testid="motto-phrase">
-        Design, desenvolvimento ágil, inovação,
-        <BreakLine /> cultura e liberdade. Nosso desafio é transformar
-        <BreakLine /> ideias em resultados reais.
+        {parse(mottoStrings.text)}
       </MottoPhrase>
       <StyledButton onClick={handleOpenModal} data-testid="motto-button">
-        Falar com um consultor
+        {selectedLanguage && mottoStrings.buttonPhrase}
       </StyledButton>
     </MottoContainer>
   )
