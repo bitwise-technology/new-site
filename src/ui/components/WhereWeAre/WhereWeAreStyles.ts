@@ -1,8 +1,25 @@
 import styled, { keyframes } from 'styled-components'
 
 export const WhereWeAreContainer = styled.section`
-  @media screen and (min-width: 1200px) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 10rem;
+  align-items: flex-start;
+
+  background-image: url('/img/Mapa Mundi.svg'),
+    linear-gradient(to bottom right, rgba(255, 255, 255, 0.4), transparent);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0% -100%;
+  background-clip: border-box;
+
+  height: 45rem;
+  @media screen and (min-width: 768px) {
     display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding-top: 0;
 
     background-image: url('/img/Mapa Mundi.svg');
     background-size: contain;
@@ -14,7 +31,15 @@ export const WhereWeAreContainer = styled.section`
 `
 
 export const WhereWeArePlaces = styled.div`
-  @media screen and (min-width: 1200px) {
+  color: #534554;
+  font-size: 3.6rem;
+  line-height: 5.6rem;
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1rem;
+  @media screen and (min-width: 768px) {
     color: #534554;
     font-size: 5.6rem;
     line-height: 5.6rem;
@@ -31,7 +56,30 @@ export const WhereWeArePlaces = styled.div`
 `
 
 export const WhereWeArePhrase = styled.p`
-  @media screen and (min-width: 1200px) {
+  color: #640055;
+
+  font-size: 2.8rem;
+  font-family: 'Gotham';
+  font-weight: 500;
+  line-height: 3.6rem;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start;
+
+  padding-left: 2rem;
+  strong {
+    font-family: 'Gotham-Bold';
+  }
+
+  small {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  @media screen and (min-width: 768px) {
     flex: 1;
     background-color: #fbfbfb;
 
@@ -41,10 +89,6 @@ export const WhereWeArePhrase = styled.p`
     font-family: 'Gotham';
     font-weight: 500;
     line-height: 5.6rem;
-
-    display: flex;
-    flex-direction: column;
-
     justify-content: center;
 
     padding-left: 10rem;
@@ -79,7 +123,7 @@ export const BlinkTextCursor = keyframes`
 export const TypeWriterEffect = styled.span`
   overflow: hidden;
   max-width: fit-content;
-  border-right: 6px solid rgba(255, 255, 255, 0.75);
+  border-right: 3px solid rgba(255, 255, 255, 0.75);
   padding-right: 0.3rem;
   animation: ${TypeWriter} 5s steps(40, end) forwards,
     ${BlinkTextCursor} 0.75s step-end infinite;
