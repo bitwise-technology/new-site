@@ -83,7 +83,7 @@ export const ButtonsContainer = styled.div`
 
 export const StyledButton = styled.button`
   background-color: #890877;
-
+  text-transform: uppercase;
   color: #fff;
   font-size: 1.4rem;
   font-weight: bold;
@@ -101,7 +101,7 @@ export const StyledButtonInverted = styled.button`
   color: #640055;
   font-size: 1.4rem;
   font-weight: bold;
-
+  text-transform: uppercase;
   padding: 1.8rem;
   border: 3px solid #640055;
   border-radius: 1rem;
@@ -130,8 +130,4 @@ export const CallToActionSectionImageContainer = styled.div`
     padding: 0;
     margin: 0;
   }
-`
-
-export const BreakLine = styled.span`
-  display: block;
 `

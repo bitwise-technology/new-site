@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
-import Link from 'next/link'
 import Image from 'next/image'
 
 import {
@@ -10,8 +9,17 @@ import {
   LinksAndLanguagesContainer,
   LogoContainer
 } from './HeaderStyles'
+import { LanguagesContext } from 'contexts/LanguagesContext'
+
+type Language = 'pt-BR' | 'en-EN'
 
 const Header = () => {
+  const { setSelectedLanguage } = useContext(LanguagesContext)
+
+  const handleSelectedLanguage = (language: Language) => {
+    setSelectedLanguage && setSelectedLanguage(language)
+  }
+
   return (
     <HeaderContainer>
       <LogoContainer>
@@ -25,7 +33,13 @@ const Header = () => {
       </LogoContainer>
       <LinksAndLanguagesContainer>
         <LanguagesContainer data-testid="languages">
-          <Language>PT</Language> | <Language>EN</Language>
+          <Language onClick={() => handleSelectedLanguage('pt-BR')}>
+            PT
+          </Language>{' '}
+          |{' '}
+          <Language onClick={() => handleSelectedLanguage('en-EN')}>
+            EN
+          </Language>
         </LanguagesContainer>
       </LinksAndLanguagesContainer>
     </HeaderContainer>

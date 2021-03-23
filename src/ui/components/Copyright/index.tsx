@@ -8,16 +8,24 @@ import {
   SocialMedias
 } from './CopyrightStyles'
 
+import strings from '../../../languages/language'
+import { useContext } from 'react'
+import { LanguagesContext } from 'contexts/LanguagesContext'
+
 const Copyright = () => {
+  const { selectedLanguage } = useContext(LanguagesContext)
+
   const handleBackToTop = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault()
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
+  const { text, backToTop } = strings[selectedLanguage].copyright
+
   return (
     <CopyrightWrapper>
       <CopyrightContainer>
-        <CopyrightText>Todos os direitos reservados - 2021</CopyrightText>
+        <CopyrightText>{text}</CopyrightText>
 
         <SocialMedias>
           <a href="/">
@@ -40,7 +48,7 @@ const Copyright = () => {
         </SocialMedias>
 
         <BackToTop onClick={handleBackToTop} type="button">
-          Voltar ao topo
+          {backToTop}
         </BackToTop>
       </CopyrightContainer>
     </CopyrightWrapper>

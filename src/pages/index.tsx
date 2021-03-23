@@ -11,29 +11,32 @@ import Partners from 'ui/components/Partners'
 import Services from 'ui/components/Services'
 import WhereWeAre from 'ui/components/WhereWeAre'
 import ProgrammingLanguages from 'ui/components/ProgrammingLanguages'
+import LanguagesContextProvider from 'contexts/LanguagesContext'
 
 const Home = () => {
   return (
-    <ContactModalProvider>
-      <div
-        style={{
-          position: 'relative',
-          backgroundColor: '#F0F0F0',
-          margin: 'auto'
-        }}
-      >
-        <ContactModal />
-        <Header />
-        <Motto />
-        <Services />
-        <Partners />
-        <WhereWeAre />
-        <ProgrammingLanguages />
-        <CallToActionSection />
-        <BitwiseInfo />
-        <Copyright />
-      </div>
-    </ContactModalProvider>
+    <LanguagesContextProvider>
+      <ContactModalProvider>
+        <div
+          style={{
+            position: 'relative',
+            backgroundColor: '#F0F0F0',
+            margin: 'auto'
+          }}
+        >
+          <ContactModal />
+          <Header />
+          <Motto />
+          <Services />
+          <Partners />
+          <WhereWeAre />
+          <ProgrammingLanguages />
+          <CallToActionSection />
+          <BitwiseInfo />
+          <Copyright />
+        </div>
+      </ContactModalProvider>
+    </LanguagesContextProvider>
   )
 }
 

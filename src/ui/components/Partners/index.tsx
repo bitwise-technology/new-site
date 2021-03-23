@@ -1,6 +1,12 @@
+import { LanguagesContext } from 'contexts/LanguagesContext'
+import { useContext } from 'react'
 import { PartnersBox, PartnersContainer, PartnersTitle } from './PartnersStyles'
 
+import strings from '../../../languages/language'
+
 const Partners = () => {
+  const { selectedLanguage } = useContext(LanguagesContext)
+
   const partners = [
     'Facens',
     'Newton',
@@ -26,7 +32,7 @@ const Partners = () => {
 
   return (
     <PartnersContainer>
-      <PartnersTitle>Onde levamos a inovação</PartnersTitle>
+      <PartnersTitle>{strings[selectedLanguage].partners.title}</PartnersTitle>
       <PartnersBox data-testid="partners">
         {partners.map((partner, index) => (
           <img

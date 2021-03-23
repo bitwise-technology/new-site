@@ -11,6 +11,10 @@ import {
 } from './ServicesStyles'
 
 import Image from 'next/image'
+import { useContext } from 'react'
+import { LanguagesContext } from 'contexts/LanguagesContext'
+
+import strings from '../../../languages/language'
 
 interface IService {
   title: string
@@ -20,73 +24,76 @@ interface IService {
 }
 
 const Services = () => {
+  const {
+    selectedLanguage
+  }: { selectedLanguage: 'pt-BR' | 'en-EN' } = useContext(LanguagesContext)
+
+  const servicesStrings = strings[selectedLanguage].services
+
   const services: Array<IService> = [
     {
       image: 'ProjectManagement',
-      title: 'Projeto Gerenciados',
+      title: servicesStrings.first_service.title,
       titleBorderColor: '45B20E',
-      description:
-        'Co-criamos soluções personalizadas em parceria com seu time. Melhoramos processos internos e garantimos a execução de projetos no prazo necessário.'
+      description: servicesStrings.first_service.description
     },
 
     {
       image: 'DigitalTransformation',
-      title: 'Transformação Digital',
+      title: servicesStrings.second_service.title,
       titleBorderColor: '00ADCC',
-      description:
-        'Contamos com especialistas em diversas areas (UX/UI, PM, Devops, Arquitetos e Desenvolvedores atuando com metodologia ágeis e constante acompanhamento de performance.'
+      description: servicesStrings.second_service.description
     },
 
     {
       image: 'Outsourcing',
-      title: 'Outsourcing',
+      title: servicesStrings.third_service.title,
       titleBorderColor: 'F2C604',
-
-      description:
-        'Garantimos uma equipe de alto nível em seu projeto.Elimine custos fixos, compartilhe conhecimento, atinja e alcance resultados reais.'
+      description: servicesStrings.third_service.description
     },
 
     {
       image: 'HeadHunting',
-      title: 'HeadHunting',
+      title: servicesStrings.fourth_service.title,
       titleBorderColor: 'A51C92',
-      description:
-        'Entregamos profissionais com fit adequado ao seu projeto, através de um processo de recrutamento ágil e especializado.'
+      description: servicesStrings.fourth_service.description
     }
   ]
 
   return (
-    <ServicesContainerWrapper>
-      <ServicesContainer>
-        <ServicesTitle>Nossos Serviços</ServicesTitle>
-        <ServicesBox data-testid="services-box">
-          {services.map(
-            ({ title, titleBorderColor, description, image }, index) => {
-              const isOdd = index % 2 !== 0
+    selectedLanguage && (
+      <ServicesContainerWrapper>
+        <ServicesContainer>
+          <ServicesTitle>{servicesStrings.title}</ServicesTitle>
+          <ServicesBox data-testid="services-box">
+            {services.map(
+              ({ title, titleBorderColor, description, image }, index) => {
+                const isOdd = index % 2 !== 0
 
-              return (
-                <Service key={title}>
-                  <ServiceImageBox>
-                    <Image
-                      src={`/img/${image}.svg`}
-                      layout="intrinsic"
-                      width={110}
-                      height={80}
-                    />
-                  </ServiceImageBox>
-                  <ServiceText style={{ order: isOdd ? -1 : 1 }}>
-                    <ServiceTitle titleBorderColor={titleBorderColor}>
-                      {title}
-                    </ServiceTitle>
-                    <ServiceDescription>{description}</ServiceDescription>
-                  </ServiceText>
-                </Service>
-              )
-            }
-          )}
-        </ServicesBox>
-      </ServicesContainer>
-    </ServicesContainerWrapper>
+                return (
+                  <Service key={title}>
+                    <ServiceImageBox>
+                      <Image
+                        src={`/img/${image}.svg`}
+                        layout="intrinsic"
+                        width={110}
+                        height={80}
+                      />
+                    </ServiceImageBox>
+                    <ServiceText style={{ order: isOdd ? -1 : 1 }}>
+                      <ServiceTitle titleBorderColor={titleBorderColor}>
+                        {title}
+                      </ServiceTitle>
+                      <ServiceDescription>{description}</ServiceDescription>
+                    </ServiceText>
+                  </Service>
+                )
+              }
+            )}
+          </ServicesBox>
+        </ServicesContainer>
+      </ServicesContainerWrapper>
+    )
   )
 }
 

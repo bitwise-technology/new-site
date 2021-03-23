@@ -73,7 +73,3 @@ export const Street = styled.span``
 export const Reference = styled.span``
 
 export const State = styled.span``
-
-export const BreakLine = styled.span`
-  display: block;
-`

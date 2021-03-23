@@ -1,4 +1,9 @@
+import { LanguagesContext } from 'contexts/LanguagesContext'
 import Image from 'next/image'
+import { useContext } from 'react'
+
+import strings from '../../../languages/language'
+
 import {
   LanguageText,
   LanguageBox,
@@ -11,6 +16,8 @@ import {
 } from './ProgrammingLanguagesStyles'
 
 const ProgrammingLanguages = () => {
+  const { selectedLanguage } = useContext(LanguagesContext)
+
   const languages = [
     {
       name: 'Rust',
@@ -52,7 +59,9 @@ const ProgrammingLanguages = () => {
 
   return (
     <ProgrammingLanguagesContainer>
-      <ProgrammingLanguagesTitle>Nossa Stack</ProgrammingLanguagesTitle>
+      <ProgrammingLanguagesTitle>
+        {strings[selectedLanguage].programming_languages.title}
+      </ProgrammingLanguagesTitle>
       <Languages data-testid="languages">
         {languages.map(({ name, description, image }) => {
           return (

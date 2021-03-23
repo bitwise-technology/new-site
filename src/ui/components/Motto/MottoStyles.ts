@@ -58,7 +58,3 @@ export const StyledButton = styled.button`
   @media screen and (min-width: 1200px) {
   }
 `
-
-export const BreakLine = styled.span`
-  display: block;
-`

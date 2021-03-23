@@ -2,7 +2,6 @@ import {
   BitwiseMotto,
   InfoContainer,
   LogoContainer,
-  BreakLine,
   Address,
   Country,
   Street,
@@ -12,9 +11,19 @@ import {
   BackToTop
 } from './BitwiseInfoStyles'
 
+import parse from 'html-react-parser'
+
+import strings from '../../../languages/language'
+
 import Image from 'next/image'
+import { useContext } from 'react'
+import { LanguagesContext } from 'contexts/LanguagesContext'
 
 const BitwiseInfo = () => {
+  const { selectedLanguage } = useContext(LanguagesContext)
+
+  const bitwiseInfoStrings = strings[selectedLanguage].bitwise_info
+
   return (
     <InfoContainerWrapper>
       <InfoContainer>
@@ -27,24 +36,19 @@ const BitwiseInfo = () => {
           />
         </LogoContainer>
 
-        <BitwiseMotto>
-          Acreditamos no valor da tecnologia e no impacto <BreakLine /> positivo
-          que a transformação digital exerce sobre <BreakLine /> a sociedade,
-          mudando o nosso dia a dia, facilitando <BreakLine /> atividades comuns
-          e acelerando os negócios.
-        </BitwiseMotto>
+        <BitwiseMotto>{parse(bitwiseInfoStrings.beliefs)}</BitwiseMotto>
 
         <Address data-testid="address">
-          <Country>Brasil</Country>
-          <Street> R. Raphael Dias da Silva, 75</Street>
-          <Reference> 3º andar • Sala 306 e 308</Reference>
-          <State> Campolim • Sorocaba/SP</State>
+          <Country>{bitwiseInfoStrings.first_address.country}</Country>
+          <Street> {bitwiseInfoStrings.first_address.street}</Street>
+          <Reference> {bitwiseInfoStrings.first_address.reference}</Reference>
+          <State> {bitwiseInfoStrings.first_address.state}</State>
         </Address>
         <Address data-testid="address">
-          <Country>CANADÁ </Country>
-          <Street> 830, Av. Ernest-Gagnon,</Street>
-          <Reference> Bureau 315, Sala 609</Reference>
-          <State>Quebec</State>
+          <Country>{bitwiseInfoStrings.second_address.country}</Country>
+          <Street> {bitwiseInfoStrings.second_address.street}</Street>
+          <Reference> {bitwiseInfoStrings.second_address.reference}</Reference>
+          <State> {bitwiseInfoStrings.second_address.state}</State>
         </Address>
 
         <BackToTop>Voltar ao topo</BackToTop>

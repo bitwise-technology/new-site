@@ -1,3 +1,5 @@
+import { LanguagesContext } from 'contexts/LanguagesContext'
+import { useContext } from 'react'
 import {
   WhereWeAreContainer,
   WhereWeArePhrase,
@@ -6,22 +8,30 @@ import {
   TypeWriterEffect
 } from './WhereWeAreStyles'
 
+import strings from '../../../languages/language'
+
 const WhereWeAre = () => {
+  const { selectedLanguage } = useContext(LanguagesContext)
+
+  const { cities, countries, we, are, nomad, description } = strings[
+    selectedLanguage
+  ].where_we_are
+
   return (
     <WhereWeAreContainer>
       <WhereWeArePlaces>
-        18 Cidades <BreakLine /> & 2 Países
+        {cities} <BreakLine /> & {countries}
       </WhereWeArePlaces>
       <WhereWeArePhrase>
         <strong>
-          Nós
+          {we}
           <BreakLine />
-          Somos
+          {are}
         </strong>
         <BreakLine />
-        <TypeWriterEffect>Nômades</TypeWriterEffect>
+        <TypeWriterEffect>{nomad}</TypeWriterEffect>
         <BreakLine />
-        <small>Somos 100% Remoto</small>
+        <small>{description}</small>
       </WhereWeArePhrase>
     </WhereWeAreContainer>
   )
