@@ -10,7 +10,6 @@ import {
   ServiceTitle
 } from './ServicesStyles'
 
-import Image from 'next/image'
 import { useContext } from 'react'
 import { LanguagesContext } from 'contexts/LanguagesContext'
 
@@ -21,6 +20,7 @@ interface IService {
   titleBorderColor: string
   description: string
   image: string
+  alt: string
 }
 
 const Services = () => {
@@ -34,6 +34,7 @@ const Services = () => {
     {
       image: 'ProjectManagement',
       title: servicesStrings.first_service.title,
+      alt: servicesStrings.fourth_service.alt,
       titleBorderColor: '45B20E',
       description: servicesStrings.first_service.description
     },
@@ -41,6 +42,7 @@ const Services = () => {
     {
       image: 'DigitalTransformation',
       title: servicesStrings.second_service.title,
+      alt: servicesStrings.fourth_service.alt,
       titleBorderColor: '00ADCC',
       description: servicesStrings.second_service.description
     },
@@ -48,6 +50,7 @@ const Services = () => {
     {
       image: 'Outsourcing',
       title: servicesStrings.third_service.title,
+      alt: servicesStrings.fourth_service.alt,
       titleBorderColor: 'F2C604',
       description: servicesStrings.third_service.description
     },
@@ -55,6 +58,7 @@ const Services = () => {
     {
       image: 'HeadHunting',
       title: servicesStrings.fourth_service.title,
+      alt: servicesStrings.fourth_service.alt,
       titleBorderColor: 'A51C92',
       description: servicesStrings.fourth_service.description
     }
@@ -67,18 +71,13 @@ const Services = () => {
           <ServicesTitle>{servicesStrings.title}</ServicesTitle>
           <ServicesBox data-testid="services-box">
             {services.map(
-              ({ title, titleBorderColor, description, image }, index) => {
+              ({ title, titleBorderColor, description, image, alt }, index) => {
                 const isOdd = index % 2 !== 0
 
                 return (
                   <Service key={title}>
                     <ServiceImageBox>
-                      <Image
-                        src={`/img/${image}.svg`}
-                        layout="intrinsic"
-                        width={110}
-                        height={80}
-                      />
+                      <img src={`/img/${image}.svg`} alt={alt} />
                     </ServiceImageBox>
                     <ServiceText style={{ order: isOdd ? -1 : 1 }}>
                       <ServiceTitle titleBorderColor={titleBorderColor}>
