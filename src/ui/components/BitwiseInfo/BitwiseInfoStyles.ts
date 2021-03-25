@@ -17,10 +17,8 @@ export const InfoContainer = styled.div`
   }
 
   background-color: #1c171c;
-
   width: 80%;
   margin: auto;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,10 +30,20 @@ export const InfoContainer = styled.div`
   font-size: 1.2rem;
 
   border-bottom: 3px solid #a51c92;
+
+  @media screen and (min-width: 992px) {
+    width: 80%;
+    margin: auto;
+  }
+
+  @media screen and (min-width: 1500px) {
+    width: 60%;
+    margin: auto;
+  }
 `
 
 export const BackToTop = styled.p`
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 1200px) {
     display: none;
   }
 `
@@ -43,7 +51,7 @@ export const BackToTop = styled.p`
 export const LogoContainer = styled.div``
 
 export const BitwiseMotto = styled.p`
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 2rem;
   letter-spacing: 1px;
 

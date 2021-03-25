@@ -15,7 +15,6 @@ import parse from 'html-react-parser'
 
 import strings from '../../../languages/language'
 
-import Image from 'next/image'
 import { useContext } from 'react'
 import { LanguagesContext } from 'contexts/LanguagesContext'
 
@@ -24,16 +23,15 @@ const BitwiseInfo = () => {
 
   const bitwiseInfoStrings = strings[selectedLanguage].bitwise_info
 
+  const goBackToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <InfoContainerWrapper>
       <InfoContainer>
         <LogoContainer>
-          <Image
-            src="/img/Bottom Logo.svg"
-            width={98}
-            height={36}
-            layout="intrinsic"
-          />
+          <img src="/img/Bottom Logo.svg" />
         </LogoContainer>
 
         <BitwiseMotto>{parse(bitwiseInfoStrings.beliefs)}</BitwiseMotto>
@@ -51,7 +49,9 @@ const BitwiseInfo = () => {
           <State> {bitwiseInfoStrings.second_address.state}</State>
         </Address>
 
-        <BackToTop>Voltar ao topo</BackToTop>
+        <BackToTop onClick={goBackToTop}>
+          {strings[selectedLanguage].copyright.backToTop}
+        </BackToTop>
       </InfoContainer>
     </InfoContainerWrapper>
   )
