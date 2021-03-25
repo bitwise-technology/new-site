@@ -4,7 +4,14 @@ export const TextAreaLabel = styled.label`
   font-size: 1.4rem;
   line-height: 2rem;
   color: #5a3d5c;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: #5a3d5c;
+    margin-bottom: 2rem;
+  }
 `
 
 export const StyledTextArea = styled.textarea`
