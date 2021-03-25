@@ -18,9 +18,9 @@ export const CallToActionSectionContainer = styled.section`
   @media screen and (min-width: 992px) {
     width: 80%;
 
-    margin: auto;
-
     flex-direction: row;
+
+    margin: auto;
 
     height: 90vh;
   }
@@ -95,6 +95,8 @@ export const StyledButton = styled.button`
 
   margin-top: 4.9rem;
   margin-bottom: 1rem;
+
+  cursor: pointer;
 `
 
 export const StyledButtonInverted = styled.button`
@@ -105,11 +107,12 @@ export const StyledButtonInverted = styled.button`
   padding: 1.8rem;
   border: 3px solid #640055;
   border-radius: 1rem;
+  cursor: pointer;
   outline: none;
 `
 
 export const CallToActionSectionImageContainer = styled.div`
-  max-width: 60%;
+  max-width: 45%;
   align-self: center;
   padding: 1rem;
   margin: 2rem 0;

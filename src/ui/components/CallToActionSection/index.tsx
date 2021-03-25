@@ -20,12 +20,13 @@ const CallToActionSection = () => {
 
   const { setShowContactModal } = useContext(ContactModalContext)
 
+  const callToActionStrings = strings[selectedLanguage].call_to_action
+
   const openModal = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault()
+
     setShowContactModal && setShowContactModal(true)
   }
-
-  const callToActionStrings = strings[selectedLanguage].call_to_action
 
   return (
     <CallToActionSectionContainerWrapper>
@@ -41,7 +42,7 @@ const CallToActionSection = () => {
             <StyledButton data-testid="open-modal-button" onClick={openModal}>
               {callToActionStrings.talk_to_consultant}
             </StyledButton>
-            <StyledButtonInverted>
+            <StyledButtonInverted onClick={openModal}>
               {callToActionStrings.work_with_us}
             </StyledButtonInverted>
           </ButtonsContainer>
