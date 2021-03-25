@@ -1,7 +1,5 @@
 import React, { useContext } from 'react'
 
-import Image from 'next/image'
-
 import {
   HeaderContainer,
   Language,
@@ -23,13 +21,7 @@ const Header = () => {
   return (
     <HeaderContainer>
       <LogoContainer>
-        <Image
-          src="/img/Logo.svg"
-          alt="Logo da Bitwise"
-          layout="intrinsic"
-          height={48}
-          width={130}
-        />
+        <img src="/img/Logo.svg" alt="Logo da Bitwise" />
       </LogoContainer>
       <LinksAndLanguagesContainer>
         <LanguagesContainer data-testid="languages">

@@ -59,4 +59,5 @@ export const LanguagesContainer = styled.div`
 
 export const Language = styled.span`
   margin: 0 1rem;
+  cursor: pointer;
 `
