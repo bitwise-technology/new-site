@@ -19,10 +19,10 @@ const WhereWeAre = () => {
 
   return (
     <WhereWeAreContainer>
-      <WhereWeArePlaces>
-        {cities} <BreakLine /> & {countries}
+      <WhereWeArePlaces data-testid="where-we-are-places">
+        {cities} <br /> & {countries}
       </WhereWeArePlaces>
-      <WhereWeArePhrase>
+      <WhereWeArePhrase data-testid="where-we-are-phrase">
         <strong>
           {we}
           <BreakLine />

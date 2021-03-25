@@ -24,7 +24,7 @@ export const WhereWeAreContainer = styled.section`
     background-image: url('/img/Mapa Mundi.svg');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: 28% center;
+    background-position: 28% 0%;
 
     height: 48rem;
   }
