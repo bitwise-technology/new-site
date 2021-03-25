@@ -33,11 +33,13 @@ describe('Contact Modal', () => {
       expect(input.value).toBe('')
     })
 
-    radioInputs.forEach((radioInput) => {
-      expect(radioInput).not.toBeChecked()
-    })
+    expect(radioInputs[0]).toBeChecked()
+    expect(radioInputs[1]).not.toBeChecked()
 
-    expect(modal).toHaveAttribute('style', 'transform: scale(0);')
+    expect(modal).toHaveAttribute(
+      'style',
+      'visibility: hidden; opacity: 0; top: 50%;'
+    )
   })
 
   test('should not be visible in initial render', async () => {
@@ -58,7 +60,10 @@ describe('Contact Modal', () => {
       'contact_modal'
     )) as HTMLDivElement
 
-    expect(modal).toHaveAttribute('style', 'transform: scale(0);')
+    expect(modal).toHaveAttribute(
+      'style',
+      'visibility: hidden; opacity: 0; top: 50%;'
+    )
   })
 
   test('should not be visible if user clicks X', async () => {
@@ -79,9 +84,11 @@ describe('Contact Modal', () => {
       'contact_modal'
     )) as HTMLDivElement
 
-    expect(modal).toHaveAttribute('style', 'transform: scale(1);')
-
-    const closeElement = await wrapper.findByText('X')
+    expect(modal).toHaveAttribute(
+      'style',
+      'visibility: visible; opacity: 1; top: 0%;'
+    )
+    const closeElement = await wrapper.findByAltText('Contact Modal Close Icon')
 
     fireEvent.click(closeElement)
 
@@ -207,8 +214,6 @@ describe('Contact Modal', () => {
     )) as HTMLInputElement[]
 
     radioInputs.forEach((radioInput, index) => {
-      expect(radioInput).not.toBeChecked()
-
       fireEvent.click(radioInput)
 
       if (radioInputs.length > 1) {

@@ -12,29 +12,34 @@ import Services from 'ui/components/Services'
 import WhereWeAre from 'ui/components/WhereWeAre'
 import ProgrammingLanguages from 'ui/components/ProgrammingLanguages'
 import LanguagesContextProvider from 'contexts/LanguagesContext'
+import ModalResponse from 'ui/components/ModalResponse'
+import ContactModalResponseProvider from 'contexts/ModalResponse'
 
 const Home = () => {
   return (
     <LanguagesContextProvider>
       <ContactModalProvider>
-        <div
-          style={{
-            position: 'relative',
-            backgroundColor: '#F0F0F0',
-            margin: 'auto'
-          }}
-        >
-          <ContactModal />
-          <Header />
-          <Motto />
-          <Services />
-          <Partners />
-          <WhereWeAre />
-          <ProgrammingLanguages />
-          <CallToActionSection />
-          <BitwiseInfo />
-          <Copyright />
-        </div>
+        <ContactModalResponseProvider>
+          <div
+            style={{
+              position: 'relative',
+              backgroundColor: '#F0F0F0',
+              margin: 'auto'
+            }}
+          >
+            <ContactModal />
+            <ModalResponse />
+            <Header />
+            <Motto />
+            <Services />
+            <Partners />
+            <WhereWeAre />
+            <ProgrammingLanguages />
+            <CallToActionSection />
+            <BitwiseInfo />
+            <Copyright />
+          </div>
+        </ContactModalResponseProvider>
       </ContactModalProvider>
     </LanguagesContextProvider>
   )

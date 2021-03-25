@@ -9,7 +9,10 @@ export const InputWrapper = styled.div`
 export const InputLabel = styled.label`
   color: #5a3d5c;
   font-size: 1.4rem;
-  line-height: 5rem;
+  line-height: 4rem;
+  @media screen and (min-width: 768px) {
+    line-height: 5rem;
+  }
 `
 
 export const StyledInput = styled.input`
@@ -18,4 +21,16 @@ export const StyledInput = styled.input`
   outline: none;
 
   padding: 1rem;
+
+  &:focus {
+    border-color: yellow;
+  }
+`
+
+export const StyledError = styled.p`
+  color: #b11523;
+  font-size: 1.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  padding: 1rem 0;
 `
