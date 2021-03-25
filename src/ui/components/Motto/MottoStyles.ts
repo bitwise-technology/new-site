@@ -21,6 +21,11 @@ export const MottoTitle = styled.h1`
   strong {
     font-family: 'Gotham-Bold';
   }
+  @media screen and (min-width: 768px) {
+    span {
+      display: block;
+    }
+  }
   @media screen and (min-width: 1200px) {
     line-height: normal;
     font-size: 6.5rem;
@@ -49,12 +54,15 @@ export const StyledButton = styled.button`
   font-size: 1.7rem;
   font-weight: bold;
 
+  cursor: pointer;
+
   padding: 1.8rem;
   border: none;
   border-radius: 1rem;
   outline: none;
 
+  width: 25.6rem;
+  max-width: 25.6rem;
+
   margin-bottom: 12rem;
-  @media screen and (min-width: 1200px) {
-  }
 `
