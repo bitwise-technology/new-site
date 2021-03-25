@@ -1,5 +1,22 @@
 export default {
   'pt-BR': {
+    errors: {
+      required: 'Valor é obrigatório',
+      invalidEmail: 'Email é inválido',
+      invalidPhone: 'O número é inválido'
+    },
+
+    modal_response: {
+      success: {
+        title: 'Obrigado !',
+        text: 'Em breve entramos em contato'
+      },
+      error: {
+        title: 'SHIIIIIII !',
+        text: 'Nosso servidor de e-mail está passando por manutenção'
+      }
+    },
+
     contact_modal: {
       title:
         'Preencha o formulário e inicie <br /> a sua<strong> transformação digital </strong>',
@@ -40,7 +57,7 @@ export default {
       title:
         'Inovação, Design e<br /> Tecnologia que <strong>transforma!</strong>',
       text:
-        ' Design, desenvolvimento ágil, inovação,<br /> cultura e liberdade. Nosso desafio é transformar<br /> ideias em resultados reais.',
+        'Design, desenvolvimento ágil, inovação,<br /> cultura e liberdade. Nosso desafio é transformar<br /> ideias em resultados reais.',
       buttonPhrase: 'Falar com um consultor'
     },
 
@@ -50,23 +67,27 @@ export default {
       first_service: {
         title: 'Projeto Gerenciados',
         description:
-          'Co-criamos soluções personalizadas em parceria com seu time. Melhoramos processos internos e garantimos a execução de projetos no prazo necessário.'
+          'Co-criamos soluções personalizadas em parceria com seu time. Melhoramos processos internos e garantimos a execução de projetos no prazo necessário.',
+        alt: 'Tela de computador com esfera verde'
       },
 
       second_service: {
         title: 'Transformação Digital',
+        alt: 'Celular',
         description:
           'Contamos com especialistas em diversas areas (UX/UI, PM, Devops, Arquitetos e Desenvolvedores atuando com metodologia ágeis e constante acompanhamento de performance.'
       },
 
       third_service: {
         title: 'Outsourcing',
+        alt: 'Hierarquia entre processos',
         description:
           'Garantimos uma equipe de alto nível em seu projeto.Elimine custos fixos, compartilhe conhecimento, atinja e alcance resultados reais.'
       },
 
       fourth_service: {
         title: 'HeadHunting',
+        alt: 'Empresário',
         description:
           'Entregamos profissionais com fit adequado ao seu projeto, através de um processo de recrutamento ágil e especializado.'
       }
@@ -77,8 +98,8 @@ export default {
     },
 
     where_we_are: {
-      cities: '18 cidades',
-      countries: '2 paises',
+      cities: '18 Cidades',
+      countries: '2 Paises',
       we: 'Nós',
       are: 'Somos',
       nomad: 'Nômades',
@@ -86,13 +107,37 @@ export default {
     },
 
     programming_languages: {
-      title: 'Nossa Stack'
+      title: 'Nossa Stack',
+
+      first_language: {
+        alt: 'Imagem da linguagem de programação Rust'
+      },
+
+      second_language: {
+        alt: 'Imagem da linguagem de programação Typescript'
+      },
+
+      third_language: {
+        alt: 'Imagem da linguagem de programação Golang'
+      },
+
+      fourth_language: {
+        alt: 'Imagem da linguagem de programação Node.JS'
+      },
+
+      fifth_language: {
+        alt: 'Logo do Bitcoin'
+      },
+
+      sixth_language: {
+        alt: 'Logo de Fintech'
+      }
     },
 
     call_to_action: {
       title: 'O digital é por nossa conta!',
       description:
-        'Nós nascemos em 2015, para mudar o dia a dia das pessoas através de tecnologia <br/> Hoje, com o mesmo objetivo, impactamos empresas através da nossaexperiência e tecnologia em diferentes áreas. Temos uma equipeproativa e disposta a resolver problemas complexos para expandir eescalar o seu negócio.',
+        'Nós nascemos em 2015, para mudar o dia a dia das pessoas através de tecnologia.<br/>Hoje, com o mesmo objetivo, impactamos empresas através da nossa experiência e tecnologia em diferentes áreas. Temos uma equipe proativa e disposta a resolver problemas complexos para expandir e escalar o seu negócio.',
       talk_to_consultant: 'Quero falar com um consultor',
       work_with_us: 'Quero trabalhar na bitwise'
     },
@@ -120,6 +165,23 @@ export default {
     }
   },
   'en-EN': {
+    errors: {
+      required: 'Value is required',
+      invalidEmail: 'Email is invalid',
+      invalidPhone: 'Phone number is invalid'
+    },
+
+    modal_response: {
+      success: {
+        title: 'Thanks !',
+        text: 'Soon we will contact you'
+      },
+      error: {
+        title: 'SHIIIIIII !',
+        text: 'Our email server is undergoing maintenance'
+      }
+    },
+
     contact_modal: {
       title:
         'Fill out the form and start <br /> your <strong> digital transformation </strong>',
@@ -157,33 +219,37 @@ export default {
     },
     motto: {
       title:
-        'Innovation, Design and<br /> Technology that <strong>transform!</strong>',
+        'Innovation, Design and <span /> Technology that <strong>transform!</strong>',
       text:
         ' Design, agile development, innovation,<br /> culture and freedom. Our challenge is to transform<br /> ideas in real results.',
-      buttonPhrase: 'Talk to one of our consultors'
+      buttonPhrase: 'Talk to our consultors'
     },
     services: {
       title: 'Our services',
       first_service: {
         title: 'Managed Projects',
+        alt: 'image',
         description:
           'We co-create customized solutions in partnership with your team. We improve internal processes and guarantee the execution of projects on time.'
       },
 
       second_service: {
         title: 'Digital Transformation',
+        alt: 'image',
         description:
           'We have specialists in several areas (UX / UI, PM, Devops, Architects and Developers working with agile methodology and constant performance monitoring.'
       },
 
       third_service: {
         title: 'Outsourcing',
+        alt: 'image',
         description:
           'We guarantee a high level team in your project. Eliminate fixed costs, share knowledge and achieve real results.'
       },
 
       fourth_service: {
         title: 'HeadHunting',
+        alt: 'image',
         description:
           'We deliver professionals with suitable fit to your project, through an agile and specialized recruitment process.'
       }
@@ -194,8 +260,8 @@ export default {
     },
 
     where_we_are: {
-      cities: '18 cities',
-      countries: '2 countries',
+      cities: '18 Cities',
+      countries: '2 Countries',
       we: 'We',
       are: 'Are',
       nomad: 'Nomad',
@@ -203,7 +269,31 @@ export default {
     },
 
     programming_languages: {
-      title: 'Our stack'
+      title: 'Our stack',
+
+      first_language: {
+        alt: "Rust's programming language image"
+      },
+
+      second_language: {
+        alt: "Typescript's programming language image"
+      },
+
+      third_language: {
+        alt: "Golang's programming language image"
+      },
+
+      fourth_language: {
+        alt: "Node.JS's programming language image"
+      },
+
+      fifth_language: {
+        alt: "Bitcoin's Logo"
+      },
+
+      sixth_language: {
+        alt: "Fintech's Logo"
+      }
     },
 
     call_to_action: {
