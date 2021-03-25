@@ -22,8 +22,8 @@ describe('ModalReponse', () => {
       </ContactModalResponseProvider>
     )
 
-    const title = wrapper.findByText('Obrigado !')
-    const text = wrapper.findByText('Em breve entramos em contato')
+    const title = await wrapper.findByText('Obrigado !')
+    const text = await wrapper.findByText('Em breve entramos em contato')
 
     expect(title).toBeTruthy()
     expect(text).toBeTruthy()
@@ -48,8 +48,8 @@ describe('ModalReponse', () => {
       </ContactModalResponseProvider>
     )
 
-    const title = wrapper.findByText('SHIIIIIII !')
-    const text = wrapper.findByText(
+    const title = await wrapper.findByText('SHIIIIIII !')
+    const text = await wrapper.findByText(
       'Nosso servidor de e-mail está passando por manutenção'
     )
 
