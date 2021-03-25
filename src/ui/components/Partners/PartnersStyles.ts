@@ -17,7 +17,7 @@ export const PartnersTitle = styled.p`
 
 const ScrollAnimation = keyframes`
 	0% { transform: translateX(100px); }
-	100% { transform: translateX(calc(-100px * 19))}
+	100% { transform: translateX(calc(-100px * 13))}
 `
 
 export const PartnersBox = styled.div`
