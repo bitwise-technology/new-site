@@ -12,6 +12,16 @@ export const CopyrightContainer = styled.div`
   width: 80%;
   margin: auto;
 
+  @media screen and (min-width: 992px) {
+    width: 80%;
+    margin: auto;
+  }
+
+  @media screen and (min-width: 1500px) {
+    width: 60%;
+    margin: auto;
+  }
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,6 +31,8 @@ export const CopyrightText = styled.p`
   font-size: 1.2rem;
 
   line-height: 2rem;
+
+  max-width: 50%;
 
   @media screen and (max-width: 768px) {
     width: 20rem;
@@ -37,6 +49,9 @@ export const SocialMedias = styled.div`
 
 export const BackToTop = styled.button`
   font-size: 1.2rem;
+  text-transform: uppercase;
+  font-family: 'Gotham';
+  font-weight: bold;
   color: #d0c7d1;
   line-height: 2rem;
 

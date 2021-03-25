@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 import {
   BackToTop,
   CopyrightContainer,
@@ -29,21 +27,11 @@ const Copyright = () => {
 
         <SocialMedias>
           <a href="/">
-            <Image
-              src="/img/MediumLogo.svg"
-              width={24}
-              height={24}
-              layout="intrinsic"
-            />
+            <img src="/img/MediumLogo.svg" />
           </a>
 
           <a href="/">
-            <Image
-              src="/img/SocialLogos.svg"
-              width={58}
-              height={24}
-              layout="intrinsic"
-            />
+            <img src="/img/SocialLogos.svg" />
           </a>
         </SocialMedias>
 
