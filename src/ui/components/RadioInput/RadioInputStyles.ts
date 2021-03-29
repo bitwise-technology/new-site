@@ -10,12 +10,34 @@ export const RadioInputContainer = styled.div`
 export const StyledRadioInput = styled.input`
   display: none;
 
-  &:checked + label::before {
-    background-color: #5a3d5c;
-    border: none;
+  &:checked + label > span::before {
+    opacity: 1;
   }
 `
 
+export const StyledRadio = styled.span`
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 2px solid #5a3d5c;
+  background-color: none;
+  border-radius: 50%;
+  margin-right: 1rem;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    opacity: 0;
+    transition: all 0.2s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    width: 0.7rem;
+    height: 0.7rem;
+    background-color: #5a3d5c;
+    border-radius: 50%;
+  }
+`
 export const RadioInputLabel = styled.label`
   display: flex;
   justify-content: center;
@@ -25,16 +47,7 @@ export const RadioInputLabel = styled.label`
   line-height: 2rem;
   color: #5a3d5c;
   cursor: pointer;
-  &::before {
-    content: '';
-    display: inline-block;
-    width: 1.2rem;
-    height: 1.2rem;
-    border: 2px solid #5a3d5c;
-    background-color: none;
-    border-radius: 50%;
-    margin-right: 1rem;
-  }
+
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: center;

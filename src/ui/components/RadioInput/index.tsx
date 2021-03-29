@@ -2,6 +2,7 @@ import { InputHTMLAttributes } from 'react'
 import {
   RadioInputContainer,
   RadioInputLabel,
+  StyledRadio,
   StyledRadioInput
 } from './RadioInputStyles'
 
@@ -24,7 +25,10 @@ const RadioInput: React.FC<RadioInputProps> = ({
         id={id}
         {...othersProperties}
       />
-      <RadioInputLabel htmlFor={id}>{label}</RadioInputLabel>
+      <RadioInputLabel htmlFor={id}>
+        <StyledRadio />
+        {label}
+      </RadioInputLabel>
     </RadioInputContainer>
   )
 }
