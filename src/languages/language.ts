@@ -110,26 +110,38 @@ export default {
       title: 'Nossa Stack',
 
       first_language: {
+        text:
+          'Rust é uma linguagem de programação conhecida por ter um ótimo desempenho, uma ótima confiabilidade e uma excelente produtividade.',
         alt: 'Imagem da linguagem de programação Rust'
       },
 
       second_language: {
+        text:
+          'TypeScript é uma linguagem de código aberto que se baseia em JavaScript, uma das ferramentas mais usadas do mundo, adicionando definições de tipo estático.',
         alt: 'Imagem da linguagem de programação Typescript'
       },
 
       third_language: {
+        text:
+          'Go é uma linguagem de programação de código aberto que facilita a construção de software simples , confiável e eficiente .',
         alt: 'Imagem da linguagem de programação Golang'
       },
 
       fourth_language: {
+        text:
+          'Node.js é um software de código aberto, multiplataforma, que executa códigos JavaScript no backend/servidor e frontend/interface.',
         alt: 'Imagem da linguagem de programação Node.JS'
       },
 
       fifth_language: {
+        text:
+          'Blockchain é muito utilizado em Gestão de contrato inteligentes, Processamentos de pagamentos, gestão de cadeia e abastecimento e Proteção de ativos.',
         alt: 'Logo do Bitcoin'
       },
 
       sixth_language: {
+        text:
+          'Construa soluções em meio de pagamentos. Ajudamos a sua startup a Inovar e otimizar serviços do sistema financeiro.',
         alt: 'Logo de Fintech'
       }
     },
@@ -272,26 +284,38 @@ export default {
       title: 'Our stack',
 
       first_language: {
+        text:
+          'Rust is a programming language known for great performance, great reliability and excellent productivity.',
         alt: "Rust's programming language image"
       },
 
       second_language: {
+        text:
+          'TypeScript is an open source language that is based on JavaScript, one of the most used tools in the world, adding static type definitions.',
         alt: "Typescript's programming language image"
       },
 
       third_language: {
+        text:
+          'Go is an open source programming language that facilitates the construction of simple, reliable and efficient software.',
         alt: "Golang's programming language image"
       },
 
       fourth_language: {
+        text:
+          'Node.js is open source, multiplatform software that runs JavaScript code on the backend / server and frontend / interface.',
         alt: "Node.JS's programming language image"
       },
 
       fifth_language: {
+        text:
+          'Blockchain is widely used in smart contract management, payment processing, supply and chain management and asset protection.',
         alt: "Bitcoin's Logo"
       },
 
       sixth_language: {
+        text:
+          'Build payment solutions. We help your startup to innovate and optimize financial system services.',
         alt: "Fintech's Logo"
       }
     },
