@@ -56,8 +56,29 @@ const ModalResponse = () => {
           Enquanto isso, acompanhe a bitwise nas redes sociais :
         </ModalResponseSocialMediaText>
         <ModalResponseSocialMedias>
-          <img src="/img/MediumLogo.svg" />
-          <img src="/img/SocialLogos.svg" />
+          <a
+            href="https://medium.com/@bitwisetechnology"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src="/img/MediumLogo.svg" />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/company/bitwisetechnology"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src="/img/linkedIn.svg" />
+          </a>
+
+          <a
+            href="https://instagram.com/bitwisetechnology?igshid=l4nls0y2rbks"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src="/img/instagram.svg" />
+          </a>
         </ModalResponseSocialMedias>
         <ModalResponseSocialMedias></ModalResponseSocialMedias>
       </ModalResponseSocialMediaContainer>

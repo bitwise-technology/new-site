@@ -71,6 +71,16 @@ export const ModalResponseSocialMediaText = styled.p`
 `
 
 export const ModalResponseSocialMedias = styled.div`
+  a {
+    margin-right: 1rem;
+
+    img {
+      width: 24px;
+      height: 24px;
+
+      fill: #fff;
+    }
+  }
   & > img:not(:first-child) {
     margin-left: 1rem;
   }

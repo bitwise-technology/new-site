@@ -42,8 +42,15 @@ export const CopyrightText = styled.p`
 `
 
 export const SocialMedias = styled.div`
-  a:first-of-type {
+  a {
     margin-right: 1rem;
+
+    img {
+      width: 24px;
+      height: 24px;
+
+      fill: #fff;
+    }
   }
 `
 
