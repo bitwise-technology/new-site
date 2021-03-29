@@ -14,7 +14,7 @@ export const ProgrammingLanguagesContainer = styled.section`
 
 export const ProgrammingLanguagesTitle = styled.h3`
   text-align: center;
-  font-family: 'Gotham';
+  font-family: 'Gotham-Black';
   line-height: 5.6rem;
   font-size: 3.2rem;
   color: #534554;
@@ -55,14 +55,18 @@ export const LanguageBox = styled.div`
     margin-top: 2rem;
     max-width: 50px;
     max-height: 50px;
+    width: 50px;
+    height: 50px;
 
     @media screen and (min-width: 1400px) {
       align-self: flex-start;
     }
   }
+
   @media screen and (min-width: 1400px) {
     flex-direction: row;
     justify-content: center;
+    align-items: flex-start;
     text-align: left;
   }
 `
@@ -93,6 +97,9 @@ export const LanguageText = styled.div`
     padding-bottom: 2rem;
     color: #000;
     margin-left: 3rem;
+
+    display: flex;
+    flex-direction: column;
   }
 
   @media screen and (min-width: 1400px) {
@@ -102,4 +109,9 @@ export const LanguageText = styled.div`
 
 export const LanguageDescription = styled.p`
   margin-top: 1.5rem;
+  text-align: justify;
+
+  @media screen and (min-width: 1400px) {
+    text-align: left;
+  }
 `
