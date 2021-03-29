@@ -26,12 +26,28 @@ const Copyright = () => {
         <CopyrightText>{text}</CopyrightText>
 
         <SocialMedias>
-          <a href="/">
+          <a
+            href="https://medium.com/@bitwisetechnology"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src="/img/MediumLogo.svg" />
           </a>
 
-          <a href="/">
-            <img src="/img/SocialLogos.svg" />
+          <a
+            href="https://www.linkedin.com/company/bitwisetechnology"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src="/img/linkedIn.svg" />
+          </a>
+
+          <a
+            href="https://instagram.com/bitwisetechnology?igshid=l4nls0y2rbks"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src="/img/instagram.svg" />
           </a>
         </SocialMedias>
 
