@@ -12,6 +12,14 @@ export const HeaderContainer = styled.header`
   padding-top: 4rem;
 
   font-size: 1.6rem;
+
+  @media screen and (min-width: 992px) {
+    width: 90%;
+  }
+
+  @media screen and (min-width: 1400px) {
+    width: 80%;
+  }
 `
 
 export const LogoContainer = styled.div`
