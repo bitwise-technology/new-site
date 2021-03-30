@@ -58,10 +58,10 @@ export const WhereWeArePlaces = styled.div`
 export const WhereWeArePhrase = styled.p`
   color: #640055;
 
-  font-size: 2.8rem;
+  font-size: 3.8rem;
   font-family: 'Gotham';
   font-weight: 500;
-  line-height: 3.6rem;
+  line-height: 4.6rem;
   flex: 1;
 
   display: flex;
@@ -122,6 +122,7 @@ export const BlinkTextCursor = keyframes`
 
 export const TypeWriterEffect = styled.span`
   overflow: hidden;
+  font-family: 'Gotham-Black';
   max-width: fit-content;
   border-right: 3px solid rgba(255, 255, 255, 0.75);
   padding-right: 0.3rem;

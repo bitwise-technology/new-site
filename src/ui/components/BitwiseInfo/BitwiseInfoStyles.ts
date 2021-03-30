@@ -11,7 +11,6 @@ export const InfoContainer = styled.div`
   padding-bottom: 6rem;
 
   @media screen and (max-width: 768px) {
-    margin-top: 2rem;
     padding-top: 4.2rem;
     padding-bottom: 4rem;
   }
@@ -43,7 +42,7 @@ export const InfoContainer = styled.div`
 `
 
 export const BackToTop = styled.p`
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 992px) {
     display: none;
   }
 `
@@ -55,7 +54,7 @@ export const BitwiseMotto = styled.p`
   line-height: 2rem;
   letter-spacing: 1px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 992px) {
     display: none;
   }
 `

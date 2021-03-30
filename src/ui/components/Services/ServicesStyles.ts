@@ -8,12 +8,18 @@ export const ServicesContainerWrapper = styled.div`
 export const ServicesContainer = styled.section`
   background-color: #534554;
   font-family: 'Gotham';
-  @media screen and (min-width: 1200px) {
+  box-shadow: 1px 1px 5px solid #ccc;
+
+  @media screen and (min-width: 992px) {
     border-radius: 1rem;
 
-    width: 80%;
+    width: 90%;
 
     margin: auto;
+  }
+
+  @media screen and (min-width: 1400px) {
+    width: 80%;
   }
 `
 
@@ -69,7 +75,7 @@ export const ServicesBox = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
-    justify-content: space-between;
+    justify-content: space-between !important;
     flex-wrap: nowrap;
     margin-top: 5rem;
     & > * {
@@ -80,6 +86,7 @@ export const ServicesBox = styled.div`
 
 export const Service = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   margin: 1.6rem 0;
   @media screen and (min-width: 768px) {
@@ -97,12 +104,14 @@ export const Service = styled.div`
 export const ServiceText = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   flex: 1;
   margin: 0 1rem;
 
   @media screen and (min-width: 1200px) {
     display: block;
     padding-left: 0;
+    margin: 0;
   }
 `
 
@@ -111,6 +120,13 @@ export const ServiceImageBox = styled.div`
   justify-content: center;
   align-items: center;
   flex: 1;
+
+  @media screen and (max-width: 768px) {
+    img {
+      width: 8rem;
+      height: 8rem;
+    }
+  }
 
   @media screen and (min-width: 768px) {
     display: block;
@@ -127,13 +143,19 @@ export const ServiceTitle = styled.h3<{ titleBorderColor: string }>`
 
   position: relative;
 
-  border-left: ${(props) => `2px solid #${props.titleBorderColor}`};
+  text-align: center;
 
-  padding-left: 1rem;
+  &::before {
+    content: '';
+    border-left: ${(props) => `2px solid #${props.titleBorderColor}`};
+    width: 1rem;
+    margin-right: 7px;
+  }
 
   margin: 1.5rem 0;
 
   @media screen and (min-width: 1200px) {
+    text-align: left;
     font-size: 1.6rem;
   }
 
@@ -150,13 +172,14 @@ export const ServiceDescription = styled.p`
   font-size: 1.4rem;
   line-height: 2rem;
 
-  padding-left: 1.1rem;
+  text-align: center;
 
-  text-align: left;
-
-  max-width: 18rem;
+  margin-left: 1rem;
 
   @media screen and (min-width: 768px) {
+    max-width: 18rem;
+    text-align: left;
+
     max-width: 100%;
   }
 

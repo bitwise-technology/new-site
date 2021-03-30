@@ -23,7 +23,7 @@ export const StyledInput = styled.input`
   padding: 1rem;
 
   &:focus {
-    border-color: yellow;
+    border-color: #e5c3d1;
   }
 `
 

@@ -71,15 +71,13 @@ const Services = () => {
           <ServicesTitle>{servicesStrings.title}</ServicesTitle>
           <ServicesBox data-testid="services-box">
             {services.map(
-              ({ title, titleBorderColor, description, image, alt }, index) => {
-                const isOdd = index % 2 !== 0
-
+              ({ title, titleBorderColor, description, image, alt }) => {
                 return (
                   <Service key={title}>
                     <ServiceImageBox>
                       <img src={`/img/${image}.svg`} alt={alt} />
                     </ServiceImageBox>
-                    <ServiceText style={{ order: isOdd ? -1 : 1 }}>
+                    <ServiceText>
                       <ServiceTitle titleBorderColor={titleBorderColor}>
                         {title}
                       </ServiceTitle>

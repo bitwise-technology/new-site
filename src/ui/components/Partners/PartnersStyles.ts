@@ -17,14 +17,12 @@ export const PartnersTitle = styled.p`
 
 const ScrollAnimation = keyframes`
 	0% { transform: translateX(100px); }
-	100% { transform: translateX(calc(-100px * 13))}
+	100% { transform: translateX(calc(-100px * 10))}
 `
 
 export const PartnersBox = styled.div`
   display: flex;
   justify-content: space-between;
-  max-width: 80%;
-
   width: 80%;
 
   margin: auto;
@@ -35,7 +33,7 @@ export const PartnersBox = styled.div`
     }
   }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 992px) {
     overflow: scroll;
     scrollbar-width: none;
     ::-webkit-scrollbar {
@@ -48,14 +46,22 @@ export const PartnersBox = styled.div`
   img {
     display: inline-block;
 
-    margin: 0 1rem;
-
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 992px) {
       max-width: 100px;
+      margin: 1rem;
       animation: ${ScrollAnimation} 30s linear infinite;
     }
   }
-  @media screen and (min-width: 1200px) {
+
+  @media screen and (min-width: 992px) {
+    img {
+      margin: 0 0.5rem;
+      max-width: 100%;
+    }
+    width: 90%;
+  }
+
+  @media screen and (min-width: 1400px) {
     display: flex;
     justify-content: space-between;
 

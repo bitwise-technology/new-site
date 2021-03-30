@@ -13,10 +13,18 @@ export const ContactModalContainer = styled.div`
   max-width: 100%;
   overflow-y: scroll;
 
+  &::-webkit-scrollbar {
+    background: transparent;
+    width: 0;
+  }
+
   transition: all 0.5s;
 
   @media screen and (min-width: 1200px) {
     width: 60%;
+    right: 0;
+    left: auto;
+    margin: 0;
   }
 `
 

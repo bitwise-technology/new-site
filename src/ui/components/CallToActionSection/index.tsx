@@ -28,6 +28,12 @@ const CallToActionSection = () => {
     setShowContactModal && setShowContactModal(true)
   }
 
+  const goToLinkedIn = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault()
+
+    window.open('https://www.linkedin.com/company/bitwisetechnology', '_blank')
+  }
+
   return (
     <CallToActionSectionContainerWrapper>
       <CallToActionSectionContainer>
@@ -42,7 +48,7 @@ const CallToActionSection = () => {
             <StyledButton data-testid="open-modal-button" onClick={openModal}>
               {callToActionStrings.talk_to_consultant}
             </StyledButton>
-            <StyledButtonInverted onClick={openModal}>
+            <StyledButtonInverted onClick={goToLinkedIn}>
               {callToActionStrings.work_with_us}
             </StyledButtonInverted>
           </ButtonsContainer>
