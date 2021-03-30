@@ -6,18 +6,23 @@ export const GlobalStyles = createGlobalStyle`
         font-family: "Gotham-Bold";
         src: url(/fonts/Gotham/Gotham-Bold.otf);
         font-weight: bold;
-        font-style: normal;
     }
 
     @font-face {
-        font-family: "Gotham-Medium";
-        src: url(/fonts/Gotham/Gotham-Medium.otf);
-
+        font-family: "Gotham-Black";
+        src: url(/fonts/Gotham/Gotham-Black.otf);
     }
+    
 
     @font-face {
         font-family: "Gotham";
         src: url(/fonts/Gotham/Gotham-Book.otf);
+        font-weight: 400;
+    }
+
+    @font-face {
+        font-family: "Gotham-Ultra";
+        src: url(/fonts/Gotham/Gotham-Ultra.otf);
     }
 
     * {
