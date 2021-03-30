@@ -47,7 +47,7 @@ export default async function handler(
     // send mail with defined transport object
     await transporter.sendMail({
       from: email, // sender address
-      to: 'tiago_jvo@outlook.com', // list of receivers
+      to: 'estevao@bitwise.ltda', // list of receivers
       subject: 'Contato de Cliente', // Subject line
       html: html // html body
     })
