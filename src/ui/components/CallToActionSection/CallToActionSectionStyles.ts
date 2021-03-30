@@ -16,13 +16,17 @@ export const CallToActionSectionContainer = styled.section`
   }
 
   @media screen and (min-width: 992px) {
-    width: 80%;
+    width: 90%;
 
     flex-direction: row;
 
     margin: auto;
 
     height: 90vh;
+  }
+
+  @media screen and (min-width: 1400px) {
+    width: 80%;
   }
 `
 
@@ -67,6 +71,13 @@ export const CallToActionSectionDescription = styled.p`
     font-size: 2rem;
     line-height: 4rem;
 
+    max-width: 45rem;
+  }
+
+  @media screen and (min-width: 1400px) {
+    font-size: 2rem;
+    line-height: 4rem;
+
     max-width: 53rem;
   }
 `
@@ -77,6 +88,10 @@ export const ButtonsContainer = styled.div`
   max-width: 40rem;
 
   @media screen and (min-width: 1200px) {
+    max-width: 45rem;
+  }
+
+  @media screen and (min-width: 1400px) {
     max-width: 53rem;
   }
 `
@@ -112,26 +127,36 @@ export const StyledButtonInverted = styled.button`
 `
 
 export const CallToActionSectionImageContainer = styled.div`
-  max-width: 45%;
+  max-width: 100%;
   align-self: center;
   padding: 1rem;
   margin: 2rem 0;
   order: -1;
 
+  display: flex;
+  justify-content: center;
+
   img {
     max-width: 100%;
-    width: 90%;
+    width: 80%;
+    @media screen and (min-width: 992px) {
+      width: 90%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 80%;
   }
   @media screen and (min-width: 992px) {
     order: 0;
     flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
 
-    width: 100%;
-    align-self: initial;
     padding: 0;
     margin: 0;
+    max-width: 45%;
+  }
+
+  @media screen and (min-width: 1300px) {
+    max-width: 45%;
   }
 `
