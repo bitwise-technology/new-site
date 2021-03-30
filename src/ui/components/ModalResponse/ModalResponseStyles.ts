@@ -9,7 +9,7 @@ export const ModalResponseContainer = styled.div<ModalResposneContainerProps>`
     props.isValidFeedback ? '#890877' : '#B11523'};
   max-width: 78.8rem;
 
-  position: absolute;
+  position: fixed;
   top: 0%;
   right: 0;
 
