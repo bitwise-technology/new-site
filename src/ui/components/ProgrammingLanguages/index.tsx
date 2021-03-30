@@ -3,6 +3,8 @@ import { useContext } from 'react'
 
 import strings from '../../../languages/language'
 
+import parse from 'html-react-parser'
+
 import {
   LanguageText,
   LanguageBox,
@@ -22,43 +24,37 @@ const ProgrammingLanguages = () => {
   const languages = [
     {
       name: 'Rust',
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
+      description: programmingLanguagesStrings.first_language.text,
       image: '/img/languages/Rust_programming_language_black_logo.svg',
       alt: programmingLanguagesStrings.first_language.alt
     },
     {
       name: 'Typescript',
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
+      description: programmingLanguagesStrings.second_language.text,
       image: '/img/languages/Typescript_logo_2020.svg',
       alt: programmingLanguagesStrings.second_language.alt
     },
     {
       name: 'Golang',
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
+      description: programmingLanguagesStrings.third_language.text,
       image: '/img/languages/Go_Logo_Blue.svg',
       alt: programmingLanguagesStrings.third_language.alt
     },
     {
       name: 'Node.JS',
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
+      description: programmingLanguagesStrings.fourth_language.text,
       image: '/img/languages/Node.js_logo.svg',
       alt: programmingLanguagesStrings.fourth_language.alt
     },
     {
       name: 'Blockchain',
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
+      description: programmingLanguagesStrings.fifth_language.text,
       image: '/img/languages/blockchain-logo.svg',
       alt: programmingLanguagesStrings.fifth_language.alt
     },
     {
       name: 'Fintechs',
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
+      description: programmingLanguagesStrings.sixth_language.text,
       image: '/img/languages/credit card alt.svg',
       alt: programmingLanguagesStrings.sixth_language.alt
     }
@@ -71,12 +67,22 @@ const ProgrammingLanguages = () => {
       </ProgrammingLanguagesTitle>
       <Languages data-testid="languages">
         {languages.map(({ name, description, image, alt }) => {
+          const isNodeJs = name === 'Node.JS'
+
           return (
             <LanguageBox key={name}>
               <img src={image} alt={alt} />
               <LanguageText>
                 <LanguageName>{name}</LanguageName>
-                <LanguageDescription>{description}</LanguageDescription>
+                <LanguageDescription
+                  style={
+                    isNodeJs
+                      ? { maxWidth: '21.5rem', wordSpacing: '.1rem' }
+                      : {}
+                  }
+                >
+                  {parse(description)}
+                </LanguageDescription>
               </LanguageText>
             </LanguageBox>
           )
