@@ -32,7 +32,7 @@ export const ServicesTitle = styled.h2`
   color: #fff;
 
   text-align: center;
-
+  font-family: 'Gotham';
   position: relative;
 
   @media screen and (min-width: 1200px) {
