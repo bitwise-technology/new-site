@@ -40,7 +40,7 @@ export default async function handler(
     const html = `<p>Olá, sou o ${name}, estou aqui pois necessito de um serviço da bitwise.</p><br/>
       <p>O que eu quero : ${message}</p>
       <p>Em situação de retorno, prefiro que seja contatado por : ${wayOfContact}</p>
-      <p>Caso aja alguma duvida, aqui está o meu telefone : ${phone}</p>
+      <p>Caso haja alguma duvida, aqui está o meu telefone : ${phone}</p>
       <p>Att. ${name} - ${company}</p>
     `
 
