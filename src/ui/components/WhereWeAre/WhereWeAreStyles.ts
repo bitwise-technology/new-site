@@ -122,7 +122,6 @@ export const BlinkTextCursor = keyframes`
 
 export const TypeWriterEffect = styled.span`
   overflow: hidden;
-  font-family: 'Gotham-Black';
   max-width: fit-content;
   border-right: 3px solid rgba(255, 255, 255, 0.75);
   padding-right: 0.3rem;
