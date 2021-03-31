@@ -67,22 +67,14 @@ const ProgrammingLanguages = () => {
       </ProgrammingLanguagesTitle>
       <Languages data-testid="languages">
         {languages.map(({ name, description, image, alt }) => {
-          const isNodeJs = name === 'Node.JS'
-
           return (
             <LanguageBox key={name}>
-              <img src={image} alt={alt} />
+              <div>
+                <img src={image} alt={alt} />
+              </div>
               <LanguageText>
                 <LanguageName>{name}</LanguageName>
-                <LanguageDescription
-                  style={
-                    isNodeJs
-                      ? { maxWidth: '21.5rem', wordSpacing: '.1rem' }
-                      : {}
-                  }
-                >
-                  {parse(description)}
-                </LanguageDescription>
+                <LanguageDescription>{parse(description)}</LanguageDescription>
               </LanguageText>
             </LanguageBox>
           )
