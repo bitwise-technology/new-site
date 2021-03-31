@@ -140,6 +140,7 @@ export const SubmitButtonContainer = styled.div`
 
 export const StyledSubmitButton = styled.button`
   background-color: #890877;
+  cursor: pointer;
 
   color: #fff;
   font-size: 1.4rem;

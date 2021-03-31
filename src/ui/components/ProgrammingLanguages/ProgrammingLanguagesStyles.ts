@@ -22,7 +22,7 @@ export const ProgrammingLanguagesContainer = styled.section`
 
 export const ProgrammingLanguagesTitle = styled.h3`
   text-align: center;
-  font-family: 'Gotham-Black';
+  font-family: 'Gotham';
   line-height: 5.6rem;
   font-size: 3.2rem;
   color: #534554;
@@ -52,7 +52,7 @@ export const LanguageBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 3rem;
+  padding-left: 1rem;
 
   box-shadow: 2px 5px 5px #bbb;
 
@@ -64,21 +64,27 @@ export const LanguageBox = styled.div`
 
   img {
     margin-top: 2rem;
-    max-width: 50px;
-    max-height: 50px;
-    width: 50px;
-    height: 50px;
 
     @media screen and (min-width: 1500px) {
       align-self: flex-start;
     }
   }
 
-  @media screen and (min-width: 1500px) {
+  @media screen and (max-width: 768px) {
+    padding-bottom: 3rem;
+  }
+
+  @media screen and (min-width: 1200px) {
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     text-align: left;
+
+    padding-left: 3rem;
+  }
+
+  @media screen and (min-width: 1600px) {
+    padding-left: 6rem;
   }
 `
 
@@ -88,9 +94,9 @@ export const LanguageText = styled.div`
   max-width: 24rem;
   margin-top: 0.5rem;
   color: #000;
-  @media screen and (min-width: 1500px) {
+  @media screen and (min-width: 1200px) {
     padding-bottom: 2rem;
-    margin-left: 3rem;
+    margin-left: 2rem;
 
     display: flex;
     flex-direction: column;
@@ -104,12 +110,11 @@ export const LanguageText = styled.div`
 export const LanguageName = styled.p`
   font-family: 'Gotham-Bold';
   font-size: 1.4rem;
+  color: #534554;
   margin-top: 2rem;
 
-  @media screen and (min-width: 1500px) {
+  @media screen and (min-width: 1300px) {
     text-transform: uppercase;
-
-    font-size: 1.6rem;
   }
 `
 
@@ -118,6 +123,7 @@ export const LanguageDescription = styled.p`
 
   @media screen and (min-width: 1200px) {
     text-align: left;
-    height: 11rem;
+    max-width: 22rem;
+    padding-bottom: 1.8rem;
   }
 `
