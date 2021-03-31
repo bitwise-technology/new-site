@@ -124,6 +124,8 @@ export const StyledButtonInverted = styled.button`
   border-radius: 1rem;
   cursor: pointer;
   outline: none;
+  background-color: transparent;
+  -webkit-background-color: transparent;
 `
 
 export const CallToActionSectionImageContainer = styled.div`
