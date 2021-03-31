@@ -3,7 +3,8 @@ import styled from 'styled-components'
 export const ContactModalContainer = styled.div`
   position: fixed;
   z-index: 1;
-  height: 95vh;
+  max-height: 95vh;
+  height: fit-content;
   left: 0;
   right: 0;
   margin: 1rem auto;
@@ -134,7 +135,7 @@ export const SubmitButtonContainer = styled.div`
   padding-bottom: 1rem;
 
   @media screen and (min-width: 768px) {
-    margin: 5rem auto;
+    margin: 3rem auto;
   }
 `
 

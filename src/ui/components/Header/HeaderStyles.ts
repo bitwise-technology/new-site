@@ -9,7 +9,7 @@ export const HeaderContainer = styled.header`
   align-items: center;
   justify-content: center;
   margin: auto;
-  padding-top: 4rem;
+  padding-top: 2rem;
 
   font-size: 1.6rem;
 
