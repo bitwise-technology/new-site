@@ -27,6 +27,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.17",
     "@babel/preset-typescript": "^7.12.17",
+    "@netlify/plugin-nextjs": "^3.0.3",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@types/jest": "^26.0.20",
