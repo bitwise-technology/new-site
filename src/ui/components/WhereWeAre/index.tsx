@@ -1,5 +1,5 @@
 import { LanguagesContext } from 'contexts/LanguagesContext'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import {
   WhereWeAreContainer,
   WhereWeArePhrase,
@@ -7,6 +7,8 @@ import {
   BreakLine,
   TypeWriterEffect
 } from './WhereWeAreStyles'
+
+import ScrollOut from 'scroll-out'
 
 import strings from '../../../languages/language'
 
@@ -16,6 +18,16 @@ const WhereWeAre = () => {
   const { cities, countries, we, are, nomad, description } = strings[
     selectedLanguage
   ].where_we_are
+
+  useEffect(() => {
+    const scrollOut = ScrollOut({
+      targets: '.type_writer'
+    })
+
+    return () => {
+      scrollOut.teardown()
+    }
+  })
 
   return (
     <WhereWeAreContainer>
@@ -29,7 +41,7 @@ const WhereWeAre = () => {
           {are}
         </strong>
         <BreakLine />
-        <TypeWriterEffect>{nomad}</TypeWriterEffect>
+        <TypeWriterEffect className="type_writer">{nomad}</TypeWriterEffect>
         <BreakLine />
         <small>{description}</small>
       </WhereWeArePhrase>
