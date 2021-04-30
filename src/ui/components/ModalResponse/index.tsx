@@ -61,7 +61,7 @@ const ModalResponse = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <img src="/img/MediumLogo.svg" />
+            <img src="/img/MediumLogo.svg" alt="Medium Logo" />
           </a>
 
           <a
@@ -69,7 +69,7 @@ const ModalResponse = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <img src="/img/linkedIn.svg" />
+            <img src="/img/linkedIn.svg" alt="LinkedIn Logo" />
           </a>
 
           <a
@@ -77,7 +77,7 @@ const ModalResponse = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <img src="/img/instagram.svg" />
+            <img src="/img/instagram.svg" alt="Instagram Logo" />
           </a>
         </ModalResponseSocialMedias>
         <ModalResponseSocialMedias></ModalResponseSocialMedias>

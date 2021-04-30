@@ -31,7 +31,7 @@ const BitwiseInfo = () => {
     <InfoContainerWrapper>
       <InfoContainer>
         <LogoContainer>
-          <img src="/img/Bottom Logo.svg" />
+          <img src="/img/Bottom Logo.svg" alt="Logo da bitwise" />
         </LogoContainer>
 
         <BitwiseMotto>{parse(bitwiseInfoStrings.beliefs)}</BitwiseMotto>
