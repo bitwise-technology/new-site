@@ -22,7 +22,7 @@ export const CallToActionSectionContainer = styled.section`
 
     margin: auto;
 
-    padding: 5rem 0;
+    padding: 10rem 0;
   }
 
   @media screen and (min-width: 1400px) {
@@ -45,12 +45,13 @@ export const CallToActionSectionTitle = styled.h3`
   font-size: 2.5rem;
   line-height: 3rem;
   color: #534554;
+  font-weight: bold;
   @media screen and (min-width: 992px) {
     font-size: 3rem;
     line-height: 5.6rem;
   }
   @media screen and (min-width: 1600px) {
-    font-size: 3.6rem;
+    font-size: 3.2rem;
     line-height: 5.6rem;
   }
 `
@@ -77,10 +78,10 @@ export const CallToActionSectionDescription = styled.p`
   }
 
   @media screen and (min-width: 1400px) {
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 4rem;
 
-    max-width: 53rem;
+    max-width: 49rem;
   }
 `
 
@@ -94,7 +95,7 @@ export const ButtonsContainer = styled.div`
   }
 
   @media screen and (min-width: 1400px) {
-    max-width: 53rem;
+    max-width: 49rem;
   }
 `
 
@@ -161,6 +162,6 @@ export const CallToActionSectionImageContainer = styled.div`
   }
 
   @media screen and (min-width: 1300px) {
-    max-width: 45%;
+    max-width: 43%;
   }
 `
