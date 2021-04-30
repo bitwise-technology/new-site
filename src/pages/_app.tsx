@@ -7,17 +7,25 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Bitwise - 2021</title>
+        <title>Bitwise - Technology</title>
         <link rel="shortcut icon" href="/img/Logo.svg" />
         <link rel="apple-touch-icon" href="/img/Logo.svg" />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="description" content="Novo site da bitwise technology" />
+        <meta
+          name="description"
+          content="Design, desenvolvimento ágil, inovação e liberdade. Nosso desafio é transformar ideias em resultados reais."
+        />
+        <meta
+          name="keywods"
+          content="blockchain, desenvolvimento, consultoria, trabalho remoto, fintech"
+        />
+        <link rel="canonical" href="https://bitwise.ltda/" />
+
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
           rel="stylesheet"
-        ></link>
-
+        />
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=UA-143190317-1"
@@ -32,7 +40,6 @@ function App({ Component, pageProps }: AppProps) {
             `
           }}
         />
-
         <script
           dangerouslySetInnerHTML={{
             __html: `
