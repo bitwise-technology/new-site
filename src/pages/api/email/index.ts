@@ -32,8 +32,8 @@ export default async function handler(
       port: 587,
       secure: false,
       auth: {
-        user: 'mailerbitwise@gmail.com',
-        pass: 'bit@wise@mailer'
+        user: process.env.EMAIL_AUTH_USER,
+        pass: process.env.EMAIL_AUTH_PASSWORD
       }
     })
 
@@ -47,7 +47,7 @@ export default async function handler(
     // send mail with defined transport object
     await transporter.sendMail({
       from: email, // sender address
-      to: 'estevao@bitwise.ltda', // list of receivers
+      to: process.env.EMAIL_ADDRESS_TO, // list of receivers
       subject: 'Contato de Cliente', // Subject line
       html: html // html body
     })
