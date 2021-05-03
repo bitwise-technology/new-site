@@ -25,6 +25,7 @@ export const ProgrammingLanguagesTitle = styled.h3`
   font-family: 'Gotham';
   line-height: 5.6rem;
   font-size: 3.2rem;
+  font-weight: bold;
   color: #534554;
   margin: 4.3rem 0 5.8rem 0;
 `

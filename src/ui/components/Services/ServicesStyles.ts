@@ -33,6 +33,7 @@ export const ServicesTitle = styled.h2`
 
   text-align: center;
   font-family: 'Gotham';
+  font-weight: bold;
   position: relative;
 
   @media screen and (min-width: 1200px) {
@@ -139,6 +140,7 @@ export const ServiceTitle = styled.h3<{ titleBorderColor: string }>`
   font-size: 1.6rem;
   font-weight: 500;
   font-family: Montserrat;
+  font-weight: 700;
   line-height: 2rem;
 
   position: relative;
@@ -161,7 +163,6 @@ export const ServiceTitle = styled.h3<{ titleBorderColor: string }>`
 
   @media screen and (min-width: 1600px) {
     font-size: 1.9rem;
-    font-weight: 500;
     margin: 1.5rem 0;
   }
 `

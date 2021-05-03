@@ -125,8 +125,11 @@ export const TypeWriterEffect = styled.span`
   max-width: fit-content;
   border-right: 3px solid rgba(255, 255, 255, 0.75);
   padding-right: 0.3rem;
-  animation: ${TypeWriter} 5s steps(40, end) forwards,
-    ${BlinkTextCursor} 0.75s step-end infinite;
+
+  &[data-scroll='in'] {
+    animation: ${TypeWriter} 5s steps(40, end) forwards,
+      ${BlinkTextCursor} 0.75s step-end infinite;
+  }
 `
 
 export const BreakLine = styled.span`
