@@ -19,6 +19,7 @@ function App({ Component, pageProps }: AppProps) {
           name="keywods"
           content="blockchain, desenvolvimento, consultoria, trabalho remoto, fintech"
         />
+        <meta name="robots" content="all" />
         <link rel="canonical" href="https://bitwise.ltda/" />
 
         <link rel="preconnect" href="https://fonts.gstatic.com" />
