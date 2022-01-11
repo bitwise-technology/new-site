@@ -65,7 +65,7 @@ export default {
       title: 'Nossos Serviços',
 
       first_service: {
-        title: 'Projeto Gerenciados',
+        title: 'Projetos Gerenciados',
         description:
           'Co-criamos soluções personalizadas em parceria com seu time. Melhoramos processos internos e garantimos a execução de projetos no prazo necessário.',
         alt: 'Tela de computador com esfera verde'
@@ -75,14 +75,14 @@ export default {
         title: 'Transformação Digital',
         alt: 'Celular',
         description:
-          'Contamos com especialistas em diversas areas (UX/UI, PM, Devops, Arquitetos e Desenvolvedores atuando com metodologia ágeis e constante acompanhamento de performance.'
+          'Contamos com especialistas em diversas áreas (UX/UI, PM, Devops, Arquitetos e Desenvolvedores atuando com metodologias ágeis e constante acompanhamento de performance.'
       },
 
       third_service: {
         title: 'Outsourcing',
         alt: 'Hierarquia entre processos',
         description:
-          'Garantimos uma equipe de alto nível em seu projeto.Elimine custos fixos, compartilhe conhecimento, atinja e alcance resultados reais.'
+          'Garantimos uma equipe de alto nível em seu projeto. Elimine custos fixos, compartilhe conhecimento, atinja e alcance resultados reais.'
       },
 
       fourth_service: {
@@ -123,7 +123,7 @@ export default {
 
       third_language: {
         text:
-          'Go é uma linguagem de programação de código aberto que facilita a construção de software simples , confiável e eficiente .',
+          'Go é uma linguagem de programação de código aberto que facilita a construção de software simples, confiável e eficiente.',
         alt: 'Imagem da linguagem de programação Golang'
       },
 
@@ -135,7 +135,7 @@ export default {
 
       fifth_language: {
         text:
-          'Blockchain é muito utilizado em Gestão de contrato inteligentes, Processamentos de pagamentos, gestão de cadeia e abastecimento e Proteção de ativos.',
+          'Blockchain é muito utilizado em Gestão de contratos inteligentes, Processamentos de pagamentos, gestão de cadeia e abastecimento e Proteção de ativos.',
         alt: 'Logo do Bitcoin'
       },
 
@@ -156,7 +156,7 @@ export default {
 
     bitwise_info: {
       beliefs:
-        'Acreditamos no valor da tecnologia e no impacto <br /> positivo que a transformação digital exerce sobre <br /> a sociedade,mudando o nosso dia a dia, facilitando <br /> atividades comunse acelerando os negócios.',
+        'Acreditamos no valor da tecnologia e no impacto <br /> positivo que a transformação digital exerce sobre <br /> a sociedade, mudando o nosso dia a dia, facilitando <br /> atividades comuns e acelerando os negócios.',
       first_address: {
         country: 'Brasil',
         street: 'R. Raphael Dias da Silva, 75',
