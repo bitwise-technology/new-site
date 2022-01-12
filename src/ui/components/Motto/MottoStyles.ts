@@ -9,7 +9,15 @@ export const MottoContainer = styled.section`
   margin-top: 10rem;
 
   @media screen and (min-width: 1200px) {
+    margin-top: 8rem;
+  }
+
+  @media screen and (min-width: 1400px) {
     margin-top: 15rem;
+  }
+
+  @media screen and (min-width: 2000px) {
+    margin-top: 8rem;
   }
 
   @media screen and (min-width: 1200px) and (max-height: 700px) {
@@ -72,6 +80,10 @@ export const StyledButton = styled.button`
 
   @media screen and (min-width: 1400px) {
     margin-bottom: 18rem;
+  }
+
+  @media screen and (min-width: 2000px) {
+    margin-bottom: 16rem;
   }
 
   @media screen and (min-width: 1200px) and (max-height: 730px) {
