@@ -99,7 +99,7 @@ export default {
 
     where_we_are: {
       cities: '18 Cidades',
-      countries: '2 Paises',
+      countries: '2 Países',
       we: 'Nós',
       are: 'Somos',
       nomad: 'Nômades',
