@@ -57,7 +57,7 @@ export default {
       title:
         'Inovação, Design e<br /> Tecnologia que <strong>transforma!</strong>',
       text:
-        'Design, desenvolvimento ágil, inovação,<br /> cultura e liberdade. Nosso desafio é transformar<br /> ideias em resultados reais.',
+        'Design, desenvolvimento ágil, inovação,<br /> cultura e liberdade. Nosso objetivo é transformar<br /> ideias em resultados reais.',
       buttonPhrase: 'Falar com um consultor'
     },
 
