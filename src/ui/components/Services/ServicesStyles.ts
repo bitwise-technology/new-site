@@ -13,13 +13,13 @@ export const ServicesContainer = styled.section`
   @media screen and (min-width: 992px) {
     border-radius: 1rem;
 
-    width: 90%;
+    width: 85%;
 
     margin: auto;
   }
 
   @media screen and (min-width: 1400px) {
-    width: 80%;
+    width: 75%;
   }
 `
 

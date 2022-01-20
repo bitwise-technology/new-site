@@ -15,7 +15,7 @@ describe('Motto', () => {
     const wrapper = render(<Motto />)
     const titleText = await wrapper.findByTestId('motto-phrase')
     expect(titleText.textContent).toBe(
-      'Design, desenvolvimento ágil, inovação, cultura e liberdade. Nosso desafio é transformar ideias em resultados reais.'
+      'Design, desenvolvimento ágil, inovação, cultura e liberdade. Nosso objetivo é transformar ideias em resultados reais.'
     )
   })
 

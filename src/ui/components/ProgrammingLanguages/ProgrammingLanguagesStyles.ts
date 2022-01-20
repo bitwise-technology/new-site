@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 
+export const ProgrammingLanguagesContainerWrapper = styled.div`
+  background-color: #F0F0F0;
+`
+
 export const ProgrammingLanguagesContainer = styled.section`
   width: 80%;
   margin: auto;

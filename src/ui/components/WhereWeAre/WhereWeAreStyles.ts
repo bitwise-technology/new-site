@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components'
 
 export const WhereWeAreContainer = styled.section`
+background-color: #F0F0F0;
   display: flex;
   flex-direction: column;
   justify-content: center;

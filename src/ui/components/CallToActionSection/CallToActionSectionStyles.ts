@@ -22,13 +22,13 @@ export const CallToActionSectionContainer = styled.section`
 
     margin: auto;
 
-    padding: 10rem 0;
+    padding: 10rem 0 0 0;
   }
 
   @media screen and (min-width: 1400px) {
     width: 80%;
 
-    padding: 12rem 0;
+    padding: 12rem 0 0 0;
   }
 `
 

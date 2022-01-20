@@ -12,7 +12,8 @@ import {
   LanguageName,
   Languages,
   ProgrammingLanguagesContainer,
-  ProgrammingLanguagesTitle
+  ProgrammingLanguagesTitle,
+  ProgrammingLanguagesContainerWrapper
 } from './ProgrammingLanguagesStyles'
 
 const ProgrammingLanguages = () => {
@@ -61,6 +62,7 @@ const ProgrammingLanguages = () => {
   ]
 
   return (
+    <ProgrammingLanguagesContainerWrapper>
     <ProgrammingLanguagesContainer>
       <ProgrammingLanguagesTitle>
         {programmingLanguagesStrings.title}
@@ -81,6 +83,7 @@ const ProgrammingLanguages = () => {
         })}
       </Languages>
     </ProgrammingLanguagesContainer>
+    </ProgrammingLanguagesContainerWrapper>
   )
 }
 
