@@ -8,7 +8,6 @@ import strings from '../../../languages/language'
 
 import {
   MottoContainer,
-  MottoContainerWrapper,
   MottoPhrase,
   MottoTitle,
   StyledButton
@@ -26,19 +25,17 @@ const Motto = () => {
   const mottoStrings = strings[selectedLanguage].motto
 
   return (
-    <MottoContainerWrapper>
-      <MottoContainer data-testid="motto-button">
-        <MottoTitle data-testid="motto-title">
-          {parse(mottoStrings.title)}
-        </MottoTitle>
-        <MottoPhrase data-testid="motto-phrase">
-          {parse(mottoStrings.text)}
-        </MottoPhrase>
-        <StyledButton onClick={handleOpenModal} data-testid="motto-button">
-          {selectedLanguage && mottoStrings.buttonPhrase}
-        </StyledButton>
-      </MottoContainer>
-    </MottoContainerWrapper>
+    <MottoContainer data-testid="motto-button">
+      <MottoTitle data-testid="motto-title">
+        {parse(mottoStrings.title)}
+      </MottoTitle>
+      <MottoPhrase data-testid="motto-phrase">
+        {parse(mottoStrings.text)}
+      </MottoPhrase>
+      <StyledButton onClick={handleOpenModal} data-testid="motto-button">
+        {selectedLanguage && mottoStrings.buttonPhrase}
+      </StyledButton>
+    </MottoContainer>
   )
 }
 

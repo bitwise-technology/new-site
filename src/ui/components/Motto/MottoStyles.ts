@@ -1,9 +1,5 @@
 import styled from 'styled-components'
 
-export const MottoContainerWrapper = styled.div`
-  background-image: linear-gradient(to bottom, #FFF 80%, #D0C7D1 );
-`
-
 export const MottoContainer = styled.section`
   font-family: 'Gotham';
   width: 70%;

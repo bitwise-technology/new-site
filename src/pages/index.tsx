@@ -23,7 +23,7 @@ const Home = () => {
           <div
             style={{
               position: 'relative',
-              backgroundColor: '#fbfbfb',
+              backgroundColor: '#fff',
               margin: 'auto'
             }}
           >
