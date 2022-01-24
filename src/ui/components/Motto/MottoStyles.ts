@@ -3,13 +3,21 @@ import styled from 'styled-components'
 export const MottoContainer = styled.section`
   font-family: 'Gotham';
   width: 70%;
-
+  
   color: #735775;
   margin: auto;
   margin-top: 10rem;
 
   @media screen and (min-width: 1200px) {
+    margin-top: 8rem;
+  }
+
+  @media screen and (min-width: 1400px) {
     margin-top: 15rem;
+  }
+
+  @media screen and (min-width: 2000px) {
+    margin-top: 8rem;
   }
 
   @media screen and (min-width: 1200px) and (max-height: 700px) {
@@ -68,10 +76,14 @@ export const StyledButton = styled.button`
   width: 25.6rem;
   max-width: 25.6rem;
 
-  margin-bottom: 15rem;
+  margin-bottom: 11rem;
 
   @media screen and (min-width: 1400px) {
-    margin-bottom: 22rem;
+    margin-bottom: 18rem;
+  }
+
+  @media screen and (min-width: 2000px) {
+    margin-bottom: 16rem;
   }
 
   @media screen and (min-width: 1200px) and (max-height: 730px) {

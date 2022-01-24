@@ -53,7 +53,7 @@ const Services = () => {
       alt: servicesStrings.fourth_service.alt,
       titleBorderColor: 'F2C604',
       description: servicesStrings.third_service.description
-    },
+    }/* ,
 
     {
       image: 'HeadHunting',
@@ -61,7 +61,7 @@ const Services = () => {
       alt: servicesStrings.fourth_service.alt,
       titleBorderColor: 'A51C92',
       description: servicesStrings.fourth_service.description
-    }
+    } */
   ]
 
   return (

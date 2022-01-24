@@ -2,7 +2,11 @@ import styled from 'styled-components'
 
 export const ServicesContainerWrapper = styled.div`
   background-image: linear-gradient(to bottom, #f0f0f0, #fbfbfb);
-  padding-bottom: 9rem;
+  padding-bottom: 2rem;
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 9rem;
+  }
 `
 
 export const ServicesContainer = styled.section`
@@ -16,10 +20,6 @@ export const ServicesContainer = styled.section`
     width: 90%;
 
     margin: auto;
-  }
-
-  @media screen and (min-width: 1400px) {
-    width: 80%;
   }
 `
 
@@ -187,12 +187,12 @@ export const ServiceDescription = styled.p`
   @media screen and (min-width: 1200px) {
     font-size: 1.2rem;
 
-    max-width: 21rem;
+    max-width: 30rem;
   }
 
   @media screen and (min-width: 1600px) {
     font-size: 1.4rem;
 
-    max-width: 21rem;
+    max-width: 30rem;
   }
 `

@@ -7,7 +7,7 @@ export const CallToActionSectionContainerWrapper = styled.div`
 export const CallToActionSectionContainer = styled.section`
   display: flex;
 
-  flex-direction: column;
+  flex-direction: column-reverse;
 
   font-family: 'Gotham';
 
@@ -22,13 +22,13 @@ export const CallToActionSectionContainer = styled.section`
 
     margin: auto;
 
-    padding: 10rem 0;
+    padding: 10rem 0 0 0;
   }
 
   @media screen and (min-width: 1400px) {
     width: 80%;
 
-    padding: 12rem 0;
+    padding: 12rem 0 0 0;
   }
 `
 
@@ -71,8 +71,8 @@ export const CallToActionSectionDescription = styled.p`
   text-align: justify;
 
   @media screen and (min-width: 1200px) {
-    font-size: 2rem;
-    line-height: 4rem;
+    font-size: 1.8rem;
+    line-height: 3.5rem;
 
     max-width: 45rem;
   }
@@ -134,8 +134,7 @@ export const StyledButtonInverted = styled.button`
 export const CallToActionSectionImageContainer = styled.div`
   max-width: 100%;
   align-self: center;
-  padding: 1rem;
-  margin: 2rem 0;
+  margin: 2rem 0 0 0;
   order: -1;
 
   display: flex;
@@ -143,13 +142,18 @@ export const CallToActionSectionImageContainer = styled.div`
 
   img {
     max-width: 100%;
-    width: 80%;
+    min-width: 100%;
     @media screen and (min-width: 992px) {
       width: 90%;
     }
+    @media screen and (max-width: 768px) {
+    min-width: 0;
+    width: 80%;
+  }
   }
 
   @media screen and (max-width: 768px) {
+    min-width: 0;
     width: 80%;
   }
   @media screen and (min-width: 992px) {

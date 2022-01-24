@@ -55,8 +55,8 @@ const CallToActionSection = () => {
         </CallToActionSectionTexts>
         <CallToActionSectionImageContainer>
           <img
-            src="/img/Logo Faça Acontecer.svg"
-            alt="Frase de inspiração 'Faça Acontencer'"
+            src="/img/Astronaut.svg"
+            alt="Imagem Astronauta'"
           />
         </CallToActionSectionImageContainer>
       </CallToActionSectionContainer>
