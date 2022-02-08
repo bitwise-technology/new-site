@@ -7,7 +7,7 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Bitwise - Technology</title>
+        <title>Bitwise</title>
         <link rel="shortcut icon" href="/img/Logo.svg" />
         <link rel="apple-touch-icon" href="/img/Logo.svg" />
         <link rel="manifest" href="/manifest.json" />
