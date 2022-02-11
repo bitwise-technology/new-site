@@ -75,7 +75,7 @@ export default {
         title: 'Transformação Digital',
         alt: 'Celular',
         description:
-          'Contamos com especialistas em diversas áreas (UX/UI, PM, Devops, Arquitetos e Desenvolvedores atuando com metodologias ágeis e constante acompanhamento de performance.'
+          'Contamos com especialistas em diversas áreas (UX/UI, PM, Devops, Arquitetos e Desenvolvedores) atuando com metodologias ágeis e constante acompanhamento de performance.'
       },
 
       third_service: {
@@ -230,8 +230,8 @@ export default {
       button: 'Submit'
     },
     motto: {
-      title:
-        'Innovation, Design and <span /> Technology that <strong>transform!</strong>',
+      title:'Your trusted partner <span /> in <strong>software development</strong>'
+        /* 'Innovation, Design and <span /> Technology that <strong>transform!</strong>' */,
       text:
         ' Design, agile development, innovation,<br /> culture and freedom. Our challenge is to transform<br /> ideas in real results.',
       buttonPhrase: 'Talk to our consultors'
@@ -249,7 +249,7 @@ export default {
         title: 'Digital Transformation',
         alt: 'image',
         description:
-          'We have specialists in several areas (UX / UI, PM, Devops, Architects and Developers working with agile methodology and constant performance monitoring.'
+          'We have specialists in several areas (UX / UI, PM, Devops, Architects and Developers) working with agile methodology and constant performance monitoring.'
       },
 
       third_service: {

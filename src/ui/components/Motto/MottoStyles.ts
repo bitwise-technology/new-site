@@ -17,7 +17,7 @@ export const MottoContainer = styled.section`
   }
 
   @media screen and (min-width: 2000px) {
-    margin-top: 8rem;
+    margin-top: 4rem;
   }
 
   @media screen and (min-width: 1200px) and (max-height: 700px) {
