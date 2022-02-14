@@ -29,7 +29,7 @@ export default async function handler(
     // create reusable transporter object using the default SMTP transport
     const transporter = nodemailer.createTransport({
       host: 'smtp.gmail.com',
-      port: 587,
+      port: 465,
       secure: false,
       auth: {
         user: 'lucasdeveloper97@gmail.com',
