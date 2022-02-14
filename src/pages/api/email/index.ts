@@ -30,7 +30,7 @@ export default async function handler(
     const transporter = nodemailer.createTransport({
       host: 'smtp.gmail.com',
       port: 465,
-      secure: false,
+      secure: true,
       auth: {
         user: 'lucasdeveloper97@gmail.com',
         pass: 'Oliveira1997@'
