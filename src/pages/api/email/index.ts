@@ -49,7 +49,7 @@ export default async function handler(
     // send mail with defined transport object
     await transporter.sendMail({
       from: email, // sender address
-      to: process.env.EMAIL_ADDRESS_TO, // list of receivers
+      to: 'capivarazord@gmail.com', // list of receivers
       subject: 'Contato de Cliente', // Subject line
       html: html // html body
     })
