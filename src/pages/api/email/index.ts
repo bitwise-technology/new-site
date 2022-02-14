@@ -32,8 +32,8 @@ export default async function handler(
       port: 587,
       secure: false,
       auth: {
-        user: 'lucasdeveloper97@gmail.com',
-        pass: 'Oliveira1997@'
+        user: process.env.EMAIL_AUTH_USER,
+        pass: process.env.EMAIL_AUTH_PASSWORD
       }
     })
 
