@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const nodemailer = require('nodemailer')
+import nodemailer from 'nodemailer'
 
 interface ContactInfo {
   name: string
