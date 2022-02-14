@@ -159,9 +159,10 @@ export default {
         'Acreditamos no valor da tecnologia e no impacto <br /> positivo que a transformação digital exerce sobre <br /> a sociedade, mudando o nosso dia a dia, facilitando <br /> atividades comuns e acelerando os negócios.',
       first_address: {
         country: 'Brasil',
-        street: 'R. Raphael Dias da Silva, 75',
-        reference: '3º andar • Sala 306 e 308',
-        state: 'Campolim • Sorocaba/SP'
+        street: 'Rua Horacio Cenci, 9',
+        reference: 'Sala 306 e 308',
+        state: 'Parque Campolim • Sorocaba/SP',
+        cep: '18048-800'
       },
       second_address: {
         country: 'Canadá',
@@ -332,9 +333,10 @@ export default {
         'We believe in the value of technology and the positive <br/> impact that digital transformation has on society,<br/> changing our daily lives, facilitating<br/> community activities and accelerating business.',
       first_address: {
         country: 'Brasil',
-        street: 'R. Raphael Dias da Silva, 75',
-        reference: '3º andar • Sala 306 e 308',
-        state: 'Campolim • Sorocaba/SP'
+        street: 'Rua Horacio Cenci, 9',
+        reference: 'Sala 306 e 308',
+        state: 'Parque Campolim • Sorocaba/SP',
+        cep: '18048-800'
       },
       second_address: {
         country: 'Canadá',
