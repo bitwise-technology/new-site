@@ -15,9 +15,7 @@ export const ServicesContainer = styled.section`
   box-shadow: 1px 1px 5px solid #ccc;
 
   @media screen and (min-width: 992px) {
-    border-radius: 1rem;
-
-    width: 90%;
+    width: 100%;
 
     margin: auto;
   }

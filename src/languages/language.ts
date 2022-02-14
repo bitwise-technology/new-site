@@ -75,7 +75,7 @@ export default {
         title: 'Transformação Digital',
         alt: 'Celular',
         description:
-          'Contamos com especialistas em diversas áreas (UX/UI, PM, Devops, Arquitetos e Desenvolvedores atuando com metodologias ágeis e constante acompanhamento de performance.'
+          'Contamos com especialistas em diversas áreas (UX/UI, PM, Devops, Arquitetos e Desenvolvedores) atuando com metodologias ágeis e constante acompanhamento de performance.'
       },
 
       third_service: {
@@ -159,9 +159,10 @@ export default {
         'Acreditamos no valor da tecnologia e no impacto <br /> positivo que a transformação digital exerce sobre <br /> a sociedade, mudando o nosso dia a dia, facilitando <br /> atividades comuns e acelerando os negócios.',
       first_address: {
         country: 'Brasil',
-        street: 'R. Raphael Dias da Silva, 75',
-        reference: '3º andar • Sala 306 e 308',
-        state: 'Campolim • Sorocaba/SP'
+        street: 'Rua Horacio Cenci, 9',
+        reference: 'Sala 306 e 308',
+        state: 'Parque Campolim • Sorocaba/SP',
+        cep: '18048-800'
       },
       second_address: {
         country: 'Canadá',
@@ -230,8 +231,8 @@ export default {
       button: 'Submit'
     },
     motto: {
-      title:
-        'Innovation, Design and <span /> Technology that <strong>transform!</strong>',
+      title:'Your trusted partner <span /> in <strong>software development</strong>'
+        /* 'Innovation, Design and <span /> Technology that <strong>transform!</strong>' */,
       text:
         ' Design, agile development, innovation,<br /> culture and freedom. Our challenge is to transform<br /> ideas in real results.',
       buttonPhrase: 'Talk to our consultors'
@@ -249,7 +250,7 @@ export default {
         title: 'Digital Transformation',
         alt: 'image',
         description:
-          'We have specialists in several areas (UX / UI, PM, Devops, Architects and Developers working with agile methodology and constant performance monitoring.'
+          'We have specialists in several areas (UX / UI, PM, Devops, Architects and Developers) working with agile methodology and constant performance monitoring.'
       },
 
       third_service: {
@@ -332,9 +333,10 @@ export default {
         'We believe in the value of technology and the positive <br/> impact that digital transformation has on society,<br/> changing our daily lives, facilitating<br/> community activities and accelerating business.',
       first_address: {
         country: 'Brasil',
-        street: 'R. Raphael Dias da Silva, 75',
-        reference: '3º andar • Sala 306 e 308',
-        state: 'Campolim • Sorocaba/SP'
+        street: 'Rua Horacio Cenci, 9',
+        reference: 'Sala 306 e 308',
+        state: 'Parque Campolim • Sorocaba/SP',
+        cep: '18048-800'
       },
       second_address: {
         country: 'Canadá',
