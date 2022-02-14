@@ -37,6 +37,8 @@ export default async function handler(
       }
     })
 
+    console.log('')
+
     const html = `<p>Olá, sou o ${name}, estou aqui pois necessito de um serviço da bitwise.</p><br/>
       <p>O que eu quero : ${message}</p>
       <p>Em situação de retorno, prefiro que seja contatado por : ${wayOfContact}</p>
