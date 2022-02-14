@@ -7,6 +7,3 @@ module.exports = {
   target: 'serverless'
 }
 
-/* EMAIL_AUTH_USER: 'mailerbitwise@gmail.com',
-    EMAIL_AUTH_PASSWORD: 'bit@wise@mailer' */
-
