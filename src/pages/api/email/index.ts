@@ -26,8 +26,40 @@ export default async function handler(
       req.body
     ) as ContactInfo
 
+    const data = {
+      service_id: 'service_lkr7jyo',
+      template_id: 'template_7tvpo33',
+      user_id: 'user_G3TDM2PA980twf81Wsq5G',
+      template_params: {
+        name,
+        message,
+        phone,
+        company
+      }
+    }
+
+    
+
+    fetch('https://api.emailjs.com/api/v1.0/email/send', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-type':'application/json'
+      }
+    }).then((httpResponse) => {
+        if (httpResponse.ok) {
+            console.log('Your mail is sent!');
+        } else {
+            return httpResponse.text()
+              .then(text => Promise.reject(text));
+        }
+    })
+    .catch((error) => {
+        console.log('Oops... ' + error);
+    });
+
     // create reusable transporter object using the default SMTP transport
-    const transporter = nodemailer.createTransport({
+    /* const transporter = nodemailer.createTransport({
       host: 'smtp.gmail.com',
       port: 465,
       secure: true,
@@ -36,8 +68,6 @@ export default async function handler(
         pass: 'Oliveira1997@'
       }
     })
-
-    console.log(transporter)
 
     const html = `<p>Olá, sou o ${name}, estou aqui pois necessito de um serviço da bitwise.</p><br/>
       <p>O que eu quero : ${message}</p>
@@ -57,7 +87,7 @@ export default async function handler(
     res.status(200).json({
       status: 200,
       message: 'Email was sent correctly'
-    })
+    }) */
   } catch (error) {
     console.log(error)
     res.status(500).json({
