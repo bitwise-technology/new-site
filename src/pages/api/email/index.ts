@@ -29,13 +29,15 @@ export default async function handler(
     // create reusable transporter object using the default SMTP transport
     const transporter = nodemailer.createTransport({
       host: 'smtp.gmail.com',
-      port: 587,
-      secure: false,
+      port: 465,
+      secure: true,
       auth: {
         user: 'lucasdeveloper97@gmail.com',
         pass: 'Oliveira1997@'
       }
     })
+
+    console.log(transporter)
 
     const html = `<p>Olá, sou o ${name}, estou aqui pois necessito de um serviço da bitwise.</p><br/>
       <p>O que eu quero : ${message}</p>
