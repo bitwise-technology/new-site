@@ -45,20 +45,21 @@ export default async function handler(
    ssl:true
   });
 
-  client.send(
-     {
-       text: `Just for testing purpose`,
+  const object= {
+       text: `Contato`,
        from: email,
-       to: process.env.EMAIL_ADDRESS_TO,
+       to: 'capivarazord@gmail.com',
        subject: `Olá, sou o ${name}, estou aqui pois necessito de um serviço da bitwise.
       O que eu quero : ${message}
       Meu email é: ${email}
       Em situação de retorno, prefiro que seja contatado por : ${wayOfContact}
       Caso haja alguma duvida, aqui está o meu telefone : ${phone}
       Att. ${name} - ${company}
-    `,
-      
-     }, () => {}
+    `}
+  
+  // @ts-ignore
+  client.send(object,
+      (err, message) => {}
      )
 
     
