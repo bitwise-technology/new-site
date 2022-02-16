@@ -1,6 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const nodemailer = require('nodemailer')
+import { SMTPClient } from 'emailjs';
 
 interface ContactInfo {
   name: string
@@ -27,7 +28,7 @@ export default async function handler(
     ) as ContactInfo
 
     // create reusable transporter object using the default SMTP transport
-    const transporter = nodemailer.createTransport({
+    /* const transporter = nodemailer.createTransport({
       host: 'smtp.gmail.com',
       port: 587,
       secure: false,
@@ -35,11 +36,34 @@ export default async function handler(
         user: 'lucasdeveloper97@gmail.com',
         pass: 'Oliveira1997@'
       }
-    })
+    }) */
 
-    console.log('')
+  const client = new SMTPClient({
+   user: 'lucasdeveloper97@gmail.com',
+   password: 'Oliveira1997@',
+   host: 'smtp.gmail.com',
+   ssl:true
+  });
 
-    const html = `<p>Olá, sou o ${name}, estou aqui pois necessito de um serviço da bitwise.</p><br/>
+  client.send(
+     {
+       text: `Just for testing purpose`,
+       from: email,
+       to: process.env.EMAIL_ADDRESS_TO,
+       subject: `Olá, sou o ${name}, estou aqui pois necessito de um serviço da bitwise.
+      O que eu quero : ${message}
+      Meu email é: ${email}
+      Em situação de retorno, prefiro que seja contatado por : ${wayOfContact}
+      Caso haja alguma duvida, aqui está o meu telefone : ${phone}
+      Att. ${name} - ${company}
+    `,
+      
+     }, () => {}
+     )
+
+    
+
+    /* const html = `<p>Olá, sou o ${name}, estou aqui pois necessito de um serviço da bitwise.</p><br/>
       <p>O que eu quero : ${message}</p>
       <p>Em situação de retorno, prefiro que seja contatado por : ${wayOfContact}</p>
       <p>Caso haja alguma duvida, aqui está o meu telefone : ${phone}</p>
@@ -53,7 +77,7 @@ export default async function handler(
       subject: 'Contato de Cliente', // Subject line
       html: html // html body
     })
-
+ */
     res.status(200).json({
       status: 200,
       message: 'Email was sent correctly'
