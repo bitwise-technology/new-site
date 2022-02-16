@@ -1,6 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const nodemailer = require('nodemailer')
+/* const nodemailer = require('nodemailer') */
+import axios from 'axios'
 
 interface ContactInfo {
   name: string
@@ -27,7 +28,7 @@ export default async function handler(
     ) as ContactInfo
 
     // create reusable transporter object using the default SMTP transport
-    const transporter = nodemailer.createTransport({
+    /* const transporter = nodemailer.createTransport({
       host: 'smtp.gmail.com',
       port: 587,
       secure: false,
@@ -35,21 +36,44 @@ export default async function handler(
         user: 'lucasdeveloper97@gmail.com',
         pass: 'Oliveira1997@'
       }
-    })
+    }) */
 
-    const html = `<p>Olá, sou o ${name}, estou aqui pois necessito de um serviço da bitwise.</p><br/>
+    /* const html = `<p>Olá, sou o ${name}, estou aqui pois necessito de um serviço da bitwise.</p><br/>
       <p>O que eu quero : ${message}</p>
       <p>Em situação de retorno, prefiro que seja contatado por : ${wayOfContact}</p>
       <p>Caso haja alguma duvida, aqui está o meu telefone : ${phone}</p>
       <p>Att. ${name} - ${company}</p>
-    `
+    ` */
 
     // send mail with defined transport object
-    await transporter.sendMail({
+    /* await transporter.sendMail({
       from: email, // sender address
       to: process.env.EMAIL_ADDRESS_TO, // list of receivers
       subject: 'Contato de Cliente', // Subject line
       html: html // html body
+    }) */
+
+    const data = {
+      service_id: 'service_lkr7jyo',
+      template_id: 'template_7tvpo33',
+      user_id: 'user_G3TDM2PA980twf81Wsq5G',
+      template_params: {
+        'email': email,
+        'name': name,
+        'phone': phone,
+        'company': company
+      }
+    }
+
+    const headers = {
+      'Content-Type': 'application/json',
+    };
+
+    await axios({
+      method: 'POST',
+      url: 'https://api.emailjs.com/api/v1.0/email/send',
+      data,
+      headers
     })
 
     res.status(200).json({
