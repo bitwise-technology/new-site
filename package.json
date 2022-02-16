@@ -17,6 +17,7 @@
     ]
   },
   "dependencies": {
+    "axios": "^0.26.0",
     "countries-and-timezones": "^3.3.0",
     "html-react-parser": "^1.2.4",
     "moment-timezone": "^0.5.34",
