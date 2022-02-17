@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <HeaderContainer>
       <LogoContainer>
-        <img src="/img/Logo.svg" alt="Logo da Bitwise" />
+        <img src="/img/Logo-White.svg" alt="Logo da Bitwise" />
       </LogoContainer>
       <LinksAndLanguagesContainer>
         <LanguagesContainer data-testid="languages">

@@ -62,7 +62,7 @@ export const LanguagesContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #a51c92;
+  color: #FFFFFF;
 `
 
 export const Language = styled.span`
