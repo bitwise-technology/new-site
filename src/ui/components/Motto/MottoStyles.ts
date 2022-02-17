@@ -4,7 +4,7 @@ export const MottoContainer = styled.section`
   font-family: 'Gotham';
   width: 70%;
   
-  color: #735775;
+  color: #FFF;
   margin: auto;
   margin-top: 10rem;
 
@@ -54,13 +54,20 @@ export const MottoPhrase = styled.p`
   word-spacing: 0.1rem;
   line-height: 2.5rem;
 
-  color: #8b738c;
+  color: #FFF;
   @media screen and (min-width: 1200px) {
   }
 `
 
 export const StyledButton = styled.button`
-  background-color: #890877;
+  background-color: transparent;
+  font-family: Gotham;
+
+  &:hover {
+    background-color: white;
+    color: black;
+    text-decoration: underline;
+  }
 
   color: #fff;
   font-size: 1.7rem;
@@ -69,7 +76,7 @@ export const StyledButton = styled.button`
   cursor: pointer;
 
   padding: 1.8rem;
-  border: none;
+  border: solid;
   border-radius: 1rem;
   outline: none;
 

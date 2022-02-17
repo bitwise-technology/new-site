@@ -13,6 +13,7 @@ import WhereWeAre from 'ui/components/WhereWeAre'
 import ProgrammingLanguages from 'ui/components/ProgrammingLanguages'
 import LanguagesContextProvider from 'contexts/LanguagesContext'
 import ModalResponse from 'ui/components/ModalResponse'
+import Section1 from 'ui/components/Section1'
 import ContactModalResponseProvider from 'contexts/ModalResponse'
 
 const Home = () => {
@@ -29,8 +30,7 @@ const Home = () => {
           >
             <ContactModal />
             <ModalResponse />
-            <Header />
-            <Motto />
+            <Section1 />
             <Services />
             <Partners />
             <WhereWeAre />
