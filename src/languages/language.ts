@@ -55,7 +55,7 @@ export default {
 
     motto: {
       title:
-        'Inovação, Design e<br /> Tecnologia que <strong>transforma!</strong>',
+        'Seu parceiro confiável em <br /> <strong>desenvolvimento de software</strong>',
       text:
         'Design, desenvolvimento ágil, inovação,<br /> cultura e liberdade. Nosso objetivo é transformar<br /> ideias em resultados reais.',
       buttonPhrase: 'Falar com um consultor'

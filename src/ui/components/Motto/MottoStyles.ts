@@ -66,6 +66,7 @@ export const StyledButton = styled.button`
   &:hover {
     background-color: white;
     color: black;
+    border-color: white;
     text-decoration: underline;
   }
 
