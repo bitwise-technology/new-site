@@ -15,7 +15,7 @@ import {
 
 const Motto = () => {
   const { selectedLanguage } = useContext(LanguagesContext)
-  const { setShowContactModal } = useContext(ContactModalContext)
+  const { setShowContactModal, showContactModal } = useContext(ContactModalContext)
 
   const handleOpenModal = (event: React.MouseEvent<Element>) => {
     event.preventDefault()
@@ -32,7 +32,7 @@ const Motto = () => {
       <MottoPhrase data-testid="motto-phrase">
         {parse(mottoStrings.text)}
       </MottoPhrase>
-      <StyledButton onClick={handleOpenModal} data-testid="motto-button">
+      <StyledButton active={showContactModal} onClick={handleOpenModal} data-testid="motto-button">
         {selectedLanguage && mottoStrings.buttonPhrase}
       </StyledButton>
     </MottoContainer>
