@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 
+interface buttonProps {
+  active: boolean | undefined
+}
+
 export const MottoContainer = styled.section`
   font-family: 'Gotham';
   width: 70%;
@@ -60,9 +64,10 @@ export const MottoPhrase = styled.p`
 `
 
 export const StyledButton = styled.button`
-  background-color: transparent;
+  background-color: ${(props:buttonProps) => props.active ? '#FBFBFB80' : 'transparent'};
   font-family: Gotham;
 
+  color: ${props => props.active ? 'black' : 'white'};
   &:hover {
     background-color: white;
     color: black;
@@ -70,7 +75,6 @@ export const StyledButton = styled.button`
     text-decoration: underline;
   }
 
-  color: #fff;
   font-size: 1.7rem;
   font-weight: bold;
 
@@ -80,6 +84,7 @@ export const StyledButton = styled.button`
   border: solid;
   border-radius: 1rem;
   outline: none;
+  border-color: ${props => props.active ? '#FBFBFB80' : 'white'};
 
   width: 25.6rem;
   max-width: 25.6rem;
