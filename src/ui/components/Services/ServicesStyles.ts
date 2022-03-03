@@ -35,7 +35,7 @@ export const ServicesTitle = styled.h2`
   position: relative;
 
   @media screen and (min-width: 1200px) {
-    width: 90%;
+    width: 80%;
     margin: auto;
     position: relative;
 
@@ -60,7 +60,7 @@ export const ServicesTitle = styled.h2`
 export const ServicesBox = styled.div`
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 80%;
   margin: auto;
   padding-bottom: 3.2rem;
 
