@@ -87,7 +87,6 @@ export const StyledButton = styled.button`
   border-color: ${props => props.active ? '#FBFBFB80' : 'white'};
 
   width: 25.6rem;
-  max-width: 25.6rem;
 
   margin-bottom: 11rem;
 
