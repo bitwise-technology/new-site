@@ -1,12 +1,14 @@
 import Motto from '../Motto'
 import Header from '../Header'
-import { Container } from './Section1Styles'
+import { Container, Shader } from './Section1Styles'
 
 const Section1 = () => {
   return (
     <Container>
-      <Header />
-      <Motto />
+      <Shader>
+        <Header />
+        <Motto />
+      </Shader>
     </Container>
   )
 }
