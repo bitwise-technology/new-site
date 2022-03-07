@@ -6,3 +6,7 @@ export const Container = styled.section`
   background-repeat: no-repeat;
   background-size: cover;
 `
+
+export const Shader = styled.div`
+  background-color: rgba(0, 0, 0, 0.6)
+`;
