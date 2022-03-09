@@ -66,6 +66,7 @@ export const MottoPhrase = styled.p`
 export const StyledButton = styled.button`
   background-color: ${(props:buttonProps) => props.active ? '#FBFBFB80' : 'transparent'};
   font-family: Gotham;
+  white-space: nowrap;
 
   color: ${props => props.active ? 'black' : 'white'};
   &:hover {
