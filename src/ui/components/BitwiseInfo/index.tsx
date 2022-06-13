@@ -42,12 +42,12 @@ const BitwiseInfo = () => {
           <Reference> {bitwiseInfoStrings.first_address.reference}</Reference>
           <State> {bitwiseInfoStrings.first_address.state}</State>
         </Address>
-        <Address data-testid="address">
+        {/* <Address data-testid="address">
           <Country>{bitwiseInfoStrings.second_address.country}</Country>
           <Street> {bitwiseInfoStrings.second_address.street}</Street>
           <Reference> {bitwiseInfoStrings.second_address.reference}</Reference>
           <State> {bitwiseInfoStrings.second_address.state}</State>
-        </Address>
+        </Address> */}
 
         <BackToTop onClick={goBackToTop}>
           {strings[selectedLanguage].copyright.backToTop}
