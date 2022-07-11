@@ -1,16 +1,23 @@
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 
-import { GlobalStyles } from 'themes/global'
+import { GlobalStyles } from '../themes/global'
 
 function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Bitwise</title>
+        <title>Bitwise Technology</title>
+        <meta charSet="UTF-8" />
         <link rel="shortcut icon" href="/img/Logo.svg" />
         <link rel="apple-touch-icon" href="/img/Logo.svg" />
         <link rel="manifest" href="/manifest.json" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+          rel="stylesheet"
+        />
         <meta
           name="description"
           content="Design, desenvolvimento ágil, inovação e liberdade. Nosso desafio é transformar ideias em resultados reais."
@@ -22,7 +29,6 @@ function App({ Component, pageProps }: AppProps) {
         <meta name="robots" content="all" />
         <link rel="canonical" href="https://bitwise.ltda/" />
 
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
           rel="stylesheet"

@@ -1,47 +1,75 @@
 import React from 'react'
-import ContactModalProvider from 'contexts/ContactModal'
+import { Header } from '../ui/components_2/Header'
+import { Landing } from '../ui/components_2/Landing'
+import { SectionFive } from '../ui/components_2/SectionFive'
+import { SectionFour } from '../ui/components_2/SectionFour'
+import { SectionOne } from '../ui/components_2/SectionOne'
+import { SectionThree } from '../ui/components_2/SectionThree'
+import { SectionTwo } from '../ui/components_2/SectionTwo'
 
-import BitwiseInfo from 'ui/components/BitwiseInfo'
-import CallToActionSection from 'ui/components/CallToActionSection'
-import ContactModal from 'ui/components/ContactModal'
-import Copyright from 'ui/components/Copyright'
-import Header from 'ui/components/Header'
-import Motto from 'ui/components/Motto'
-import Partners from 'ui/components/Partners'
-import Services from 'ui/components/Services'
-import WhereWeAre from 'ui/components/WhereWeAre'
-import ProgrammingLanguages from 'ui/components/ProgrammingLanguages'
-import LanguagesContextProvider from 'contexts/LanguagesContext'
-import ModalResponse from 'ui/components/ModalResponse'
-import Section1 from 'ui/components/Section1'
-import ContactModalResponseProvider from 'contexts/ModalResponse'
-
+// const Item: React.FC<{ color: string }> = ({ color }) => (
+//   <div
+//     style={{
+//       height: '100vh',
+//       backgroundColor: color
+//     }}
+//   ></div>
+// )
 const Home = () => {
   return (
-    <LanguagesContextProvider>
-      <ContactModalProvider>
-        <ContactModalResponseProvider>
-          <div
-            style={{
-              position: 'relative',
-              backgroundColor: '#fff',
-              margin: 'auto'
-            }}
-          >
-            <ContactModal />
-            <ModalResponse />
-            <Section1 />
-            <Services />
-            <Partners />
-            <WhereWeAre />
-            <ProgrammingLanguages />
-            <CallToActionSection />
-            <BitwiseInfo />
-            <Copyright />
-          </div>
-        </ContactModalResponseProvider>
-      </ContactModalProvider>
-    </LanguagesContextProvider>
+    <div
+      style={{
+        position: 'relative',
+        backgroundColor: '#fff',
+        margin: 'auto'
+      }}
+    >
+      <Header />
+      <Landing />
+      <SectionOne />
+      <SectionTwo />
+      <SectionThree />
+      <div style={{ backgroundColor: '#000' }}>
+        <div
+          style={{
+            height: '200vh',
+            background: 'url(/img/NewYork.svg)',
+            width: '100%',
+            backgroundSize: 'cover',
+            display: 'flex',
+            flexDirection: 'column'
+          }}
+        >
+          <SectionFour />
+          <SectionFive />
+        </div>
+      </div>
+      {/* <Item color="blue" /> */}
+    </div>
+    // <LanguagesContextProvider>
+    //   <ContactModalProvider>
+    //     <ContactModalResponseProvider>
+    //       <div
+    //         style={{
+    //           position: 'relative',
+    //           backgroundColor: '#fff',
+    //           margin: 'auto'
+    //         }}
+    //       >
+    //         <ContactModal />
+    //         <ModalResponse />
+    //         <Section1 />
+    //         <Services />
+    //         <Partners />
+    //         <WhereWeAre />
+    //         <ProgrammingLanguages />
+    //         <CallToActionSection />
+    //         <BitwiseInfo />
+    //         <Copyright />
+    //       </div>
+    //     </ContactModalResponseProvider>
+    //   </ContactModalProvider>
+    // </LanguagesContextProvider>
   )
 }
 

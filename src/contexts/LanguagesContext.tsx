@@ -28,8 +28,7 @@ const LanguagesContextProvider: React.FC<LanguagesContextProps> = ({
 
   const country = details?.countries[0]
 
-  const language = country === 'BR' ? 'pt-BR'
-  : 'en-EN'
+  const language = country === 'BR' ? 'pt-BR' : 'en-EN'
 
   const [selectedLanguage, setSelectedLanguage] = useState<Languages>(language)
 

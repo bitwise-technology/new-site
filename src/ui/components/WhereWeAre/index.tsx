@@ -15,9 +15,8 @@ import strings from '../../../languages/language'
 const WhereWeAre = () => {
   const { selectedLanguage } = useContext(LanguagesContext)
 
-  const { cities, countries, we, are, nomad, description } = strings[
-    selectedLanguage
-  ].where_we_are
+  const { cities, countries, we, are, nomad, description } =
+    strings[selectedLanguage].where_we_are
 
   useEffect(() => {
     const scrollOut = ScrollOut({
