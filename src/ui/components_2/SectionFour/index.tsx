@@ -4,7 +4,7 @@ import { Container, GridContainer, Title } from './styles'
 
 const SectionFour = () => {
   return (
-    <Container>
+    <Container id="partners">
       <Title>Onde Levamos a inovação</Title>
       <GridContainer>
         <img src="/img/partners_2/Santander.svg" />

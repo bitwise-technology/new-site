@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import styled from 'styled-components'
+import { Footer } from '../ui/components_2/Footer'
 import { Header } from '../ui/components_2/Header'
 import { Landing } from '../ui/components_2/Landing'
 import { SectionFive } from '../ui/components_2/SectionFive'
@@ -7,21 +9,44 @@ import { SectionOne } from '../ui/components_2/SectionOne'
 import { SectionThree } from '../ui/components_2/SectionThree'
 import { SectionTwo } from '../ui/components_2/SectionTwo'
 
-// const Item: React.FC<{ color: string }> = ({ color }) => (
-//   <div
-//     style={{
-//       height: '100vh',
-//       backgroundColor: color
-//     }}
-//   ></div>
-// )
+const TwoSection = styled.div`
+  @media (max-width: 1150px) {
+    display: none !important;
+  }
+  background-color: #000;
+  height: 1304px;
+`
+
+const Image = styled.div`
+  @media (max-width: 1150px) {
+    display: none !important;
+  }
+  height: 100%;
+  background: url('/img/NewYork.svg');
+  width: 100%;
+  object-fit: contain;
+  display: flex;
+  flex-direction: column;
+`
+
+const Container = styled.div`
+  /* @media (max-width: 1150px) {
+    display: none !important;
+  } */
+  position: relative;
+  background-color: #fff;
+  margin: auto;
+  width: 100%;
+`
+
 const Home = () => {
   return (
-    <div
+    <Container
       style={{
         position: 'relative',
         backgroundColor: '#fff',
-        margin: 'auto'
+        margin: 'auto',
+        width: '100%'
       }}
     >
       <Header />
@@ -29,23 +54,14 @@ const Home = () => {
       <SectionOne />
       <SectionTwo />
       <SectionThree />
-      <div style={{ backgroundColor: '#000' }}>
-        <div
-          style={{
-            height: '200vh',
-            background: 'url(/img/NewYork.svg)',
-            width: '100%',
-            backgroundSize: 'cover',
-            display: 'flex',
-            flexDirection: 'column'
-          }}
-        >
+      <TwoSection>
+        <Image>
           <SectionFour />
           <SectionFive />
-        </div>
-      </div>
-      {/* <Item color="blue" /> */}
-    </div>
+        </Image>
+      </TwoSection>
+      <Footer />
+    </Container>
     // <LanguagesContextProvider>
     //   <ContactModalProvider>
     //     <ContactModalResponseProvider>

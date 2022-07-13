@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 
 export const Container = styled.section`
+  @media (max-width: 1150px) {
+    display: none !important;
+  }
   background: #edf0f2;
   height: 100vh;
   display: flex;
