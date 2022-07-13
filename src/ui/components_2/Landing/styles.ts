@@ -1,5 +1,19 @@
 import styled from 'styled-components'
 
+export const MobileContainer = styled.section`
+  @media (min-width: 1150px) {
+    display: none !important;
+  }
+
+  background: url('/img/image 11.png');
+  padding-top: 100px;
+  padding-bottom: 131px;
+  background-size: cover;
+
+  /* height: 100vh; */
+  /* width: 100vw; */
+`
+
 export const Container = styled.section`
   @media (max-width: 1150px) {
     display: none !important;
@@ -28,14 +42,25 @@ export const Image = styled.img`
   z-index: -2;
 `
 export const Title = styled.h4`
-  color: #fff;
-  font-weight: 700;
-  font-size: 72px;
-  line-height: 80px;
+  @media (max-width: 1150px) {
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 44px;
+    margin: 80px 16px 0px 16px;
+  }
+  @media (min-width: 1150px) {
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 80px;
+  }
   letter-spacing: -2px;
   text-transform: uppercase;
+  color: #fff;
 `
 export const Desc = styled.p`
+  @media (max-width: 1150px) {
+    margin: 48px 16px 0px 16px;
+  }
   color: #fff;
   font-size: 16px;
   line-height: 24px;
@@ -43,7 +68,13 @@ export const Desc = styled.p`
 `
 
 export const Button = styled.button`
-  margin-top: 66px;
+  @media (max-width: 1150px) {
+    margin: 84px 16px 0px 16px;
+  }
+  @media (min-width: 1150px) {
+    margin-top: 66px;
+  }
+
   font-style: normal;
   font-weight: 400;
   font-size: 16px;

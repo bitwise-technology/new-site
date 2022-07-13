@@ -33,7 +33,7 @@ const Container = styled.div`
   /* @media (max-width: 1150px) {
     display: none !important;
   } */
-  position: relative;
+  /* position: relative; */
   background-color: #fff;
   margin: auto;
   width: 100%;
@@ -41,14 +41,7 @@ const Container = styled.div`
 
 const Home = () => {
   return (
-    <Container
-      style={{
-        position: 'relative',
-        backgroundColor: '#fff',
-        margin: 'auto',
-        width: '100%'
-      }}
-    >
+    <Container>
       <Header />
       <Landing />
       <SectionOne />

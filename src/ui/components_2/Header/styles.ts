@@ -7,11 +7,11 @@ export const MobileContainer = styled.header`
   @media (min-width: 1150px) {
     display: none !important;
   }
-  background-color: red;
-  width: 100vw;
+  background-color: transparent;
   height: 100px;
   position: absolute;
   z-index: 1000;
+  top: 0;
   right: 0;
   left: 0;
 
