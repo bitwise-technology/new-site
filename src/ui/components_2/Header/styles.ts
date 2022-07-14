@@ -55,15 +55,16 @@ export const Logo = styled.img<Props>`
   @media (min-width: 1150px) {
     width: 200px;
     height: 48px;
-    filter: brightness(0) invert(1);
-  }
-  @media (max-width: 1150px) {
     ${(p) =>
       p.typeProp === 0
         ? css`
             filter: brightness(0) invert(1);
           `
         : null}
+  }
+  @media (max-width: 1150px) {
+    filter: brightness(0) invert(1);
+    /* ${(p) => (p.typeProp === 0 ? css`` : null)} */
   }
 `
 

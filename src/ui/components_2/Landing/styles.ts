@@ -6,6 +6,10 @@ export const MobileContainer = styled.section`
   }
 
   background: url('/img/image 11.png');
+
+  @media (min-width: 563px) {
+    background: url('/img/Spa.svg');
+  }
   padding-top: 100px;
   padding-bottom: 131px;
   background-size: cover;
