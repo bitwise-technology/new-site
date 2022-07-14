@@ -15,7 +15,7 @@ const SectionTwo = () => {
     <>
       <Container>
         <Center>
-          <Left>
+          <Left data-aos="fade-right">
             <Title>Outsourcing</Title>
             <Sub>
               Temos uma equipe proativa e com foco total em soluções precisas e
@@ -25,7 +25,7 @@ const SectionTwo = () => {
               emergentes.
             </Sub>
           </Left>
-          <Right>
+          <Right data-aos="fade-left">
             <img
               src="/img/Outsourcing.svg"
               alt="Logo da bitwise"
@@ -35,14 +35,19 @@ const SectionTwo = () => {
         </Center>
       </Container>
       <MobileContainer>
-        <Title>Outsourcing</Title>
-        <Sub>
+        <Title data-aos="fade-up">Outsourcing</Title>
+        <Sub data-aos="fade-up">
           Temos uma equipe proativa e com foco total em soluções precisas e
           assertividade baseada em conhecimento do negócio. <br /> <br /> Aqui
           os profissionais multidisciplinares colocam ao seu alcance o domínio
           de tecnologias de ponta e de metodologias emergentes.
         </Sub>
-        <Image width={328} src="/img/Outsourcing.svg" alt="Logo da bitwise" />
+        <Image
+          data-aos="fade-up"
+          width={328}
+          src="/img/Outsourcing.svg"
+          alt="Logo da bitwise"
+        />
       </MobileContainer>
     </>
   )

@@ -13,7 +13,7 @@ const Landing = () => {
     <>
       <Container>
         <Image src="/img/Spa.svg"></Image>
-        <div>
+        <div data-aos="fade-right">
           <Title>
             Transformamos ideias <br /> em resultados reais
           </Title>
@@ -24,7 +24,7 @@ const Landing = () => {
           <Button>Quero inovar com a Bitwise</Button>
         </div>
       </Container>
-      <MobileContainer>
+      <MobileContainer data-aos="fade-right">
         {/* <Image src="/img/image 11.png" /> */}
         <Title>Transformamos ideias em resultados reais</Title>
         <Desc>

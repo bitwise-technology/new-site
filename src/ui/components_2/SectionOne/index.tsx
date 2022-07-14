@@ -15,10 +15,10 @@ const SectionOne = () => {
     <>
       <Container>
         <Center>
-          <Left>
+          <Left data-aos="fade-right">
             <Image src="/img/Vecteezy.svg" alt="Logo da bitwise" />
           </Left>
-          <Right>
+          <Right data-aos="fade-left">
             <Title>Projetos Gerenciados</Title>
             <Sub>
               Co-criamos soluções personalizadas em parceria com seu time.

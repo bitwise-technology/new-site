@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
+import Aos from 'aos'
 import { Footer } from '../ui/components_2/Footer'
 import { Header } from '../ui/components_2/Header'
 import { Landing } from '../ui/components_2/Landing'
@@ -8,21 +9,33 @@ import { SectionFour } from '../ui/components_2/SectionFour'
 import { SectionOne } from '../ui/components_2/SectionOne'
 import { SectionThree } from '../ui/components_2/SectionThree'
 import { SectionTwo } from '../ui/components_2/SectionTwo'
+import 'aos/dist/aos.css'
 
 const TwoSection = styled.div`
   @media (max-width: 1150px) {
     display: none !important;
   }
   background-color: #000;
-  height: 1304px;
+  /* height: 1304px; */
+`
+
+const MobileTwoSection = styled.div`
+  @media (min-width: 1150px) {
+    display: none !important;
+  }
+  background-color: #160c15;
+
+  /* position: relative; */
+  /* height: 1304px; */
 `
 
 const Image = styled.div`
   @media (max-width: 1150px) {
     display: none !important;
   }
-  height: 100%;
+  /* height: 100%; */
   background: url('/img/NewYork.svg');
+  background-size: cover;
   width: 100%;
   object-fit: contain;
   display: flex;
@@ -40,6 +53,11 @@ const Container = styled.div`
 `
 
 const Home = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 500
+    })
+  }, [])
   return (
     <Container>
       <Header />
@@ -47,6 +65,10 @@ const Home = () => {
       <SectionOne />
       <SectionTwo />
       <SectionThree />
+      <MobileTwoSection>
+        <SectionFour />
+        <SectionFive />
+      </MobileTwoSection>
       <TwoSection>
         <Image>
           <SectionFour />

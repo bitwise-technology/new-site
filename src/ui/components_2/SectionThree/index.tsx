@@ -15,10 +15,10 @@ const SectionThree = () => {
     <>
       <Container>
         <Center>
-          <Left>
+          <Left data-aos="fade-right">
             <Image src="/img/VecteezyPeople.svg" alt="Logo da bitwise" />
           </Left>
-          <Right>
+          <Right data-aos="fade-left">
             <Title>Transformação Digital</Title>
             <Sub>
               Contamos com especialistas nas áreas de{' '}
@@ -33,8 +33,8 @@ const SectionThree = () => {
         </Center>
       </Container>
       <MobileContainer>
-        <Title>Transformação Digital</Title>
-        <Sub>
+        <Title data-aos="fade-up">Transformação Digital</Title>
+        <Sub data-aos="fade-up">
           Contamos com especialistas nas áreas de{' '}
           <b>
             User Experience, User Interface, Project Management, Arquitetos,
@@ -44,6 +44,7 @@ const SectionThree = () => {
           performance.
         </Sub>
         <Image
+          data-aos="fade-up"
           width={328}
           src="/img/VecteezyPeople.svg"
           alt="Logo da bitwise"

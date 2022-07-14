@@ -18,27 +18,29 @@ const Footer = () => {
     <Container>
       <Layout>
         <Left>
-          <LeftTitle>
+          <LeftTitle data-aos="fade-right">
             Seu futuro só <br /> depende de você
           </LeftTitle>
-          <LeftDesc>
+          <LeftDesc data-aos="fade-right">
             Acreditamos no valor da tecnologia e no impacto positivo <br /> que
             a transformação digital exerce sobre a sociedade. <br />
             <br />
             Faça acontecer com a <b>Bitwise Technology.</b>
           </LeftDesc>
-          <LeftButton>Quero inovar com a Bitwise</LeftButton>
-          <LeftImg src="/img/3d.svg" />
+          <LeftButton data-aos="fade-right">
+            Quero inovar com a Bitwise
+          </LeftButton>
+          <LeftImg data-aos="fade-up" src="/img/3d.svg" />
         </Left>
         <Right>
-          <Title>
+          <Title data-aos="fade-left">
             Faça parte da <br /> equipe Bitwise
           </Title>
-          <Desc>
+          <Desc data-aos="fade-left">
             Tem interesse em se juntar à equipe da <br />{' '}
             <b>Bitwise Technology</b>? Junte-se a nós!
           </Desc>
-          <Button>Quero fazer parte</Button>
+          <Button data-aos="fade-left">Quero fazer parte</Button>
         </Right>
       </Layout>
       {/* <div
