@@ -8,7 +8,7 @@ import {
 
 import strings from '../../../languages/language'
 import { useContext } from 'react'
-import { LanguagesContext } from 'contexts/LanguagesContext'
+import { LanguagesContext } from '../../../contexts/LanguagesContext'
 
 const Copyright = () => {
   const { selectedLanguage } = useContext(LanguagesContext)

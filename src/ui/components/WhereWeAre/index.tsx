@@ -1,4 +1,4 @@
-import { LanguagesContext } from 'contexts/LanguagesContext'
+import { LanguagesContext } from '../../../contexts/LanguagesContext'
 import { useContext, useEffect } from 'react'
 import {
   WhereWeAreContainer,

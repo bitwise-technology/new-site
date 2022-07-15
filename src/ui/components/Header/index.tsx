@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { LanguagesContext } from '../../../contexts/LanguagesContext'
 
 import {
   HeaderContainer,
@@ -7,7 +8,6 @@ import {
   LinksAndLanguagesContainer,
   LogoContainer
 } from './HeaderStyles'
-import { LanguagesContext } from 'contexts/LanguagesContext'
 
 type Language = 'pt-BR' | 'en-EN'
 

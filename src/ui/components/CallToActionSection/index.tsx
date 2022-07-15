@@ -1,4 +1,3 @@
-import { ContactModalContext } from 'contexts/ContactModal'
 import { useContext } from 'react'
 import strings from '../../../languages/language'
 import parse from 'html-react-parser'
@@ -13,7 +12,8 @@ import {
   StyledButton,
   StyledButtonInverted
 } from './CallToActionSectionStyles'
-import { LanguagesContext } from 'contexts/LanguagesContext'
+import { LanguagesContext } from '../../../contexts/LanguagesContext'
+import { ContactModalContext } from '../../../contexts/ContactModal'
 
 const CallToActionSection = () => {
   const { selectedLanguage } = useContext(LanguagesContext)
@@ -54,10 +54,7 @@ const CallToActionSection = () => {
           </ButtonsContainer>
         </CallToActionSectionTexts>
         <CallToActionSectionImageContainer>
-          <img
-            src="/img/Astronaut.svg"
-            alt="Imagem Astronauta'"
-          />
+          <img src="/img/Astronaut.svg" alt="Imagem Astronauta'" />
         </CallToActionSectionImageContainer>
       </CallToActionSectionContainer>
     </CallToActionSectionContainerWrapper>

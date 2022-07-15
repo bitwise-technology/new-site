@@ -1,6 +1,6 @@
-import { LanguagesContext } from 'contexts/LanguagesContext'
-import { ContactModalResponseContext } from 'contexts/ModalResponse'
 import { useContext } from 'react'
+import { LanguagesContext } from '../../../contexts/LanguagesContext'
+import { ContactModalResponseContext } from '../../../contexts/ModalResponse'
 
 import strings from '../../../languages/language'
 
@@ -15,11 +15,8 @@ import {
 } from './ModalResponseStyles'
 
 const ModalResponse = () => {
-  const {
-    showContactModalResponse,
-    setShowContactModalResponse,
-    statusCode
-  } = useContext(ContactModalResponseContext)
+  const { showContactModalResponse, setShowContactModalResponse, statusCode } =
+    useContext(ContactModalResponseContext)
 
   const { selectedLanguage } = useContext(LanguagesContext)
 

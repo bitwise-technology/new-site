@@ -1,7 +1,5 @@
-import { ContactModalContext } from 'contexts/ContactModal'
 import { useContext, useState } from 'react'
-import { validateEmail } from 'helpers/validators/email/EmailValidator'
-import { validatePhone } from 'helpers/validators/phone/PhoneValidator'
+
 import Input from '../Input'
 import RadioInput from '../RadioInput'
 import TextAreaInput from '../TextAreaInput'
@@ -19,14 +17,17 @@ import {
   StyledSubmitButton,
   SubmitButtonContainer
 } from './ContactModalStyles'
-import { phoneMask } from 'helpers/masks/phone/PhoneMask'
-import { LanguagesContext } from 'contexts/LanguagesContext'
 
 import strings from '../../../languages/language'
 import parse from 'html-react-parser'
-import { ContactModalResponseContext } from 'contexts/ModalResponse'
-import { sendEmail } from 'services/email/sendEmail'
-import { requiredValidator } from 'helpers/validators/required/RequiredValidator'
+import { LanguagesContext } from '../../../contexts/LanguagesContext'
+import { ContactModalContext } from '../../../contexts/ContactModal'
+import { ContactModalResponseContext } from '../../../contexts/ModalResponse'
+import { phoneMask } from '../../../helpers/masks/phone/PhoneMask'
+import { requiredValidator } from '../../../helpers/validators/required/RequiredValidator'
+import { validatePhone } from '../../../helpers/validators/phone/PhoneValidator'
+import { validateEmail } from '../../../helpers/validators/email/EmailValidator'
+import { sendEmail } from '../../../services/email/sendEmail'
 
 interface ContactInfo {
   name: string
@@ -43,9 +44,8 @@ type Errors = 'required' | 'invalidPhone' | 'invalidEmail' | ''
 const ContactModal = () => {
   const { selectedLanguage } = useContext(LanguagesContext)
 
-  const { showContactModal, setShowContactModal } = useContext(
-    ContactModalContext
-  )
+  const { showContactModal, setShowContactModal } =
+    useContext(ContactModalContext)
 
   const { setShowContactModalResponse, setStatusCode } = useContext(
     ContactModalResponseContext

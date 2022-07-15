@@ -1,4 +1,4 @@
-import { LanguagesContext } from 'contexts/LanguagesContext'
+import { LanguagesContext } from '../../../contexts/LanguagesContext'
 import { useContext } from 'react'
 
 import strings from '../../../languages/language'

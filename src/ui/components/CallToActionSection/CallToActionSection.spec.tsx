@@ -1,6 +1,6 @@
 import { fireEvent, render } from '@testing-library/react'
-import ContactModalProvider from 'contexts/ContactModal'
 import CallToActionSection from '.'
+import ContactModalProvider from '../../../contexts/ContactModal'
 
 describe('CallToActionSection', () => {
   test('Should show CallToActionSection title', async () => {
