@@ -1,38 +1,31 @@
 import React from 'react'
-import {
-  Button,
-  Container,
-  Desc,
-  Title,
-  Image,
-  MobileContainer
-} from './styles'
+import { Button, Container, Desc, Title } from './styles'
+
+import strings from '../../../languages/language'
+import { useLanguage } from '../../../contexts/LanguagesContext'
 
 const Landing = () => {
+  const { selectedLanguage } = useLanguage()
+  const bitwiseInfoStrings = strings[selectedLanguage].landing
+
   return (
     <>
       <Container>
-        <Image src="/img/Spa.svg"></Image>
         <div data-aos="fade-right">
-          <Title>
-            Transformamos ideias <br /> em resultados reais
-          </Title>
-          <Desc>
-            Desde de 2015 dispostos a mudar o dia a dia das pessoas através de
-            tecnologia.
-          </Desc>
-          <Button>Quero inovar com a Bitwise</Button>
+          <Title>{bitwiseInfoStrings.title}</Title>
+          <Desc>{bitwiseInfoStrings.desc}</Desc>
+          <Button
+            onClick={() =>
+              window.open(
+                'https://api.whatsapp.com/send?phone=5515991722580&text=Ol%C3%A1%2C%20tenho%20interesse%20nos%20trabalhos%20da%20Bitwise!',
+                '_blank'
+              )
+            }
+          >
+            {bitwiseInfoStrings.button}{' '}
+          </Button>
         </div>
       </Container>
-      <MobileContainer data-aos="fade-right">
-        {/* <Image src="/img/image 11.png" /> */}
-        <Title>Transformamos ideias em resultados reais</Title>
-        <Desc>
-          Desde de 2015 dispostos a mudar o dia a dia das pessoas através de
-          tecnologia.
-        </Desc>
-        <Button>Quero inovar com a Bitwise</Button>
-      </MobileContainer>
     </>
   )
 }

@@ -11,8 +11,9 @@ export const MobileContainer = styled.section`
   align-items: center;
 `
 export const Container = styled.section`
-  @media (max-width: 1150px) {
-    display: none !important;
+  padding: 0 24px;
+  @media screen and (max-width: 680px) {
+    padding: 0 4px;
   }
   background: #edf0f2;
   height: 100vh;
@@ -20,15 +21,18 @@ export const Container = styled.section`
   justify-content: center;
   align-items: center;
 
-  .center {
-    background-color: aliceblue;
+  @media screen and (max-width: 680px) {
+    height: fit-content;
   }
 `
 
 export const Center = styled.div`
-  width: 1120px;
+  max-width: 1120px;
   display: flex;
-  /* background: #000; */
+  @media screen and (max-width: 680px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 export const Image = styled.img`
@@ -39,24 +43,31 @@ export const Image = styled.img`
 `
 
 export const Left = styled.div`
-  /* flex: 1; */
+  flex: 1;
   display: flex;
-  width: 592px;
-  height: 592px;
+
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
+  flex-direction: column;
+
+  padding: 12px;
+  /* background-color: red; */
 `
 
 export const Right = styled.div`
   flex: 1;
+  padding: 12px;
   padding-left: 30px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* align-items: center; */
+  /* background-color: blue; */
 `
 
 export const Title = styled.h3`
-  width: 296px;
+  /* background-color: antiquewhite; */
   @media (min-width: 1150px) {
     font-size: 56px;
     line-height: 64px;
@@ -66,9 +77,9 @@ export const Title = styled.h3`
     line-height: 56px;
     padding: 0 30px;
   }
-  @media (min-width: 1150px) {
+  /* @media (min-width: 1150px) {
     width: 296px;
-  }
+  } */
   font-weight: 600;
 
   color: #640055;

@@ -1,8 +1,12 @@
 import React from 'react'
+import { useLanguage } from '../../../contexts/LanguagesContext'
+import useMediaQuery from '../../../helpers/hooks/useMediaQuery'
+import strings from '../../../languages/language'
 import {
   Button,
   Container,
   Desc,
+  Icon,
   Layout,
   Left,
   LeftButton,
@@ -14,44 +18,151 @@ import {
 } from './styles'
 
 const Footer = () => {
+  const matcheMobile = useMediaQuery('(max-width: 1024px)')
+
+  const { selectedLanguage } = useLanguage()
+  const bitwiseInfoStrings = strings[selectedLanguage].footer
+
   return (
-    <Container>
-      <Layout>
-        <Left>
-          <LeftTitle data-aos="fade-right">
-            Seu futuro só <br /> depende de você
-          </LeftTitle>
-          <LeftDesc data-aos="fade-right">
-            Acreditamos no valor da tecnologia e no impacto positivo <br /> que
-            a transformação digital exerce sobre a sociedade. <br />
-            <br />
-            Faça acontecer com a <b>Bitwise Technology.</b>
-          </LeftDesc>
-          <LeftButton data-aos="fade-right">
-            Quero inovar com a Bitwise
-          </LeftButton>
-          <LeftImg data-aos="fade-up" src="/img/3d.svg" />
-        </Left>
-        <Right>
-          <Title data-aos="fade-left">
-            Faça parte da <br /> equipe Bitwise
-          </Title>
-          <Desc data-aos="fade-left">
-            Tem interesse em se juntar à equipe da <br />{' '}
-            <b>Bitwise Technology</b>? Junte-se a nós!
-          </Desc>
-          <Button data-aos="fade-left">Quero fazer parte</Button>
-        </Right>
-      </Layout>
-      {/* <div
-        style={{
-          width: '100px',
-          height: '100px',
-          backgroundColor: '#640055',
-          justifySelf: 'flex-end'
-        }}
-      ></div> */}
-    </Container>
+    <>
+      <Container>
+        <Layout>
+          {matcheMobile ? (
+            <>
+              <Left>
+                <div
+                  style={{
+                    padding: 24
+                  }}
+                >
+                  <LeftTitle>{bitwiseInfoStrings.left.title}</LeftTitle>
+                  <LeftDesc>{bitwiseInfoStrings.left.desciption}</LeftDesc>
+                  <LeftButton
+                    onClick={() =>
+                      window.open(
+                        'https://api.whatsapp.com/send?phone=5515991722580&text=Ol%C3%A1%2C%20tenho%20interesse%20nos%20trabalhos%20da%20Bitwise!',
+                        '_blank'
+                      )
+                    }
+                  >
+                    {bitwiseInfoStrings.left.button}
+                  </LeftButton>
+                </div>
+                <img width={380} src="/img/3d.svg" />
+              </Left>
+              <Right>
+                <Title>{bitwiseInfoStrings.right.title}</Title>
+                <Desc>{bitwiseInfoStrings.right.desciption}</Desc>
+                <Button
+                  onClick={() => {
+                    window.open(
+                      'https://bitwisetechnology.notion.site/Vagas-abertas-21bad6bb29c449e1a2a98c905b545df5',
+                      '_blank'
+                    )
+                  }}
+                >
+                  {bitwiseInfoStrings.right.button}
+                </Button>
+              </Right>
+            </>
+          ) : (
+            <>
+              <Left>
+                <LeftTitle>{bitwiseInfoStrings.left.title}</LeftTitle>
+                <LeftDesc>{bitwiseInfoStrings.left.desciption}</LeftDesc>
+                <LeftButton
+                  onClick={() =>
+                    window.open(
+                      'https://api.whatsapp.com/send?phone=5515991722580&text=Ol%C3%A1%2C%20tenho%20interesse%20nos%20trabalhos%20da%20Bitwise!',
+                      '_blank'
+                    )
+                  }
+                >
+                  {bitwiseInfoStrings.left.button}
+                </LeftButton>
+                <div
+                  style={{
+                    marginLeft: 34
+                  }}
+                >
+                  <a
+                    href="https://api.whatsapp.com/send?phone=5515991722580&text=Ol%C3%A1%2C%20tenho%20interesse%20nos%20trabalhos%20da%20Bitwise!"
+                    target={'_blank'}
+                    rel="noreferrer"
+                  >
+                    <Icon
+                      style={{
+                        marginRight: 8
+                      }}
+                      width={16}
+                      height={16}
+                      src="/img/whatsapp.svg"
+                      alt=""
+                    />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/bitwisetechnology/mycompany/"
+                    target={'_blank'}
+                    rel="noreferrer"
+                  >
+                    <Icon
+                      style={{
+                        marginRight: 8
+                      }}
+                      width={16}
+                      height={16}
+                      src="/img/linkedIn.svg"
+                      alt=""
+                    />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/bitwisetechnology/"
+                    target={'_blank'}
+                    rel="noreferrer"
+                  >
+                    <Icon
+                      style={{
+                        marginRight: 8
+                      }}
+                      width={16}
+                      height={16}
+                      src="/img/instagram.svg"
+                      alt=""
+                    />
+                  </a>
+                  <a>
+                    <Icon
+                      style={{
+                        marginRight: 8
+                      }}
+                      width={16}
+                      height={16}
+                      src="/img/mail.svg"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <LeftImg src="/img/3d.svg" />
+              </Left>
+              <Right>
+                <Title>{bitwiseInfoStrings.right.title}</Title>
+                <Desc>{bitwiseInfoStrings.right.desciption}</Desc>
+                <Button
+                  onClick={() => {
+                    window.open(
+                      'https://bitwisetechnology.notion.site/Vagas-abertas-21bad6bb29c449e1a2a98c905b545df5',
+                      '_blank'
+                    )
+                  }}
+                >
+                  {bitwiseInfoStrings.right.button}
+                </Button>
+              </Right>
+            </>
+          )}
+        </Layout>
+      </Container>
+    </>
   )
 }
 

@@ -1,4 +1,6 @@
 import React from 'react'
+import { useLanguage } from '../../../contexts/LanguagesContext'
+import strings from '../../../languages/language'
 import {
   Center,
   Container,
@@ -11,44 +13,26 @@ import {
 } from './styles'
 
 const SectionTwo = () => {
+  const { selectedLanguage } = useLanguage()
+  const bitwiseInfoStrings = strings[selectedLanguage].services
   return (
     <>
       <Container>
         <Center>
-          <Left data-aos="fade-right">
-            <Title>Outsourcing</Title>
-            <Sub>
-              Temos uma equipe proativa e com foco total em soluções precisas e
-              assertividade baseada em conhecimento do negócio.
-              <br /> <br /> Aqui os profissionais multidisciplinares colocam ao
-              seu alcance o domínio de tecnologias de ponta e de metodologias
-              emergentes.
-            </Sub>
+          <Left>
+            <Title>{bitwiseInfoStrings.second_service.title}</Title>
+            <Sub>{bitwiseInfoStrings.second_service.description}</Sub>
           </Left>
-          <Right data-aos="fade-left">
+          <Right>
             <img
+              width={328}
               src="/img/Outsourcing.svg"
               alt="Logo da bitwise"
-              style={{ objectFit: 'cover' }}
+              style={{ objectFit: 'cover', flex: 1 }}
             />
           </Right>
         </Center>
       </Container>
-      <MobileContainer>
-        <Title data-aos="fade-up">Outsourcing</Title>
-        <Sub data-aos="fade-up">
-          Temos uma equipe proativa e com foco total em soluções precisas e
-          assertividade baseada em conhecimento do negócio. <br /> <br /> Aqui
-          os profissionais multidisciplinares colocam ao seu alcance o domínio
-          de tecnologias de ponta e de metodologias emergentes.
-        </Sub>
-        <Image
-          data-aos="fade-up"
-          width={328}
-          src="/img/Outsourcing.svg"
-          alt="Logo da bitwise"
-        />
-      </MobileContainer>
     </>
   )
 }

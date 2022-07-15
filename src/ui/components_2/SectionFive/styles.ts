@@ -7,10 +7,12 @@ export const MobileContainer = styled.section`
 `
 
 export const Container = styled.section`
-  @media (max-width: 1150px) {
+  /* @media (max-width: 1150px) {
     display: none !important;
+  } */
+  @media screen and (max-width: 530px) {
+    background-color: #160c15;
   }
-  /* background-color: red; */
   flex: 1;
   display: flex;
   flex-direction: column;

@@ -1,85 +1,41 @@
 import React from 'react'
+import { useLanguage } from '../../../contexts/LanguagesContext'
+import strings from '../../../languages/language'
 import {
   Container,
   GridContainer,
   Item,
   ItemDesc,
   ItemTitle,
-  MobileContainer,
   Title
 } from './styles'
 
 const SectionFive = () => {
+  const { selectedLanguage } = useLanguage()
+  const bitwiseInfoStrings = strings[selectedLanguage].what_we_do
   return (
     <>
-      <Container data-aos="fade-up" id="oquefazemos">
-        <Title>O que fazemos</Title>
+      <div id="oquefazemos"></div>
+      <Container>
+        <Title>{bitwiseInfoStrings.title}</Title>
         <GridContainer>
-          <Item>
+          <Item data-aos="zoom-in">
             <img src="/img/app-medico.svg" alt="Desenvolvimento de software" />
-            <ItemTitle>Desenvolvimento de software</ItemTitle>
-            <ItemDesc>
-              Desenvolvimento específico, escalável e seguro, para atender a sua
-              necessidade e deixar o seu produto pronto para expandir o seu
-              negócio.
-            </ItemDesc>
+            <ItemTitle>{bitwiseInfoStrings.first.title}</ItemTitle>
+            <ItemDesc>{bitwiseInfoStrings.first.description}</ItemDesc>
           </Item>
-          <Item>
+          <Item data-aos="zoom-in">
             <img src="/img/interface.svg" />
-            <ItemTitle>
-              Foco em <br /> usabilidade
-            </ItemTitle>
-            <ItemDesc>
-              Focamos na melhor forma do seu consumidor ter acesso ao seu
-              produto ou serviço, gerando a satisfação dele e resultado para
-              você.
-            </ItemDesc>
+            <ItemTitle>{bitwiseInfoStrings.second.title}</ItemTitle>
+            <ItemDesc>{bitwiseInfoStrings.second.description}</ItemDesc>
           </Item>
-          <Item>
+          <Item data-aos="zoom-in">
             <img src="/img/interface 1.svg" />
-            <ItemTitle>Consultoria para sua empresa</ItemTitle>
-            <ItemDesc>
-              Procuramos entender a necessidade do seu produto com tecnologia de
-              ponta e metodologias emergentes para aprovar a proposta de
-              sucesso.
-            </ItemDesc>
+            <ItemTitle>{bitwiseInfoStrings.third.title}</ItemTitle>
+            <ItemDesc>{bitwiseInfoStrings.third.description}</ItemDesc>
           </Item>
         </GridContainer>
       </Container>
-      <MobileContainer>
-        <Title>O que fazemos</Title>
-        <GridContainer>
-          <Item>
-            <img src="/img/app-medico.svg" alt="Desenvolvimento de software" />
-            <ItemTitle>Desenvolvimento de software</ItemTitle>
-            <ItemDesc>
-              Desenvolvimento específico, escalável e seguro, para atender a sua
-              necessidade e deixar o seu produto pronto para expandir o seu
-              negócio.
-            </ItemDesc>
-          </Item>
-          <Item>
-            <img src="/img/interface.svg" alt="" />
-            <ItemTitle>
-              Foco em <br /> usabilidade
-            </ItemTitle>
-            <ItemDesc>
-              Focamos na melhor forma do seu consumidor ter acesso ao seu
-              produto ou serviço, gerando a satisfação dele e resultado para
-              você.
-            </ItemDesc>
-          </Item>
-          <Item>
-            <img src="/img/interface 1.svg" alt="" />
-            <ItemTitle>Consultoria para sua empresa</ItemTitle>
-            <ItemDesc>
-              Procuramos entender a necessidade do seu produto com tecnologia de
-              ponta e metodologias emergentes para aprovar a proposta de
-              sucesso.
-            </ItemDesc>
-          </Item>
-        </GridContainer>
-      </MobileContainer>
     </>
   )
 }

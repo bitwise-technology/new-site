@@ -10,46 +10,22 @@ import { SectionOne } from '../ui/components_2/SectionOne'
 import { SectionThree } from '../ui/components_2/SectionThree'
 import { SectionTwo } from '../ui/components_2/SectionTwo'
 import 'aos/dist/aos.css'
+import LanguagesContextProvider from '../contexts/LanguagesContext'
 
 const TwoSection = styled.div`
-  @media (max-width: 1150px) {
-    display: none !important;
-  }
-  background-color: #000;
+  /* background-color: #160c15; */
   /* height: 1304px; */
-`
-
-const MobileTwoSection = styled.div`
-  @media (min-width: 1150px) {
-    display: none !important;
+  @media screen and (min-width: 530px) {
+    background: url('/img/NY.svg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
   }
-  background-color: #160c15;
-
-  /* position: relative; */
-  /* height: 1304px; */
-`
-
-const Image = styled.div`
-  @media (max-width: 1150px) {
-    display: none !important;
-  }
-  /* height: 100%; */
-  background: url('/img/NewYork.svg');
-  background-size: cover;
-  width: 100%;
-  object-fit: contain;
-  display: flex;
-  flex-direction: column;
 `
 
 const Container = styled.div`
-  /* @media (max-width: 1150px) {
-    display: none !important;
-  } */
-  /* position: relative; */
-  background-color: #fff;
-  margin: auto;
-  width: 100%;
+  min-height: 1000px;
+  background-color: #edf0f2;
 `
 
 const Home = () => {
@@ -59,24 +35,22 @@ const Home = () => {
     })
   }, [])
   return (
-    <Container>
-      <Header />
-      <Landing />
-      <SectionOne />
-      <SectionTwo />
-      <SectionThree />
-      <MobileTwoSection>
-        <SectionFour />
-        <SectionFive />
-      </MobileTwoSection>
-      <TwoSection>
-        <Image>
-          <SectionFour />
-          <SectionFive />
-        </Image>
-      </TwoSection>
-      <Footer />
-    </Container>
+    <LanguagesContextProvider>
+      <Container>
+        <Header />
+        <Landing />
+        <SectionOne />
+        <SectionTwo />
+        <SectionThree />
+        <div style={{ background: '#160C15' }}>
+          <TwoSection>
+            <SectionFour />
+            <SectionFive />
+          </TwoSection>
+        </div>
+        <Footer />
+      </Container>
+    </LanguagesContextProvider>
     // <LanguagesContextProvider>
     //   <ContactModalProvider>
     //     <ContactModalResponseProvider>

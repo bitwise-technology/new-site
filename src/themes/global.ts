@@ -26,6 +26,10 @@ export const GlobalStyles = createGlobalStyle`
 
     * {
         font-family: 'Roboto', sans-serif;
+        /* overflow: hidden; */
+        /* overflow-X: hidden; */
+        /* overflow: auto; */
+        box-sizing: border-box;
     }
 
     html, body, div, span, applet, object, iframe,

@@ -13,31 +13,40 @@ export const MobileContainer = styled.section`
 `
 
 export const Container = styled.section`
-  @media (max-width: 1150px) {
+  /* @media (max-width: 1150px) {
     display: none !important;
+  } */
+  padding: 0 24px;
+  @media screen and (max-width: 680px) {
+    padding: 0 4px;
   }
   background: #edf0f2;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  .center {
-    background-color: aliceblue;
+  @media screen and (max-width: 680px) {
+    height: fit-content;
   }
 `
 
 export const Image = styled.img`
-  @media (min-width: 1150px) {
+  /* @media (min-width: 1150px) {
     width: 328px;
     height: 328px;
-  }
+  } */
 `
 
 export const Center = styled.div`
-  width: 1120px;
+  max-width: 1120px;
   display: flex;
-  /* background: #000; */
+  /* justify-content: space-around; */
+
+  @media screen and (max-width: 680px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  /* background: red; */
 `
 
 export const Left = styled.div`
@@ -46,6 +55,11 @@ export const Left = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* background-color: blue; */
+  padding: 12px;
+  @media screen and (max-width: 320px) {
+    padding: 0;
+  }
 `
 
 export const Right = styled.div`
@@ -53,6 +67,8 @@ export const Right = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  /* background-color: red; */
+  padding: 12px;
 `
 
 export const Title = styled.h3`

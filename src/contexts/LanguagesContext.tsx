@@ -1,4 +1,12 @@
-import { createContext, Dispatch, SetStateAction, useState } from 'react'
+import {
+  createContext,
+  Dispatch,
+  SetStateAction,
+  useCallback,
+  useContext,
+  useEffect,
+  useState
+} from 'react'
 import moment from 'moment-timezone'
 import ct from 'countries-and-timezones'
 
@@ -8,6 +16,8 @@ interface ILanguagesContext {
   selectedLanguage: Languages
 
   setSelectedLanguage?: Dispatch<SetStateAction<Languages>>
+
+  toggleSelect?: () => void
 }
 
 export const LanguagesContext = createContext<ILanguagesContext>({
@@ -32,10 +42,18 @@ const LanguagesContextProvider: React.FC<LanguagesContextProps> = ({
 
   const [selectedLanguage, setSelectedLanguage] = useState<Languages>(language)
 
+  useEffect(() => {
+    console.log(selectedLanguage)
+  }, [selectedLanguage])
+
+  const toggleSelect = useCallback(() => {
+    setSelectedLanguage(selectedLanguage === 'pt-BR' ? 'en-EN' : 'pt-BR')
+  }, [selectedLanguage])
+
   const valueObject =
     Object.keys(value).length === 2
       ? value
-      : { selectedLanguage, setSelectedLanguage }
+      : { selectedLanguage, setSelectedLanguage, toggleSelect }
 
   return (
     <LanguagesContext.Provider value={valueObject}>
@@ -43,5 +61,6 @@ const LanguagesContextProvider: React.FC<LanguagesContextProps> = ({
     </LanguagesContext.Provider>
   )
 }
+export const useLanguage = () => useContext(LanguagesContext)
 
 export default LanguagesContextProvider

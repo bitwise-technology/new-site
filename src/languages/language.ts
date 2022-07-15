@@ -1,9 +1,58 @@
-export default {
+const strings = {
   'pt-BR': {
     errors: {
       required: 'Valor é obrigatório',
       invalidEmail: 'Email é inválido',
       invalidPhone: 'O número é inválido'
+    },
+
+    //NOVO SITE
+
+    header: {
+      first: 'A Bitwise',
+      second: 'Nossas Parcerias',
+      third: 'O que fazemos',
+      button: 'Vamos conversar'
+    },
+
+    what_we_do: {
+      title: 'O que fazemos',
+      first: {
+        title: 'Desenvolvimento de software',
+        description:
+          'Desenvolvimento específico, escalável e seguro, para atender a sua necessidade e deixar o seu produto pronto para expandir o seu negócio.'
+      },
+      second: {
+        title: 'Foco em usabilidade',
+        description:
+          'Focamos na melhor forma do seu consumidor ter acesso ao seu produto ou serviço, gerando a satisfação dele e resultado para você.'
+      },
+      third: {
+        title: 'Consultoria para sua empresa',
+        description:
+          'Procuramos entender a necessidade do seu produto com tecnologia de ponta e metodologias emergentes para aprovar a proposta de sucesso.'
+      }
+    },
+
+    landing: {
+      title: `TRANSFORMAMOS IDEIAS \n EM RESULTADOS REAIS`,
+      desc: 'Desde de 2015 dispostos a mudar o dia a dia das pessoas através de tecnologia.',
+      button: 'Quero inovar com a Bitwise'
+    },
+
+    footer: {
+      left: {
+        title: 'Seu futuro só depende de você',
+        desciption:
+          'Acreditamos no valor da tecnologia e no impacto positivo que a transformação digital exerce sobre a sociedade. Faça acontecer com a Bitwise Technology.',
+        button: 'Quero inovar com a Bitwise'
+      },
+      right: {
+        title: 'Faça parte da equipe Bitwise',
+        desciption:
+          'Tem interesse em se juntar à equipe da Bitwise Technology? Junte-se a nós!',
+        button: 'Quero fazer parte'
+      }
     },
 
     modal_response: {
@@ -56,8 +105,7 @@ export default {
     motto: {
       title:
         'Seu parceiro confiável em <br /> <strong>desenvolvimento de software</strong>',
-      text:
-        'Design, desenvolvimento ágil, inovação,<br /> cultura e liberdade. Nosso objetivo é transformar<br /> ideias em resultados reais.',
+      text: 'Design, desenvolvimento ágil, inovação,<br /> cultura e liberdade. Nosso objetivo é transformar<br /> ideias em resultados reais.',
       buttonPhrase: 'Falar com um consultor'
     },
 
@@ -72,17 +120,17 @@ export default {
       },
 
       second_service: {
-        title: 'Transformação Digital',
+        title: 'Outsourcing',
         alt: 'Celular',
         description:
-          'Contamos com especialistas em diversas áreas (UX/UI, PM, Devops, Arquitetos e Desenvolvedores) atuando com metodologias ágeis e constante acompanhamento de performance.'
+          'Temos uma equipe proativa e com foco total em soluções precisas e assertividade baseada em conhecimento do negócio. Aqui os profissionais multidisciplinares colocam ao seu alcance o domínio de tecnologias de ponta e de metodologias emergentes.'
       },
 
       third_service: {
-        title: 'Outsourcing',
+        title: 'Transformação Digital',
         alt: 'Hierarquia entre processos',
         description:
-          'Garantimos uma equipe de alto nível em seu projeto. Elimine custos fixos, compartilhe conhecimento, atinja e alcance resultados reais.'
+          'Contamos com especialistas nas áreas de User Experience, User Interface, Project Management, Arquitetos, DevOps e Desenvolvedores,atuando com metodologias ágeis e constante acompanhamento de performance.'
       },
 
       fourth_service: {
@@ -110,38 +158,32 @@ export default {
       title: 'Nossa Stack',
 
       first_language: {
-        text:
-          'Rust é uma linguagem de programação conhecida por ter um ótimo desempenho, uma ótima confiabilidade e uma excelente produtividade.',
+        text: 'Rust é uma linguagem de programação conhecida por ter um ótimo desempenho, uma ótima confiabilidade e uma excelente produtividade.',
         alt: 'Imagem da linguagem de programação Rust'
       },
 
       second_language: {
-        text:
-          'TypeScript é uma linguagem de código aberto que se baseia em JavaScript, uma das ferramentas mais usadas do mundo, adicionando definições de tipo estático.',
+        text: 'TypeScript é uma linguagem de código aberto que se baseia em JavaScript, uma das ferramentas mais usadas do mundo, adicionando definições de tipo estático.',
         alt: 'Imagem da linguagem de programação Typescript'
       },
 
       third_language: {
-        text:
-          'Go é uma linguagem de programação de código aberto que facilita a construção de software simples, confiável e eficiente.',
+        text: 'Go é uma linguagem de programação de código aberto que facilita a construção de software simples, confiável e eficiente.',
         alt: 'Imagem da linguagem de programação Golang'
       },
 
       fourth_language: {
-        text:
-          'Node.js é um software de código aberto, multiplataforma, que executa códigos JavaScript no backend/servidor e frontend/interface.',
+        text: 'Node.js é um software de código aberto, multiplataforma, que executa códigos JavaScript no backend/servidor e frontend/interface.',
         alt: 'Imagem da linguagem de programação Node.JS'
       },
 
       fifth_language: {
-        text:
-          'Blockchain é muito utilizado em Gestão de contratos inteligentes, Processamentos de pagamentos, gestão de cadeia e abastecimento e Proteção de ativos.',
+        text: 'Blockchain é muito utilizado em Gestão de contratos inteligentes, Processamentos de pagamentos, gestão de cadeia e abastecimento e Proteção de ativos.',
         alt: 'Logo do Bitcoin'
       },
 
       sixth_language: {
-        text:
-          'Construa soluções em meio de pagamentos. Ajudamos a sua startup a Inovar e otimizar serviços do sistema financeiro.',
+        text: 'Construa soluções em meio de pagamentos. Ajudamos a sua startup a Inovar e otimizar serviços do sistema financeiro.',
         alt: 'Logo de Fintech'
       }
     },
@@ -182,6 +224,53 @@ export default {
       required: 'Value is required',
       invalidEmail: 'Email is invalid',
       invalidPhone: 'Phone number is invalid'
+    },
+
+    header: {
+      first: 'The Bitwise',
+      second: 'Our Partnerships',
+      third: 'What we do',
+      button: `Let's talk`
+    },
+
+    landing: {
+      title: `WE TRANSFORM IDEAS \n INTO REAL RESULTS`,
+      desc: `Since 2015 willing to change people's daily lives through technology.`,
+      button: 'I want to innovate with Bitwise'
+    },
+
+    what_we_do: {
+      title: 'What we do',
+      first: {
+        title: 'Software development',
+        description:
+          'Specific, scalable and secure development to meet your needs and make your product ready to expand your business.'
+      },
+      second: {
+        title: 'Focus on usability',
+        description:
+          'We focus on the best way for your consumer to have access to your product or service, generating their satisfaction and results for you.'
+      },
+      third: {
+        title: 'Consulting for your company',
+        description:
+          'We seek to understand the need for your product with cutting-edge technology and emerging methodologies to approve the successful proposal.'
+      }
+    },
+
+    footer: {
+      left: {
+        title: 'Your future only depends on you',
+        desciption:
+          'We believe in the value of technology and the positive impact that digital transformation has on society. Make it happen with Bitwise Technology.',
+        button: 'I want to innovate with Bitwise'
+      },
+      right: {
+        title: 'Join the Bitwise team',
+        desciption:
+          'Interested in joining the Bitwise Technology team? Join us!',
+        button: 'I want to be part'
+      }
     },
 
     modal_response: {
@@ -231,10 +320,9 @@ export default {
       button: 'Submit'
     },
     motto: {
-      title:'Your trusted partner <span /> in <strong>software development</strong>'
-        /* 'Innovation, Design and <span /> Technology that <strong>transform!</strong>' */,
-      text:
-        ' Design, agile development, innovation,<br /> culture and freedom. Our challenge is to transform<br /> ideas in real results.',
+      title:
+        'Your trusted partner <span /> in <strong>software development</strong>',
+      /* 'Innovation, Design and <span /> Technology that <strong>transform!</strong>' */ text: ' Design, agile development, innovation,<br /> culture and freedom. Our challenge is to transform<br /> ideas in real results.',
       buttonPhrase: 'Talk to our consultors'
     },
     services: {
@@ -247,19 +335,18 @@ export default {
       },
 
       second_service: {
-        title: 'Digital Transformation',
-        alt: 'image',
+        title: 'Outsourcing',
+        alt: 'Celular',
         description:
-          'We have specialists in several areas (UX / UI, PM, Devops, Architects and Developers) working with agile methodology and constant performance monitoring.'
+          'We have a proactive team with a total focus on accurate solutions and assertiveness based on business knowledge. \n Here, multidisciplinary professionals put the mastery of cutting-edge technologies and emerging methodologies within their reach.'
       },
 
       third_service: {
-        title: 'Outsourcing',
-        alt: 'image',
+        title: 'Digital Transformation',
+        alt: 'Hierarquia entre processos',
         description:
-          'We guarantee a high level team in your project. Eliminate fixed costs, share knowledge and achieve real results.'
+          'We have experts in the areas of User Experience, User Interface, Project Management, Architects, DevOps and Developers, working with agile methodologies and constant performance monitoring.'
       },
-
       fourth_service: {
         title: 'HeadHunting',
         alt: 'image',
@@ -285,38 +372,32 @@ export default {
       title: 'Our stack',
 
       first_language: {
-        text:
-          'Rust is a programming language known for great performance, great reliability and excellent productivity.',
+        text: 'Rust is a programming language known for great performance, great reliability and excellent productivity.',
         alt: "Rust's programming language image"
       },
 
       second_language: {
-        text:
-          'TypeScript is an open source language that is based on JavaScript, one of the most used tools in the world, adding static type definitions.',
+        text: 'TypeScript is an open source language that is based on JavaScript, one of the most used tools in the world, adding static type definitions.',
         alt: "Typescript's programming language image"
       },
 
       third_language: {
-        text:
-          'Go is an open source programming language that facilitates the construction of simple, reliable and efficient software.',
+        text: 'Go is an open source programming language that facilitates the construction of simple, reliable and efficient software.',
         alt: "Golang's programming language image"
       },
 
       fourth_language: {
-        text:
-          'Node.js is open source, multiplatform software that runs JavaScript code on the backend / server and frontend / interface.',
+        text: 'Node.js is open source, multiplatform software that runs JavaScript code on the backend / server and frontend / interface.',
         alt: "Node.JS's programming language image"
       },
 
       fifth_language: {
-        text:
-          'Blockchain is widely used in smart contract management, payment processing, supply and chain management and asset protection.',
+        text: 'Blockchain is widely used in smart contract management, payment processing, supply and chain management and asset protection.',
         alt: "Bitcoin's Logo"
       },
 
       sixth_language: {
-        text:
-          'Build payment solutions. We help your startup to innovate and optimize financial system services.',
+        text: 'Build payment solutions. We help your startup to innovate and optimize financial system services.',
         alt: "Fintech's Logo"
       }
     },
@@ -351,3 +432,4 @@ export default {
     }
   }
 }
+export default strings

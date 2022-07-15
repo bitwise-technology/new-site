@@ -1,28 +1,33 @@
 import styled from 'styled-components'
 
-export const MobileContainer = styled.section`
-  @media (min-width: 1150px) {
-    display: none !important;
-  }
-  position: relative;
-`
-
 export const Container = styled.section`
-  @media (max-width: 1150px) {
+  /* @media (max-width: 1150px) {
     display: none !important;
-  }
-  flex: 1;
+  } */
+  /* flex: 1; */
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* background-color: green; */
+
+  justify-content: center;
+
+  background-color: transparent;
+
+  @media screen and (max-width: 530px) {
+    background: url('/img/NYMobile.svg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: auto 80%;
+  }
 `
 export const Title = styled.h3`
-  @media (min-width: 1150px) {
-    margin-top: 80px;
-    margin-bottom: 80px;
-    font-size: 56px;
-    line-height: 64px;
-  }
+  /* background-color: blue; */
+
+  margin-top: 80px;
+  margin-bottom: 80px;
+  font-size: 56px;
+  line-height: 64px;
   @media (max-width: 1150px) {
     font-size: 44px;
     line-height: 56px;
@@ -36,23 +41,31 @@ export const Title = styled.h3`
 `
 export const GridContainer = styled.div`
   /* background-color: red; */
+  margin-top: 50px;
+
   display: grid;
-  @media (min-width: 1150px) {
-    grid-template-columns: auto auto auto auto;
-    grid-column-gap: 60px;
-    grid-row-gap: 80px;
+  grid-template-columns: auto auto auto auto;
+  grid-column-gap: 60px;
+  grid-row-gap: 80px;
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 40px;
   }
-  @media (max-width: 1150px) {
+
+  @media screen and (max-width: 730px) {
     grid-template-columns: auto auto;
     grid-row-gap: 40px;
+  }
+
+  /* @media (max-width: 1150px) {
     background: url('/img/NYMobile.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom;
-  }
+  } */
   justify-items: center;
   align-items: center;
-  margin-top: 50px;
   padding-bottom: 250px;
 `
 

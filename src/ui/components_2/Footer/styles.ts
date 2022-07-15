@@ -1,14 +1,24 @@
 import styled from 'styled-components'
 
-export const Container = styled.section`
-  @media (max-width: 1150px) {
+export const MobileContainer = styled.section`
+  @media (min-width: 1150px) {
     display: none !important;
   }
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+`
+
+export const Container = styled.section`
   /* background-color: #640055; */
   height: 100vh;
   position: relative;
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: 1024px) {
+    height: auto;
+  }
 `
 
 export const Layout = styled.div`
@@ -16,9 +26,14 @@ export const Layout = styled.div`
   background-color: #fff;
   height: 100%;
   width: 100%;
-
-  /* width: 1140px; */
   z-index: 10;
+
+  @media screen and (max-width: 1024px) {
+    /* background-color: red; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `
 
 export const Title = styled.h4`
@@ -28,6 +43,10 @@ export const Title = styled.h4`
   /* or 125% */
   color: #ffffff;
   letter-spacing: -1px;
+
+  @media (max-width: 1150px) {
+    margin: 32px 30px;
+  }
 `
 
 export const Desc = styled.p`
@@ -36,13 +55,38 @@ export const Desc = styled.p`
   font-size: 16px;
   line-height: 24px;
   color: #ffffff;
+  max-width: 450px;
+  @media (max-width: 1150px) {
+    /* margin: 32px 30px; */
+    padding: 0 30px;
+  }
   margin-top: 26px;
 `
 
+export const MobileImage = styled.div`
+  /* background-color: red; */
+  background-image: url('/img/3d.svg');
+  height: 676px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: -90px;
+  background-size: 400px 592px;
+  position: relative;
+`
+
 export const Right = styled.div`
-  padding: 80px 64px;
+  padding: 40px 0 0 64px;
   background-color: #640055;
-  padding-right: 10vw;
+  /* padding-right: 10vw; */
+  @media screen and (max-width: 1024px) {
+    padding: 12px;
+    width: 100%;
+  }
+`
+
+export const Icon = styled.img`
+  filter: brightness(0);
 `
 
 export const Button = styled.button`
@@ -60,6 +104,11 @@ export const Button = styled.button`
   transition: all 0.2s ease-in;
   margin-top: 36px;
 
+  @media (max-width: 1150px) {
+    margin: 64px 30px;
+    /* padding: 0 30px; */
+  }
+
   &:hover {
     color: #fff;
     background-color: transparent;
@@ -75,6 +124,11 @@ export const Left = styled.div`
   flex-direction: column;
   justify-content: start;
   align-items: flex-start;
+
+  @media screen and (max-width: 1024px) {
+    padding-left: 0;
+    align-items: center;
+  }
 `
 export const LeftButton = styled.button`
   display: flex;
@@ -87,6 +141,17 @@ export const LeftButton = styled.button`
   line-height: 24px;
   text-align: center;
   cursor: pointer;
+  margin-bottom: 36px;
+
+  @media (max-width: 1150px) {
+    align-self: flex-start;
+    margin: 36px 30px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    margin: 0;
+    margin-top: 36px;
+  }
 
   transition: all 0.2s ease-in;
   margin-top: 36px;
@@ -99,6 +164,15 @@ export const LeftButton = styled.button`
 `
 
 export const LeftTitle = styled.h4`
+  margin-bottom: 30px;
+  @media (max-width: 1150px) {
+    font-size: 48px;
+    line-height: 56px;
+    margin: 40px 30px 0 30px;
+  }
+  @media screen and (max-width: 1024px) {
+    margin: 0;
+  }
   font-weight: 600;
   font-size: 56px;
   line-height: 64px;
@@ -107,14 +181,30 @@ export const LeftTitle = styled.h4`
 `
 
 export const LeftDesc = styled.p`
+  @media (max-width: 1150px) {
+    margin: 28px 30px 0 30px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    margin: 0;
+    margin-top: 24px;
+  }
+
   font-size: 16px;
   line-height: 24px;
   color: #090c0e;
-  margin-top: 24px;
 `
 
 export const LeftImg = styled.img`
   position: absolute;
-  bottom: 0;
-  right: -130px;
+  bottom: -40px;
+  right: -160px;
+
+  @media screen and (max-width: 1024px) {
+    display: none !important;
+  }
+
+  @media (max-width: 1259px) {
+    width: 70%;
+  }
 `

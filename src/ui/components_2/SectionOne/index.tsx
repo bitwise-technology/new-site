@@ -1,4 +1,7 @@
-import React from 'react'
+import React, { useMemo } from 'react'
+import { useLanguage } from '../../../contexts/LanguagesContext'
+import useMediaQuery from '../../../helpers/hooks/useMediaQuery'
+import strings from '../../../languages/language'
 import {
   Center,
   Container,
@@ -11,33 +14,49 @@ import {
 } from './styles'
 
 const SectionOne = () => {
+  const matcheMobile = useMediaQuery('(min-width: 680px)')
+  const render = useMemo(() => {
+    return
+  }, [matcheMobile])
+  const { selectedLanguage } = useLanguage()
+  const bitwiseInfoStrings = strings[selectedLanguage].services
   return (
     <>
       <Container>
         <Center>
-          <Left data-aos="fade-right">
-            <Image src="/img/Vecteezy.svg" alt="Logo da bitwise" />
-          </Left>
-          <Right data-aos="fade-left">
-            <Title>Projetos Gerenciados</Title>
-            <Sub>
-              Co-criamos soluções personalizadas em parceria com seu time.
-              <br /> <br />
-              Melhoramos processos internos e garantimos a execução de projetos
-              no prazo necessário.
-            </Sub>
-          </Right>
+          {matcheMobile ? (
+            <>
+              <Left>
+                <Image
+                  data-aos="zoom-in"
+                  width={328}
+                  src="/img/Vecteezy.svg"
+                  alt="Logo da bitwise"
+                />
+              </Left>
+              <Right data-aos="zoom-in">
+                <Title>{bitwiseInfoStrings.first_service.title}</Title>
+                <Sub>{bitwiseInfoStrings.first_service.description}</Sub>
+              </Right>
+            </>
+          ) : (
+            <>
+              <Right data-aos="zoom-in">
+                <Title>{bitwiseInfoStrings.first_service.title}</Title>
+                <Sub>{bitwiseInfoStrings.first_service.description}</Sub>
+              </Right>
+              <Left>
+                <Image
+                  data-aos="zoom-in"
+                  width={328}
+                  src="/img/Vecteezy.svg"
+                  alt="Logo da bitwise"
+                />
+              </Left>
+            </>
+          )}
         </Center>
       </Container>
-      <MobileContainer>
-        <Title>Projetos Gerenciados</Title>
-        <Sub>
-          Co-criamos soluções personalizadas em parceria com seu time.
-          <br /> <br /> Melhoramos processos internos e garantimos a execução de
-          projetos no prazo necessário.
-        </Sub>
-        <Image width={328} src="/img/Vecteezy.svg" alt="Logo da bitwise" />
-      </MobileContainer>
     </>
   )
 }

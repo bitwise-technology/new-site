@@ -9,6 +9,7 @@ function App({ Component, pageProps }: AppProps) {
       <Head>
         <title>Bitwise Technology</title>
         <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width"></meta>
         <link rel="shortcut icon" href="/img/Logo.svg" />
         <link rel="apple-touch-icon" href="/img/Logo.svg" />
         <link rel="manifest" href="/manifest.json" />
