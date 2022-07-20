@@ -71,6 +71,7 @@ const Footer = () => {
                   }}
                 >
                   {bitwiseInfoStrings.right.button}
+                  <img style={{ marginLeft: 8 }} src="/img/arrow-right.svg" />
                 </Button>
               </Right>
             </>
@@ -169,6 +170,7 @@ const Footer = () => {
                   }}
                 >
                   {bitwiseInfoStrings.right.button}
+                  <img style={{ marginLeft: 8 }} src="/img/arrow-right.svg" />
                 </Button>
               </Right>
             </>

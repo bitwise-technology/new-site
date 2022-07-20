@@ -58,20 +58,20 @@ const Header = () => {
               <MenuItem
                 typeProp={backgroundTransparacy}
                 style={{ marginLeft: 8 }}
-                href="#bitwise"
+                to="bitwise"
               >
                 {bitwiseInfoStrings.first}
               </MenuItem>
             )}
 
             {matcheLaptop && (
-              <MenuItem typeProp={backgroundTransparacy} href="#partners">
+              <MenuItem typeProp={backgroundTransparacy} to="partners">
                 {bitwiseInfoStrings.second}
               </MenuItem>
             )}
 
             {matcheLaptop && (
-              <MenuItem typeProp={backgroundTransparacy} href="#oquefazemos">
+              <MenuItem typeProp={backgroundTransparacy} to="oquefazemos">
                 {bitwiseInfoStrings.third}
               </MenuItem>
             )}
@@ -116,6 +116,7 @@ const Header = () => {
               </Link>
 
               <MenuItem
+                to={null}
                 typeProp={backgroundTransparacy}
                 style={{ marginRight: 4 }}
                 onClick={() => toggleSelect()}
@@ -163,35 +164,11 @@ const Header = () => {
               >
                 PT | EN
               </a>
-              <img src="/img/menu.svg" />
+              {/* <img src="/img/menu.svg" /> */}
             </MobileMenu>
           )}
         </Menu>
       </Container>
-      <MobileContainer>
-        <Logo
-          typeProp={backgroundTransparacy}
-          src="/img/LogoColor.svg"
-          alt="Logo da bitwise"
-        />
-        <MobileMenu>
-          <a
-            style={{
-              marginRight: 12
-            }}
-          >
-            <img width={16} height={16} src="/img/linkedIn.svg" alt="" />
-          </a>
-          <a
-            style={{
-              marginRight: 12
-            }}
-          >
-            <img width={16} height={16} src="/img/instagram.svg" alt="" />
-          </a>
-          <img src="/img/menu.svg" />
-        </MobileMenu>
-      </MobileContainer>
     </>
   )
 }

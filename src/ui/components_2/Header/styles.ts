@@ -1,3 +1,4 @@
+import { Link as ReactItem } from 'react-scroll'
 import styled, { css } from 'styled-components'
 interface Props {
   typeProp: number
@@ -121,7 +122,7 @@ export const Left = styled.div`
   /* background-color: blueviolet; */
 `
 
-export const MenuItem = styled.a<Props>`
+export const MenuItem = styled(ReactItem)<Props>`
   padding: 12px 14px;
   font-size: 16px;
   cursor: pointer;
