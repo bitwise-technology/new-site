@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const Container = styled.section`
   /* @media (max-width: 1150px) {
@@ -67,6 +67,23 @@ export const GridContainer = styled.div`
   justify-items: center;
   align-items: center;
   padding-bottom: 250px;
+`
+
+interface IImg {
+  value?: number
+}
+
+export const Img = styled.img<IImg>`
+  @media screen and (max-width: 790px) {
+    ${(p) =>
+      p.value
+        ? css`
+            width: ${p.value}px;
+          `
+        : css`
+            width: 130px;
+          `}
+  }
 `
 
 export const Image = styled.img`

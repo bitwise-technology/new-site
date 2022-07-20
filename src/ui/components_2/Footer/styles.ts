@@ -16,7 +16,7 @@ export const Container = styled.section`
   display: flex;
   justify-content: center;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 900px) {
     height: auto;
   }
 `
@@ -28,7 +28,7 @@ export const Layout = styled.div`
   width: 100%;
   z-index: 10;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 900px) {
     /* background-color: red; */
     flex-direction: column;
     justify-content: center;
@@ -37,6 +37,7 @@ export const Layout = styled.div`
 `
 
 export const Title = styled.h4`
+  white-space: pre-wrap;
   font-weight: 500;
   font-size: 32px;
   line-height: 40px;
@@ -50,6 +51,7 @@ export const Title = styled.h4`
 `
 
 export const Desc = styled.p`
+  white-space: pre-wrap;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -78,8 +80,9 @@ export const MobileImage = styled.div`
 export const Right = styled.div`
   padding: 40px 0 0 64px;
   background-color: #640055;
+  flex: 1;
   /* padding-right: 10vw; */
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 900px) {
     padding: 12px;
     width: 100%;
   }
@@ -116,7 +119,7 @@ export const Button = styled.button`
 `
 
 export const Left = styled.div`
-  flex: 1;
+  flex: 2;
   display: flex;
   padding-top: 80px;
   padding-left: 10vw;
@@ -125,9 +128,17 @@ export const Left = styled.div`
   justify-content: start;
   align-items: flex-start;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 900px) {
     padding-left: 0;
     align-items: center;
+  }
+`
+
+export const Links = styled.div`
+  @media (max-width: 1150px) {
+    /* align-self: flex-start; */
+    margin: 36px 30px;
+    margin-top: 0;
   }
 `
 export const LeftButton = styled.button`
@@ -148,7 +159,7 @@ export const LeftButton = styled.button`
     margin: 36px 30px;
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 900px) {
     margin: 0;
     margin-top: 36px;
   }
@@ -164,13 +175,14 @@ export const LeftButton = styled.button`
 `
 
 export const LeftTitle = styled.h4`
+  white-space: pre-wrap;
   margin-bottom: 30px;
   @media (max-width: 1150px) {
     font-size: 48px;
     line-height: 56px;
     margin: 40px 30px 0 30px;
   }
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 900px) {
     margin: 0;
   }
   font-weight: 600;
@@ -181,11 +193,12 @@ export const LeftTitle = styled.h4`
 `
 
 export const LeftDesc = styled.p`
+  white-space: pre-wrap;
   @media (max-width: 1150px) {
     margin: 28px 30px 0 30px;
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 900px) {
     margin: 0;
     margin-top: 24px;
   }
@@ -197,14 +210,17 @@ export const LeftDesc = styled.p`
 
 export const LeftImg = styled.img`
   position: absolute;
-  bottom: -40px;
+  width: 70%;
+  /* bottom: -40px; */
+  /* width: 100%; */
+  bottom: 0;
   right: -160px;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 900px) {
     display: none !important;
   }
 
-  @media (max-width: 1259px) {
-    width: 70%;
+  @media (max-width: 1145px) {
+    width: 60%;
   }
 `

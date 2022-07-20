@@ -22,6 +22,7 @@ const SectionOne = () => {
   const bitwiseInfoStrings = strings[selectedLanguage].services
   return (
     <>
+      <div id="bitwise"></div>
       <Container>
         <Center>
           {matcheMobile ? (

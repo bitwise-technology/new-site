@@ -13,12 +13,13 @@ import {
   LeftDesc,
   LeftImg,
   LeftTitle,
+  Links,
   Right,
   Title
 } from './styles'
 
 const Footer = () => {
-  const matcheMobile = useMediaQuery('(max-width: 1024px)')
+  const matcheMobile = useMediaQuery('(max-width: 900px)')
 
   const { selectedLanguage } = useLanguage()
   const bitwiseInfoStrings = strings[selectedLanguage].footer
@@ -36,7 +37,11 @@ const Footer = () => {
                   }}
                 >
                   <LeftTitle>{bitwiseInfoStrings.left.title}</LeftTitle>
-                  <LeftDesc>{bitwiseInfoStrings.left.desciption}</LeftDesc>
+                  <LeftDesc
+                    dangerouslySetInnerHTML={{
+                      __html: bitwiseInfoStrings.left.desciption
+                    }}
+                  ></LeftDesc>
                   <LeftButton
                     onClick={() =>
                       window.open(
@@ -52,7 +57,11 @@ const Footer = () => {
               </Left>
               <Right>
                 <Title>{bitwiseInfoStrings.right.title}</Title>
-                <Desc>{bitwiseInfoStrings.right.desciption}</Desc>
+                <Desc
+                  dangerouslySetInnerHTML={{
+                    __html: bitwiseInfoStrings.right.desciption
+                  }}
+                ></Desc>
                 <Button
                   onClick={() => {
                     window.open(
@@ -69,7 +78,11 @@ const Footer = () => {
             <>
               <Left>
                 <LeftTitle>{bitwiseInfoStrings.left.title}</LeftTitle>
-                <LeftDesc>{bitwiseInfoStrings.left.desciption}</LeftDesc>
+                <LeftDesc
+                  dangerouslySetInnerHTML={{
+                    __html: bitwiseInfoStrings.left.desciption
+                  }}
+                ></LeftDesc>
                 <LeftButton
                   onClick={() =>
                     window.open(
@@ -80,11 +93,7 @@ const Footer = () => {
                 >
                   {bitwiseInfoStrings.left.button}
                 </LeftButton>
-                <div
-                  style={{
-                    marginLeft: 34
-                  }}
-                >
+                <Links>
                   <a
                     href="https://api.whatsapp.com/send?phone=5515991722580&text=Ol%C3%A1%2C%20tenho%20interesse%20nos%20trabalhos%20da%20Bitwise!"
                     target={'_blank'}
@@ -94,8 +103,8 @@ const Footer = () => {
                       style={{
                         marginRight: 8
                       }}
-                      width={16}
-                      height={16}
+                      width={24}
+                      height={24}
                       src="/img/whatsapp.svg"
                       alt=""
                     />
@@ -109,8 +118,8 @@ const Footer = () => {
                       style={{
                         marginRight: 8
                       }}
-                      width={16}
-                      height={16}
+                      width={24}
+                      height={24}
                       src="/img/linkedIn.svg"
                       alt=""
                     />
@@ -124,29 +133,33 @@ const Footer = () => {
                       style={{
                         marginRight: 8
                       }}
-                      width={16}
-                      height={16}
+                      width={24}
+                      height={24}
                       src="/img/instagram.svg"
                       alt=""
                     />
                   </a>
-                  <a>
+                  <a href="mailto:manoela@bitwise.ltda">
                     <Icon
                       style={{
                         marginRight: 8
                       }}
-                      width={16}
-                      height={16}
+                      width={24}
+                      height={24}
                       src="/img/mail.svg"
                       alt=""
                     />
                   </a>
-                </div>
+                </Links>
                 <LeftImg src="/img/3d.svg" />
               </Left>
               <Right>
                 <Title>{bitwiseInfoStrings.right.title}</Title>
-                <Desc>{bitwiseInfoStrings.right.desciption}</Desc>
+                <Desc
+                  dangerouslySetInnerHTML={{
+                    __html: bitwiseInfoStrings.right.desciption
+                  }}
+                ></Desc>
                 <Button
                   onClick={() => {
                     window.open(

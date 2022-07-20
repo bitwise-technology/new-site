@@ -42,15 +42,15 @@ const strings = {
 
     footer: {
       left: {
-        title: 'Seu futuro só depende de você',
+        title: 'Seu futuro só \ndepende de você',
         desciption:
-          'Acreditamos no valor da tecnologia e no impacto positivo que a transformação digital exerce sobre a sociedade. Faça acontecer com a Bitwise Technology.',
+          'Acreditamos no valor da tecnologia e no impacto positivo <br/>que a transformação digital exerce sobre a sociedade. <br/><br/>Faça acontecer com a <b>Bitwise Technology.</b>',
         button: 'Quero inovar com a Bitwise'
       },
       right: {
-        title: 'Faça parte da equipe Bitwise',
+        title: 'Faça parte da \nequipe Bitwise',
         desciption:
-          'Tem interesse em se juntar à equipe da Bitwise Technology? Junte-se a nós!',
+          'Tem interesse em se juntar à equipe da <br/><b>Bitwise Technology<b/>? Junte-se a nós!',
         button: 'Quero fazer parte'
       }
     },
@@ -234,7 +234,7 @@ const strings = {
     },
 
     landing: {
-      title: `WE TRANSFORM IDEAS \n INTO REAL RESULTS`,
+      title: `WE TRANSFORM IDEAS \nINTO REAL RESULTS`,
       desc: `Since 2015 willing to change people's daily lives through technology.`,
       button: 'I want to innovate with Bitwise'
     },
@@ -260,15 +260,15 @@ const strings = {
 
     footer: {
       left: {
-        title: 'Your future only depends on you',
+        title: 'Your future only \ndepends on you',
         desciption:
-          'We believe in the value of technology and the positive impact that digital transformation has on society. Make it happen with Bitwise Technology.',
+          'We believe in the value of technology and the positive <br/>impact that digital transformation has on society. <br/><br/>Make it happen with <b>Bitwise Technology.</b>',
         button: 'I want to innovate with Bitwise'
       },
       right: {
-        title: 'Join the Bitwise team',
+        title: 'Join the \nBitwise team',
         desciption:
-          'Interested in joining the Bitwise Technology team? Join us!',
+          'Interested in joining the <b>Bitwise Technology</b> team? <br/>Join us!',
         button: 'I want to be part'
       }
     },
@@ -328,24 +328,24 @@ const strings = {
     services: {
       title: 'Our services',
       first_service: {
-        title: 'Managed Projects',
+        title: 'Managed \nProjects',
         alt: 'image',
         description:
-          'We co-create customized solutions in partnership with your team. We improve internal processes and guarantee the execution of projects on time.'
+          'We co-create customized solutions in partnership with your team.\n\nWe improve internal processes and guarantee the execution of projects on time.'
       },
 
       second_service: {
         title: 'Outsourcing',
         alt: 'Celular',
         description:
-          'We have a proactive team with a total focus on accurate solutions and assertiveness based on business knowledge. \n Here, multidisciplinary professionals put the mastery of cutting-edge technologies and emerging methodologies within their reach.'
+          'We have a proactive team with a total focus on accurate solutions and assertiveness based on business knowledge. \n\nHere, multidisciplinary professionals put the mastery of cutting-edge technologies and emerging methodologies within their reach.'
       },
 
       third_service: {
-        title: 'Digital Transformation',
+        title: 'Digital \nTransformation',
         alt: 'Hierarquia entre processos',
         description:
-          'We have experts in the areas of User Experience, User Interface, Project Management, Architects, DevOps and Developers, working with agile methodologies and constant performance monitoring.'
+          'We have experts in the areas of <b>User Experience, User Interface, Project Management, Architects, DevOps and Developers,</b> working with agile methodologies and constant performance monitoring.'
       },
       fourth_service: {
         title: 'HeadHunting',

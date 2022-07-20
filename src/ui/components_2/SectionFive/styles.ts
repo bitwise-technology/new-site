@@ -34,6 +34,8 @@ export const Title = styled.h3`
   letter-spacing: -2px;
   color: #fff;
   text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 15px 25px rgba(0, 0, 0, 0.25), 0px 15px 50px rgba(0, 0, 0, 0.3);
 `
 
 export const GridContainer = styled.div`

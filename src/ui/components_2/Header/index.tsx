@@ -58,6 +58,7 @@ const Header = () => {
               <MenuItem
                 typeProp={backgroundTransparacy}
                 style={{ marginLeft: 8 }}
+                href="#bitwise"
               >
                 {bitwiseInfoStrings.first}
               </MenuItem>
@@ -89,7 +90,10 @@ const Header = () => {
               )}
 
               {matcheLaptop && (
-                <Link typeProp={backgroundTransparacy}>
+                <Link
+                  href="mailto:manoela@bitwise.ltda"
+                  typeProp={backgroundTransparacy}
+                >
                   <img width={16} height={16} src="/img/mail.svg" alt="" />
                 </Link>
               )}

@@ -66,7 +66,9 @@ export const Right = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
+  @media screen and (max-width: 680px) {
+    align-items: center;
+  }
   /* background-color: blue; */
 `
 
