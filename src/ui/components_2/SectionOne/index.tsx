@@ -15,9 +15,9 @@ import {
 
 const SectionOne = () => {
   const matcheMobile = useMediaQuery('(min-width: 680px)')
-  const render = useMemo(() => {
-    return
-  }, [matcheMobile])
+  // const render = useMemo(() => {
+  //   return
+  // }, [matcheMobile])
   const { selectedLanguage } = useLanguage()
   const bitwiseInfoStrings = strings[selectedLanguage].services
   return (
@@ -29,8 +29,8 @@ const SectionOne = () => {
               <Left>
                 <Image
                   data-aos="zoom-in"
-                  width={328}
-                  src="/img/Vecteezy.svg"
+                  // width={492}
+                  src="/img/cropped.png"
                   alt="Logo da bitwise"
                 />
               </Left>
@@ -48,8 +48,7 @@ const SectionOne = () => {
               <Left>
                 <Image
                   data-aos="zoom-in"
-                  width={328}
-                  src="/img/Vecteezy.svg"
+                  src="/img/cropped.png"
                   alt="Logo da bitwise"
                 />
               </Left>

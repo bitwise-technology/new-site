@@ -13,9 +13,6 @@ export const MobileContainer = styled.section`
 `
 
 export const Container = styled.section`
-  /* @media (max-width: 1150px) {
-    display: none !important;
-  } */
   padding: 0 24px;
   @media screen and (max-width: 680px) {
     padding: 0 4px;
@@ -23,6 +20,7 @@ export const Container = styled.section`
   background: #edf0f2;
   height: 100vh;
   display: flex;
+  /* grid-template-columns: minmax(1fr, 1fr) minmax(1fr, 1fr); */
   justify-content: center;
   align-items: center;
   @media screen and (max-width: 680px) {
@@ -31,10 +29,11 @@ export const Container = styled.section`
 `
 
 export const Image = styled.img`
-  /* @media (min-width: 1150px) {
+  margin-left: 130px;
+  @media screen and (max-width: 973px) {
     width: 328px;
-    height: 328px;
-  } */
+    margin-left: 0;
+  }
 `
 
 export const Center = styled.div`
@@ -89,6 +88,7 @@ export const Title = styled.h3`
 `
 
 export const Sub = styled.p`
+  white-space: pre-wrap;
   margin-top: 24px;
   @media (max-width: 1150px) {
     padding: 0 30px;

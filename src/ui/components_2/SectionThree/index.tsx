@@ -26,28 +26,28 @@ const SectionThree = () => {
             <>
               <Right data-aos="zoom-in">
                 <Title>{bitwiseInfoStrings.third_service.title}</Title>
-                <Sub>{bitwiseInfoStrings.third_service.description}</Sub>
+                <Sub
+                  dangerouslySetInnerHTML={{
+                    __html: bitwiseInfoStrings.third_service.description
+                  }}
+                ></Sub>
               </Right>
               <Left data-aos="zoom-in">
-                <Image
-                  width={328}
-                  src="/img/VecteezyPeople.svg"
-                  alt="Logo da bitwise"
-                />
+                <Image src="/img/VecteezyPeople.svg" alt="Logo da bitwise" />
               </Left>
             </>
           ) : (
             <>
               <Left data-aos="zoom-in">
-                <Image
-                  width={328}
-                  src="/img/VecteezyPeople.svg"
-                  alt="Logo da bitwise"
-                />
+                <Image src="/img/VecteezyPeople.svg" alt="Logo da bitwise" />
               </Left>
               <Right data-aos="zoom-in">
                 <Title>{bitwiseInfoStrings.third_service.title}</Title>
-                <Sub>{bitwiseInfoStrings.third_service.description}</Sub>
+                <Sub
+                  dangerouslySetInnerHTML={{
+                    __html: bitwiseInfoStrings.third_service.description
+                  }}
+                ></Sub>
               </Right>
             </>
           )}

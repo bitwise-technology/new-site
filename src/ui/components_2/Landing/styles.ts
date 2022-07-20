@@ -53,9 +53,14 @@ export const Image = styled.img`
   z-index: -2;
 `
 export const Title = styled.h4`
+  white-space: pre-wrap;
   font-weight: 700;
-  font-size: 52px;
+  font-size: 72px;
   margin-top: 80px;
+  @media (max-width: 944px) {
+    font-size: 52px;
+  }
+
   @media (max-width: 600px) {
     font-weight: 600;
     font-size: 34px;
@@ -67,6 +72,7 @@ export const Title = styled.h4`
   color: #fff;
 `
 export const Desc = styled.p`
+  /* white-space: pre-wrap; */
   @media (max-width: 1150px) {
     margin: 48px 16px 0px 16px;
   }
@@ -99,4 +105,10 @@ export const Button = styled.button`
   border: 1.5px solid #fff;
   border-radius: 4px;
   background-color: transparent;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: #fff;
+    color: #1c2429;
+  }
 `

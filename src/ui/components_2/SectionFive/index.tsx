@@ -19,17 +19,17 @@ const SectionFive = () => {
       <Container>
         <Title>{bitwiseInfoStrings.title}</Title>
         <GridContainer>
-          <Item data-aos="zoom-in">
+          <Item>
             <img src="/img/app-medico.svg" alt="Desenvolvimento de software" />
             <ItemTitle>{bitwiseInfoStrings.first.title}</ItemTitle>
             <ItemDesc>{bitwiseInfoStrings.first.description}</ItemDesc>
           </Item>
-          <Item data-aos="zoom-in">
+          <Item>
             <img src="/img/interface.svg" />
             <ItemTitle>{bitwiseInfoStrings.second.title}</ItemTitle>
             <ItemDesc>{bitwiseInfoStrings.second.description}</ItemDesc>
           </Item>
-          <Item data-aos="zoom-in">
+          <Item>
             <img src="/img/interface 1.svg" />
             <ItemTitle>{bitwiseInfoStrings.third.title}</ItemTitle>
             <ItemDesc>{bitwiseInfoStrings.third.description}</ItemDesc>

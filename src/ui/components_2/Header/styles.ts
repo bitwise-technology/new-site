@@ -156,6 +156,7 @@ export const Button = styled.button<Props>`
   border-color: #fff;
   color: #fff;
   background-color: transparent;
+  border-width: 1.5px;
   ${(p) =>
     p.typeProp === 0
       ? css`
@@ -181,6 +182,7 @@ export const Button = styled.button<Props>`
         : css`
             color: #640055;
           `}
+
     background-color: #fff;
   }
 `

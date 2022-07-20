@@ -75,7 +75,7 @@ export const Item = styled.div`
 
   padding: 0 43px;
 
-  transition: all 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 
   &:hover {
     transform: scale(1.05);

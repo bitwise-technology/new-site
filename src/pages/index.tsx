@@ -51,30 +51,6 @@ const Home = () => {
         <Footer />
       </Container>
     </LanguagesContextProvider>
-    // <LanguagesContextProvider>
-    //   <ContactModalProvider>
-    //     <ContactModalResponseProvider>
-    //       <div
-    //         style={{
-    //           position: 'relative',
-    //           backgroundColor: '#fff',
-    //           margin: 'auto'
-    //         }}
-    //       >
-    //         <ContactModal />
-    //         <ModalResponse />
-    //         <Section1 />
-    //         <Services />
-    //         <Partners />
-    //         <WhereWeAre />
-    //         <ProgrammingLanguages />
-    //         <CallToActionSection />
-    //         <BitwiseInfo />
-    //         <Copyright />
-    //       </div>
-    //     </ContactModalResponseProvider>
-    //   </ContactModalProvider>
-    // </LanguagesContextProvider>
   )
 }
 

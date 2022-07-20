@@ -36,9 +36,13 @@ export const Center = styled.div`
 `
 
 export const Image = styled.img`
-  @media (min-width: 1150px) {
+  margin-right: 80px;
+  @media screen and (max-width: 980px) {
+    margin-right: 0;
+  }
+
+  @media screen and (max-width: 973px) {
     width: 328px;
-    height: 328px;
   }
 `
 
@@ -57,7 +61,7 @@ export const Left = styled.div`
 export const Right = styled.div`
   flex: 1;
   padding: 12px;
-  padding-left: 30px;
+  /* padding-left: 30px; */
 
   display: flex;
   flex-direction: column;
@@ -67,6 +71,7 @@ export const Right = styled.div`
 `
 
 export const Title = styled.h3`
+  white-space: pre-wrap;
   /* background-color: antiquewhite; */
   @media (min-width: 1150px) {
     font-size: 56px;

@@ -52,7 +52,13 @@ export const Left = styled.div`
   /* background-color: red; */
   padding: 12px;
 `
-export const Image = styled.img``
+export const Image = styled.img`
+  margin-right: 100px;
+  @media screen and (max-width: 973px) {
+    width: 328px;
+    margin-right: 0;
+  }
+`
 export const Right = styled.div`
   flex: 1;
   padding: 12px;
@@ -69,6 +75,7 @@ export const Right = styled.div`
 `
 
 export const Title = styled.h3`
+  white-space: pre-wrap;
   @media screen and (max-width: 680px) {
     margin-top: 32px;
   }
@@ -91,6 +98,7 @@ export const Title = styled.h3`
 `
 
 export const Sub = styled.p`
+  white-space: pre-wrap;
   margin-top: 24px;
   @media (max-width: 1150px) {
     padding: 0 30px;

@@ -19,14 +19,13 @@ const SectionTwo = () => {
     <>
       <Container>
         <Center>
-          <Left>
+          <Left data-aos="zoom-in">
             <Title>{bitwiseInfoStrings.second_service.title}</Title>
             <Sub>{bitwiseInfoStrings.second_service.description}</Sub>
           </Left>
-          <Right>
-            <img
-              width={328}
-              src="/img/Outsourcing.svg"
+          <Right data-aos="zoom-in">
+            <Image
+              src="/img/cropped-two.png"
               alt="Logo da bitwise"
               style={{ objectFit: 'cover', flex: 1 }}
             />

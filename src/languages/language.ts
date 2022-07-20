@@ -35,7 +35,7 @@ const strings = {
     },
 
     landing: {
-      title: `TRANSFORMAMOS IDEIAS \n EM RESULTADOS REAIS`,
+      title: `TRANSFORMAMOS IDEIAS \nEM RESULTADOS REAIS`,
       desc: 'Desde de 2015 dispostos a mudar o dia a dia das pessoas através de tecnologia.',
       button: 'Quero inovar com a Bitwise'
     },
@@ -113,9 +113,9 @@ const strings = {
       title: 'Nossos Serviços',
 
       first_service: {
-        title: 'Projetos Gerenciados',
+        title: 'Projetos \nGerenciados',
         description:
-          'Co-criamos soluções personalizadas em parceria com seu time. Melhoramos processos internos e garantimos a execução de projetos no prazo necessário.',
+          'Co-criamos soluções personalizadas em parceria com seu time. \n\nMelhoramos processos internos e garantimos a execução de projetos no prazo necessário.',
         alt: 'Tela de computador com esfera verde'
       },
 
@@ -123,14 +123,14 @@ const strings = {
         title: 'Outsourcing',
         alt: 'Celular',
         description:
-          'Temos uma equipe proativa e com foco total em soluções precisas e assertividade baseada em conhecimento do negócio. Aqui os profissionais multidisciplinares colocam ao seu alcance o domínio de tecnologias de ponta e de metodologias emergentes.'
+          'Temos uma equipe proativa e com foco total em soluções precisas e assertividade baseada em conhecimento do negócio. \n\nAqui os profissionais multidisciplinares colocam ao seu alcance o domínio de tecnologias de ponta e de metodologias emergentes.'
       },
 
       third_service: {
-        title: 'Transformação Digital',
+        title: 'Transformação \nDigital',
         alt: 'Hierarquia entre processos',
         description:
-          'Contamos com especialistas nas áreas de User Experience, User Interface, Project Management, Arquitetos, DevOps e Desenvolvedores,atuando com metodologias ágeis e constante acompanhamento de performance.'
+          'Contamos com especialistas nas áreas de <b>User Experience, User Interface, Project Management, Arquitetos, DevOps e Desenvolvedores,</b> atuando com metodologias ágeis e constante acompanhamento de performance.'
       },
 
       fourth_service: {
