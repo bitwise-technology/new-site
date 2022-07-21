@@ -27,13 +27,8 @@ const SectionOne = () => {
         <Center>
           {matcheMobile ? (
             <>
-              <Left>
-                <Image
-                  data-aos="zoom-in"
-                  // width={492}
-                  src="/img/cropped.png"
-                  alt="Logo da bitwise"
-                />
+              <Left data-aos="zoom-in">
+                <Image src="/img/cropped.png" alt="Logo da bitwise" />
               </Left>
               <Right data-aos="zoom-in">
                 <Title>{bitwiseInfoStrings.first_service.title}</Title>
@@ -46,12 +41,8 @@ const SectionOne = () => {
                 <Title>{bitwiseInfoStrings.first_service.title}</Title>
                 <Sub>{bitwiseInfoStrings.first_service.description}</Sub>
               </Right>
-              <Left>
-                <Image
-                  data-aos="zoom-in"
-                  src="/img/cropped.png"
-                  alt="Logo da bitwise"
-                />
+              <Left data-aos="zoom-in">
+                <Image src="/img/cropped.png" alt="Logo da bitwise" />
               </Left>
             </>
           )}

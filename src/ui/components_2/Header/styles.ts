@@ -142,7 +142,11 @@ export const MenuItem = styled(ReactItem)<Props>`
         `}
 `
 
-export const Right = styled.div``
+export const Right = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
 
 export const Button = styled.button<Props>`
   padding: 12px 10px;

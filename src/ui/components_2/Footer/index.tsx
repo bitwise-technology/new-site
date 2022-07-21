@@ -170,7 +170,7 @@ const Footer = () => {
                   }}
                 >
                   {bitwiseInfoStrings.right.button}
-                  <img style={{ marginLeft: 8 }} src="/img/arrow-right.svg" />
+                  <img src="/img/arrow-right.svg" />
                 </Button>
               </Right>
             </>

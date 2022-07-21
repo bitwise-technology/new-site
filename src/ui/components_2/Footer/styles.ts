@@ -115,6 +115,9 @@ export const Button = styled.button`
   &:hover {
     color: #fff;
     background-color: transparent;
+    img {
+      filter: brightness(0) invert(1);
+    }
   }
 `
 
@@ -207,6 +210,9 @@ export const LeftDesc = styled.p`
   line-height: 24px;
   color: #090c0e;
 `
+// export const IconButton = styled.img`
+//   margin-left: 8px;
+// `
 
 export const LeftImg = styled.img`
   position: absolute;

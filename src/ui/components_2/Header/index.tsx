@@ -9,12 +9,42 @@ import {
   Logo,
   Menu,
   MenuItem,
-  MobileContainer,
   MobileMenu,
   Right
 } from './styles'
 
 import strings from '../../../languages/language'
+
+type Language = 'pt-BR' | 'en-EN'
+
+const LanguageButton = ({ color = '#fff' }) => {
+  const { setSelectedLanguage } = useLanguage()
+
+  const handleSelectedLanguage = (language: Language) => {
+    setSelectedLanguage && setSelectedLanguage(language)
+  }
+  return (
+    <div style={{ color, marginRight: 12, fontSize: 16 }}>
+      <span
+        style={{
+          cursor: 'pointer'
+        }}
+        onClick={() => handleSelectedLanguage('pt-BR')}
+      >
+        PT
+      </span>{' '}
+      |{' '}
+      <span
+        style={{
+          cursor: 'pointer'
+        }}
+        onClick={() => handleSelectedLanguage('en-EN')}
+      >
+        EN
+      </span>
+    </div>
+  )
+}
 
 const Header = () => {
   const [clientWindowHeight, setClientWindowHeight] = useState(null)
@@ -23,7 +53,11 @@ const Header = () => {
   const matcheLaptop = useMediaQuery('(min-width: 1024px)')
   const matcheMobile = useMediaQuery('(min-width: 565px)')
 
-  const { selectedLanguage, toggleSelect } = useLanguage()
+  const { setSelectedLanguage, selectedLanguage, toggleSelect } = useLanguage()
+
+  const handleSelectedLanguage = (language: Language) => {
+    setSelectedLanguage && setSelectedLanguage(language)
+  }
 
   const bitwiseInfoStrings = strings[selectedLanguage].header
 
@@ -115,14 +149,7 @@ const Header = () => {
                 <img width={16} height={16} src="/img/instagram.svg" alt="" />
               </Link>
 
-              <MenuItem
-                to={null}
-                typeProp={backgroundTransparacy}
-                style={{ marginRight: 4 }}
-                onClick={() => toggleSelect()}
-              >
-                PT | EN
-              </MenuItem>
+              <LanguageButton />
               <Button
                 typeProp={backgroundTransparacy}
                 onClick={() =>
@@ -158,13 +185,9 @@ const Header = () => {
                 <img width={16} height={16} src="/img/instagram.svg" alt="" />
               </a>
 
-              <a
-                style={{ marginRight: 12, color: '#fff' }}
-                onClick={() => toggleSelect()}
-              >
-                PT | EN
-              </a>
-              {/* <img src="/img/menu.svg" /> */}
+              <LanguageButton />
+
+              <img src="/img/menu.svg" />
             </MobileMenu>
           )}
         </Menu>
