@@ -150,7 +150,9 @@ const Header = () => {
                 <img width={16} height={16} src="/img/instagram.svg" alt="" />
               </Link>
 
-              <LanguageButton />
+              <LanguageButton
+                color={backgroundTransparacy === 0 ? '#fff' : '#000'}
+              />
               <Button
                 typeProp={backgroundTransparacy}
                 onClick={() =>
@@ -186,7 +188,9 @@ const Header = () => {
                 <img width={16} height={16} src="/img/instagram.svg" alt="" />
               </a>
 
-              <LanguageButton />
+              <LanguageButton
+                color={backgroundTransparacy === 0 ? '#fff' : '#000'}
+              />
 
               <img
                 src="/img/menu.svg"
