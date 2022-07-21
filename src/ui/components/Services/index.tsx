@@ -11,7 +11,7 @@ import {
 } from './ServicesStyles'
 
 import { useContext } from 'react'
-import { LanguagesContext } from 'contexts/LanguagesContext'
+import { LanguagesContext } from '../../../contexts/LanguagesContext'
 
 import strings from '../../../languages/language'
 

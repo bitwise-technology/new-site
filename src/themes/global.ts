@@ -1,32 +1,35 @@
 import { createGlobalStyle } from 'styled-components'
 
+// @font-face {
+//     font-family: "Gotham-Bold";
+//     src: url(/fonts/Gotham/Gotham-Bold.otf);
+//     font-weight: bold;
+// }
+
+// @font-face {
+//     font-family: "Gotham-Black";
+//     src: url(/fonts/Gotham/Gotham-Black.otf);
+// }
+
+// @font-face {
+//     font-family: "Gotham";
+//     src: url(/fonts/Gotham/Gotham-Book.otf);
+//     font-weight: 400;
+// }
+
+// @font-face {
+//     font-family: "Gotham-Ultra";
+//     src: url(/fonts/Gotham/Gotham-Ultra.otf);
+// }
 export const GlobalStyles = createGlobalStyle`
 
-    @font-face {
-        font-family: "Gotham-Bold";
-        src: url(/fonts/Gotham/Gotham-Bold.otf);
-        font-weight: bold;
-    }
-
-    @font-face {
-        font-family: "Gotham-Black";
-        src: url(/fonts/Gotham/Gotham-Black.otf);
-    }
-    
-
-    @font-face {
-        font-family: "Gotham";
-        src: url(/fonts/Gotham/Gotham-Book.otf);
-        font-weight: 400;
-    }
-
-    @font-face {
-        font-family: "Gotham-Ultra";
-        src: url(/fonts/Gotham/Gotham-Ultra.otf);
-    }
 
     * {
-        font-family: 'Gotham' sans-serif;
+        font-family: 'Roboto', sans-serif;
+        /* overflow: hidden; */
+        /* overflow-X: hidden; */
+        /* overflow: auto; */
+        box-sizing: border-box;
     }
 
     html, body, div, span, applet, object, iframe,
@@ -45,7 +48,7 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
         border: 0;
-        font: inherit;
+        
         vertical-align: baseline;
         text-decoration: none;
 

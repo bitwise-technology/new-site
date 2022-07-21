@@ -16,7 +16,7 @@ import parse from 'html-react-parser'
 import strings from '../../../languages/language'
 
 import { useContext } from 'react'
-import { LanguagesContext } from 'contexts/LanguagesContext'
+import { LanguagesContext } from '../../../contexts/LanguagesContext'
 
 const BitwiseInfo = () => {
   const { selectedLanguage } = useContext(LanguagesContext)

@@ -1,6 +1,6 @@
 import { fireEvent, render } from '@testing-library/react'
-import ContactModalProvider from 'contexts/ContactModal'
 import Motto from '.'
+import ContactModalProvider from '../../../contexts/ContactModal'
 
 describe('Motto', () => {
   test('Should render title', async () => {

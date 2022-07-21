@@ -1,6 +1,6 @@
 import { fireEvent, render } from '@testing-library/react'
-import ContactModalProvider from 'contexts/ContactModal'
 import ContactModal from '.'
+import ContactModalProvider from '../../../contexts/ContactModal'
 
 describe('Contact Modal', () => {
   test('should render with initial state', async () => {

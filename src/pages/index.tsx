@@ -1,46 +1,55 @@
-import React from 'react'
-import ContactModalProvider from 'contexts/ContactModal'
+import React, { useEffect } from 'react'
+import styled from 'styled-components'
+import Aos from 'aos'
+import { Footer } from '../ui/components_2/Footer'
+import { Header } from '../ui/components_2/Header'
+import { Landing } from '../ui/components_2/Landing'
+import { SectionFive } from '../ui/components_2/SectionFive'
+import { SectionFour } from '../ui/components_2/SectionFour'
+import { SectionOne } from '../ui/components_2/SectionOne'
+import { SectionThree } from '../ui/components_2/SectionThree'
+import { SectionTwo } from '../ui/components_2/SectionTwo'
+import 'aos/dist/aos.css'
+import LanguagesContextProvider from '../contexts/LanguagesContext'
 
-import BitwiseInfo from 'ui/components/BitwiseInfo'
-import CallToActionSection from 'ui/components/CallToActionSection'
-import ContactModal from 'ui/components/ContactModal'
-import Copyright from 'ui/components/Copyright'
-import Header from 'ui/components/Header'
-import Motto from 'ui/components/Motto'
-import Partners from 'ui/components/Partners'
-import Services from 'ui/components/Services'
-import WhereWeAre from 'ui/components/WhereWeAre'
-import ProgrammingLanguages from 'ui/components/ProgrammingLanguages'
-import LanguagesContextProvider from 'contexts/LanguagesContext'
-import ModalResponse from 'ui/components/ModalResponse'
-import Section1 from 'ui/components/Section1'
-import ContactModalResponseProvider from 'contexts/ModalResponse'
+const TwoSection = styled.div`
+  /* background-color: #160c15; */
+  /* height: 1304px; */
+  @media screen and (min-width: 530px) {
+    background: url('/img/NY.svg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+  }
+`
+
+const Container = styled.div`
+  min-height: 1000px;
+  background-color: #edf0f2;
+`
 
 const Home = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 500
+    })
+  }, [])
   return (
     <LanguagesContextProvider>
-      <ContactModalProvider>
-        <ContactModalResponseProvider>
-          <div
-            style={{
-              position: 'relative',
-              backgroundColor: '#fff',
-              margin: 'auto'
-            }}
-          >
-            <ContactModal />
-            <ModalResponse />
-            <Section1 />
-            <Services />
-            <Partners />
-            <WhereWeAre />
-            <ProgrammingLanguages />
-            <CallToActionSection />
-            <BitwiseInfo />
-            <Copyright />
-          </div>
-        </ContactModalResponseProvider>
-      </ContactModalProvider>
+      <Container>
+        <Header />
+        <Landing />
+        <SectionOne />
+        <SectionTwo />
+        <SectionThree />
+        <div style={{ background: '#160C15' }}>
+          <TwoSection>
+            <SectionFour />
+            <SectionFive />
+          </TwoSection>
+        </div>
+        <Footer />
+      </Container>
     </LanguagesContextProvider>
   )
 }
