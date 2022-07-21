@@ -1,17 +1,8 @@
-import React, { useMemo } from 'react'
+import React from 'react'
 import { useLanguage } from '../../../contexts/LanguagesContext'
 import useMediaQuery from '../../../helpers/hooks/useMediaQuery'
 import strings from '../../../languages/language'
-import {
-  Center,
-  Container,
-  Image,
-  Left,
-  MobileContainer,
-  Right,
-  Sub,
-  Title
-} from './styles'
+import { Center, Container, Image, Left, Right, Sub, Title } from './styles'
 
 const SectionOne = () => {
   const matcheMobile = useMediaQuery('(min-width: 680px)')

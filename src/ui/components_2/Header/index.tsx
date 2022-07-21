@@ -53,11 +53,7 @@ const Header = () => {
   const matcheLaptop = useMediaQuery('(min-width: 1024px)')
   const matcheMobile = useMediaQuery('(min-width: 565px)')
 
-  const { setSelectedLanguage, selectedLanguage, toggleSelect } = useLanguage()
-
-  const handleSelectedLanguage = (language: Language) => {
-    setSelectedLanguage && setSelectedLanguage(language)
-  }
+  const { selectedLanguage } = useLanguage()
 
   const bitwiseInfoStrings = strings[selectedLanguage].header
 
