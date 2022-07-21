@@ -52,6 +52,64 @@ const Footer = () => {
                   >
                     {bitwiseInfoStrings.left.button}
                   </LeftButton>
+                  <Links>
+                    <a
+                      href="https://api.whatsapp.com/send?phone=5515991722580&text=Ol%C3%A1%2C%20tenho%20interesse%20nos%20trabalhos%20da%20Bitwise!"
+                      target={'_blank'}
+                      rel="noreferrer"
+                    >
+                      <Icon
+                        style={{
+                          marginRight: 16
+                        }}
+                        width={24}
+                        height={24}
+                        src="/img/whatsapp.svg"
+                        alt=""
+                      />
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/company/bitwisetechnology/mycompany/"
+                      target={'_blank'}
+                      rel="noreferrer"
+                    >
+                      <Icon
+                        style={{
+                          marginRight: 16
+                        }}
+                        width={24}
+                        height={24}
+                        src="/img/linkedIn.svg"
+                        alt=""
+                      />
+                    </a>
+                    <a
+                      href="https://www.instagram.com/bitwisetechnology/"
+                      target={'_blank'}
+                      rel="noreferrer"
+                    >
+                      <Icon
+                        style={{
+                          marginRight: 16
+                        }}
+                        width={24}
+                        height={24}
+                        src="/img/instagram.svg"
+                        alt=""
+                      />
+                    </a>
+                    <a href="mailto:manoela@bitwise.ltda">
+                      <Icon
+                        style={{
+                          marginRight: 16
+                        }}
+                        width={24}
+                        height={24}
+                        src="/img/mail.svg"
+                        alt=""
+                      />
+                    </a>
+                  </Links>
                 </div>
                 <img width={380} src="/img/3d.svg" />
               </Left>
@@ -102,7 +160,7 @@ const Footer = () => {
                   >
                     <Icon
                       style={{
-                        marginRight: 8
+                        marginRight: 16
                       }}
                       width={24}
                       height={24}
@@ -117,7 +175,7 @@ const Footer = () => {
                   >
                     <Icon
                       style={{
-                        marginRight: 8
+                        marginRight: 16
                       }}
                       width={24}
                       height={24}
@@ -132,7 +190,7 @@ const Footer = () => {
                   >
                     <Icon
                       style={{
-                        marginRight: 8
+                        marginRight: 16
                       }}
                       width={24}
                       height={24}
@@ -143,7 +201,7 @@ const Footer = () => {
                   <a href="mailto:manoela@bitwise.ltda">
                     <Icon
                       style={{
-                        marginRight: 8
+                        marginRight: 16
                       }}
                       width={24}
                       height={24}
@@ -170,7 +228,7 @@ const Footer = () => {
                   }}
                 >
                   {bitwiseInfoStrings.right.button}
-                  <img src="/img/arrow-right.svg" />
+                  <img src="/img/arrow-right.svg" style={{ marginLeft: 8 }} />
                 </Button>
               </Right>
             </>

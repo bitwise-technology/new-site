@@ -4,6 +4,7 @@ import useMediaQuery from '../../../helpers/hooks/useMediaQuery'
 import {
   Button,
   Container,
+  Curtain,
   Left,
   Link,
   Logo,
@@ -49,6 +50,7 @@ const LanguageButton = ({ color = '#fff' }) => {
 const Header = () => {
   const [clientWindowHeight, setClientWindowHeight] = useState(null)
   const [backgroundTransparacy, setBackgroundTransparacy] = useState(0)
+  const [menu, setMenu] = useState(false)
 
   const matcheLaptop = useMediaQuery('(min-width: 1024px)')
   const matcheMobile = useMediaQuery('(min-width: 565px)')
@@ -59,6 +61,9 @@ const Header = () => {
 
   const handleScroll = () => {
     setClientWindowHeight(window.scrollY)
+  }
+  const toggleMenu = () => {
+    setMenu((prev) => !prev)
   }
 
   useEffect(() => {
@@ -183,10 +188,44 @@ const Header = () => {
 
               <LanguageButton />
 
-              <img src="/img/menu.svg" />
+              <img
+                src="/img/menu.svg"
+                onClick={() => toggleMenu()}
+                style={{ cursor: 'pointer' }}
+              />
             </MobileMenu>
           )}
         </Menu>
+        {menu && !matcheMobile && (
+          <div data-aos="zoom-in">
+            <MenuItem
+              typeProp={backgroundTransparacy}
+              style={{ marginLeft: 8, fontSize: 12 }}
+              to="bitwise"
+            >
+              {bitwiseInfoStrings.first}
+            </MenuItem>
+            <MenuItem
+              style={{
+                fontSize: 12
+              }}
+              typeProp={backgroundTransparacy}
+              to="partners"
+            >
+              {bitwiseInfoStrings.second}
+            </MenuItem>
+
+            <MenuItem
+              typeProp={backgroundTransparacy}
+              style={{
+                fontSize: 12
+              }}
+              to="oquefazemos"
+            >
+              {bitwiseInfoStrings.third}
+            </MenuItem>
+          </div>
+        )}
       </Container>
     </>
   )

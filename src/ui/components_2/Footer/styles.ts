@@ -139,9 +139,12 @@ export const Left = styled.div`
 
 export const Links = styled.div`
   @media (max-width: 1150px) {
-    /* align-self: flex-start; */
     margin: 36px 30px;
     margin-top: 0;
+  }
+  @media screen and (max-width: 900px) {
+    margin: 0;
+    margin-top: 10px;
   }
 `
 export const LeftButton = styled.button`
@@ -210,15 +213,10 @@ export const LeftDesc = styled.p`
   line-height: 24px;
   color: #090c0e;
 `
-// export const IconButton = styled.img`
-//   margin-left: 8px;
-// `
 
 export const LeftImg = styled.img`
   position: absolute;
   width: 70%;
-  /* bottom: -40px; */
-  /* width: 100%; */
   bottom: 0;
   right: -160px;
 

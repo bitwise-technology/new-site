@@ -58,6 +58,8 @@ export const Container = styled.header<Props>`
   z-index: 10000;
   transition: all 0.2s ease-in-out;
 
+  flex-direction: column;
+
   @media screen and (max-width: 1024px) {
     position: absolute;
     top: 0;
@@ -99,6 +101,17 @@ export const Logo = styled.img<Props>`
   /* @media (max-width: 1150px) {
     filter: brightness(0) invert(1);
   } */
+`
+
+export const Curtain = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 100000;
+  overflow: hidden;
 `
 
 export const Menu = styled.div`
