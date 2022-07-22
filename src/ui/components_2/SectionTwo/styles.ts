@@ -5,7 +5,6 @@ export const MobileContainer = styled.section`
     display: none !important;
   }
   background: #edf0f2;
-  /* background-color: red; */
   display: flex;
   flex-direction: column;
   padding-top: 32px;
@@ -17,10 +16,9 @@ export const Container = styled.section`
   @media screen and (max-width: 680px) {
     padding: 0 4px;
   }
-  background: #edf0f2;
+  background: #dce2e6;
   height: 100vh;
   display: flex;
-  /* grid-template-columns: minmax(1fr, 1fr) minmax(1fr, 1fr); */
   justify-content: center;
   align-items: center;
   @media screen and (max-width: 680px) {
@@ -39,13 +37,11 @@ export const Image = styled.img`
 export const Center = styled.div`
   max-width: 1120px;
   display: flex;
-  /* justify-content: space-around; */
 
   @media screen and (max-width: 680px) {
     flex-direction: column;
     align-items: center;
   }
-  /* background: red; */
 `
 
 export const Left = styled.div`
@@ -54,7 +50,7 @@ export const Left = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* background-color: blue; */
+
   padding: 12px;
   @media screen and (max-width: 320px) {
     padding: 0;
@@ -66,7 +62,6 @@ export const Right = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: red; */
   padding: 12px;
 `
 
@@ -98,7 +93,7 @@ export const Sub = styled.p`
   @media (min-width: 1150px) {
     width: 336px;
   }
-  font-size: 15px;
+  font-size: 16px;
   line-height: 24px;
   color: #1c2429;
 `

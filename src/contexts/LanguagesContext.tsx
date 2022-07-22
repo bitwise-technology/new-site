@@ -42,10 +42,6 @@ const LanguagesContextProvider: React.FC<LanguagesContextProps> = ({
 
   const [selectedLanguage, setSelectedLanguage] = useState<Languages>(language)
 
-  useEffect(() => {
-    console.log(selectedLanguage)
-  }, [selectedLanguage])
-
   const toggleSelect = useCallback(() => {
     setSelectedLanguage(selectedLanguage === 'pt-BR' ? 'en-EN' : 'pt-BR')
   }, [selectedLanguage])

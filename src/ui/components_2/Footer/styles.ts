@@ -1,17 +1,8 @@
 import styled from 'styled-components'
 
-export const MobileContainer = styled.section`
-  @media (min-width: 1150px) {
-    display: none !important;
-  }
-  display: flex;
-  flex-direction: column;
-  /* align-items: center; */
-`
-
 export const Container = styled.section`
   /* background-color: #640055; */
-  height: 100vh;
+  height: 584px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -216,7 +207,7 @@ export const LeftDesc = styled.p`
 
 export const LeftImg = styled.img`
   position: absolute;
-  width: 70%;
+  /* width: 70%; */
   bottom: 0;
   right: -160px;
 
