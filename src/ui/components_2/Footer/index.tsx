@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { useLanguage } from '../../../contexts/LanguagesContext'
 import useMediaQuery from '../../../helpers/hooks/useMediaQuery'
 import strings from '../../../languages/language'
@@ -20,9 +20,46 @@ import {
 
 const Footer = () => {
   const matcheMobile = useMediaQuery('(max-width: 900px)')
-
   const { selectedLanguage } = useLanguage()
-  const bitwiseInfoStrings = strings[selectedLanguage].footer
+
+  const infoStrings = useMemo(() => {
+    return {
+      'en-EN': {
+        footer: {
+          left: {
+            title: 'Your future only \ndepends on you',
+            desciption:
+              'We believe in the value of technology and the positive <br/>impact that digital transformation has on society. <br/><br/>Make it happen with <b>Bitwise Technology.</b>',
+            button: 'I want to innovate with Bitwise'
+          },
+          right: {
+            title: 'Join the \nBitwise team',
+            desciption:
+              'Interested in joining the <b>Bitwise Technology</b> team? <br/>Join us!',
+            button: 'I want to be part'
+          }
+        }
+      },
+      'pt-BR': {
+        footer: {
+          left: {
+            title: 'Seu futuro só \ndepende de você',
+            desciption:
+              'Acreditamos no valor da tecnologia e no impacto positivo <br/>que a transformação digital exerce sobre a sociedade. <br/><br/>Faça acontecer com a <b>Bitwise Technology.</b>',
+            button: 'Quero inovar com a Bitwise'
+          },
+          right: {
+            title: 'Faça parte da \nequipe Bitwise',
+            desciption:
+              'Tem interesse em se juntar à equipe da <br/><b>Bitwise Technology<b/>? Junte-se a nós!',
+            button: 'Quero fazer parte'
+          }
+        }
+      }
+    }
+  }, [])
+
+  const bitwiseInfoStrings = infoStrings[selectedLanguage].footer
 
   return (
     <>
