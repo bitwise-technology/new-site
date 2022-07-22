@@ -207,7 +207,7 @@ export const LeftDesc = styled.p`
 
 export const LeftImg = styled.img`
   position: absolute;
-  width: 70%;
+  /* width: 70%; */
   bottom: 0;
   right: -160px;
 
