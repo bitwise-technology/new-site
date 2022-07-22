@@ -16,7 +16,7 @@ export const Container = styled.section`
   @media screen and (max-width: 680px) {
     padding: 0 4px;
   }
-  background: #edf0f2;
+  background: #dce2e6;
   height: 100vh;
   display: flex;
   justify-content: center;

@@ -1,7 +1,6 @@
-import React, { useMemo } from 'react'
+import React, { useEffect, useMemo } from 'react'
 import { useLanguage } from '../../../contexts/LanguagesContext'
 import useMediaQuery from '../../../helpers/hooks/useMediaQuery'
-import strings from '../../../languages/language'
 import {
   Button,
   Container,
@@ -28,14 +27,24 @@ const Footer = () => {
         footer: {
           left: {
             title: 'Your future only \ndepends on you',
-            desciption:
-              'We believe in the value of technology and the positive <br/>impact that digital transformation has on society. <br/><br/>Make it happen with <b>Bitwise Technology.</b>',
+            desciption: (
+              <>
+                We believe in the value of technology and the positive <br />
+                impact that digital transformation has on society. <br />
+                <br />
+                Make it happen with <b>Bitwise Technology.</b>
+              </>
+            ),
             button: 'I want to innovate with Bitwise'
           },
           right: {
             title: 'Join the \nBitwise team',
-            desciption:
-              'Interested in joining the <b>Bitwise Technology</b> team? <br/>Join us!',
+            desciption: (
+              <>
+                Interested in joining the <b>Bitwise Technology</b> team? <br />
+                Join us!
+              </>
+            ),
             button: 'I want to be part'
           }
         }
@@ -44,20 +53,34 @@ const Footer = () => {
         footer: {
           left: {
             title: 'Seu futuro só \ndepende de você',
-            desciption:
-              'Acreditamos no valor da tecnologia e no impacto positivo <br/>que a transformação digital exerce sobre a sociedade. <br/><br/>Faça acontecer com a <b>Bitwise Technology.</b>',
+            desciption: (
+              <>
+                Acreditamos no valor da tecnologia e no impacto positivo <br />
+                que a transformação digital exerce sobre a sociedade. <br />
+                <br />
+                Faça acontecer com a <b>Bitwise Technology.</b>
+              </>
+            ),
             button: 'Quero inovar com a Bitwise'
           },
           right: {
             title: 'Faça parte da \nequipe Bitwise',
-            desciption:
-              'Tem interesse em se juntar à equipe da <br/><b>Bitwise Technology<b/>? Junte-se a nós!',
+            desciption: (
+              <>
+                Tem interesse em se juntar à equipe da <br />
+                <b>Bitwise Technology</b>? Junte-se a nós!
+              </>
+            ),
             button: 'Quero fazer parte'
           }
         }
       }
     }
   }, [])
+
+  useEffect(() => {
+    console.log(selectedLanguage)
+  }, [selectedLanguage])
 
   const bitwiseInfoStrings = infoStrings[selectedLanguage].footer
 
@@ -74,11 +97,7 @@ const Footer = () => {
                   }}
                 >
                   <LeftTitle>{bitwiseInfoStrings.left.title}</LeftTitle>
-                  <LeftDesc
-                    dangerouslySetInnerHTML={{
-                      __html: bitwiseInfoStrings.left.desciption
-                    }}
-                  ></LeftDesc>
+                  <LeftDesc>{bitwiseInfoStrings.left.desciption}</LeftDesc>
                   <LeftButton
                     onClick={() =>
                       window.open(
@@ -152,11 +171,7 @@ const Footer = () => {
               </Left>
               <Right>
                 <Title>{bitwiseInfoStrings.right.title}</Title>
-                <Desc
-                  dangerouslySetInnerHTML={{
-                    __html: bitwiseInfoStrings.right.desciption
-                  }}
-                ></Desc>
+                <Desc>{bitwiseInfoStrings.right.desciption}</Desc>
                 <Button
                   onClick={() => {
                     window.open(
@@ -174,11 +189,7 @@ const Footer = () => {
             <>
               <Left>
                 <LeftTitle>{bitwiseInfoStrings.left.title}</LeftTitle>
-                <LeftDesc
-                  dangerouslySetInnerHTML={{
-                    __html: bitwiseInfoStrings.left.desciption
-                  }}
-                ></LeftDesc>
+                <LeftDesc>{bitwiseInfoStrings.left.desciption}</LeftDesc>
                 <LeftButton
                   onClick={() =>
                     window.open(
@@ -251,11 +262,7 @@ const Footer = () => {
               </Left>
               <Right>
                 <Title>{bitwiseInfoStrings.right.title}</Title>
-                <Desc
-                  dangerouslySetInnerHTML={{
-                    __html: bitwiseInfoStrings.right.desciption
-                  }}
-                ></Desc>
+                <Desc>{bitwiseInfoStrings.right.desciption}</Desc>
                 <Button
                   onClick={() => {
                     window.open(

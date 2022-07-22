@@ -43,13 +43,13 @@ const strings = {
     footer: {
       left: {
         title: 'Seu futuro só \ndepende de você',
-        desciption:
+        description:
           'Acreditamos no valor da tecnologia e no impacto positivo <br/>que a transformação digital exerce sobre a sociedade. <br/><br/>Faça acontecer com a <b>Bitwise Technology.</b>',
         button: 'Quero inovar com a Bitwise'
       },
       right: {
         title: 'Faça parte da \nequipe Bitwise',
-        desciption:
+        description:
           'Tem interesse em se juntar à equipe da <br/><b>Bitwise Technology<b/>? Junte-se a nós!',
         button: 'Quero fazer parte'
       }
@@ -261,13 +261,13 @@ const strings = {
     footer: {
       left: {
         title: 'Your future only \ndepends on you',
-        desciption:
+        description:
           'We believe in the value of technology and the positive <br/>impact that digital transformation has on society. <br/><br/>Make it happen with <b>Bitwise Technology.</b>',
         button: 'I want to innovate with Bitwise'
       },
       right: {
         title: 'Join the \nBitwise team',
-        desciption:
+        description:
           'Interested in joining the <b>Bitwise Technology</b> team? <br/>Join us!',
         button: 'I want to be part'
       }
