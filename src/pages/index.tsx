@@ -16,10 +16,11 @@ const TwoSection = styled.div`
   /* background-color: #160c15; */
   /* height: 1304px; */
   @media screen and (min-width: 530px) {
-    background: url('/img/NY.svg');
+    background: url('/img/saa.png');
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: cover;
+    background-size: contain;
+    /* background-color: red; */
   }
 `
 

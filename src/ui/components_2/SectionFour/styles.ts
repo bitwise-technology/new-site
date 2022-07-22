@@ -14,12 +14,12 @@ export const Container = styled.section`
 
   background-color: transparent;
 
-  @media screen and (max-width: 530px) {
-    background: url('/img/NYMobile.svg');
+  /* @media screen and (max-width: 530px) { */
+  /* background: url('/img/saa.png');
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: auto 80%;
-  }
+    background-size: auto 80%; */
+  /* } */
 `
 export const Title = styled.h3`
   /* background-color: blue; */
