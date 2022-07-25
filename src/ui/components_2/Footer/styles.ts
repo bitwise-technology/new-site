@@ -94,6 +94,8 @@ export const Button = styled.button`
   line-height: 24px;
   text-align: center;
   cursor: pointer;
+  position: relative;
+  z-index: 10000;
 
   transition: all 0.2s ease-in;
   margin-top: 36px;

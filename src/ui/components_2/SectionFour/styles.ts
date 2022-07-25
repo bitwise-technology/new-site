@@ -66,7 +66,7 @@ export const GridContainer = styled.div`
   } */
   justify-items: center;
   align-items: center;
-  padding-bottom: 250px;
+  padding-bottom: 100px;
 `
 
 interface IImg {
