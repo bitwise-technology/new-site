@@ -18,19 +18,19 @@ const strings = {
     what_we_do: {
       title: 'O que fazemos',
       first: {
-        title: 'Desenvolvimento de software',
+        title: 'Desenvolvimento \nde software',
         description:
-          'Desenvolvimento específico, escalável e seguro, para atender a sua necessidade e deixar o seu produto pronto para expandir o seu negócio.'
+          'Desenvolvimento específico, \nescalável e seguro, para atender a \nsua necessidade e deixar o seu \nproduto pronto para expandir \no seu negócio.'
       },
       second: {
-        title: 'Foco em usabilidade',
+        title: 'Foco em \nusabilidade',
         description:
-          'Focamos na melhor forma do seu consumidor ter acesso ao seu produto ou serviço, gerando a satisfação dele e resultado para você.'
+          'Focamos na melhor forma do seu \nconsumidor ter acesso ao seu \nproduto ou serviço, gerando a \nsatisfação dele e resultado \npara você.'
       },
       third: {
-        title: 'Consultoria para sua empresa',
+        title: 'Consultoria para \nsua empresa',
         description:
-          'Procuramos entender a necessidade do seu produto com tecnologia de ponta e metodologias emergentes para aprovar a proposta de sucesso.'
+          'Procuramos entender a \nnecessidade do seu produto \ncom tecnologia de ponta e \nmetodologias emergentes para \naprovar a proposta de sucesso.'
       }
     },
 
@@ -242,17 +242,17 @@ const strings = {
     what_we_do: {
       title: 'What we do',
       first: {
-        title: 'Software development',
+        title: 'Software \ndevelopment',
         description:
-          'Specific, scalable and secure development to meet your needs and make your product ready to expand your business.'
+          'Specific, scalable and secure \ndevelopmentto meet your needs and \nmake your product ready \nto expand your business.'
       },
       second: {
-        title: 'Focus on usability',
+        title: 'Focus on \nusability',
         description:
           'We focus on the best way for your consumer to have access to your product or service, generating their satisfaction and results for you.'
       },
       third: {
-        title: 'Consulting for your company',
+        title: 'Consulting for \nyour company',
         description:
           'We seek to understand the need for your product with cutting-edge technology and emerging methodologies to approve the successful proposal.'
       }

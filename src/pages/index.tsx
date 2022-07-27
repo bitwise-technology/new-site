@@ -16,7 +16,7 @@ const TwoSection = styled.div`
   /* background-color: #160c15; */
   /* height: 1304px; */
   @media screen and (min-width: 530px) {
-    background: url('/img/saa.png');
+    background: url('/img/NYcity.png');
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: contain;
@@ -26,7 +26,7 @@ const TwoSection = styled.div`
 
 const Container = styled.div`
   min-height: 1000px;
-  background-color: #edf0f2;
+  background-color: #fff;
 `
 
 const Home = () => {

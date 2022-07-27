@@ -85,6 +85,7 @@ export const Item = styled.div`
 `
 
 export const ItemTitle = styled.h4`
+  white-space: pre-wrap;
   font-weight: 500;
   font-size: 32px;
   line-height: 40px;
@@ -95,6 +96,7 @@ export const ItemTitle = styled.h4`
 `
 
 export const ItemDesc = styled.p`
+  white-space: pre-wrap;
   font-size: 16px;
   line-height: 24px;
   text-align: center;

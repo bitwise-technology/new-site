@@ -1,22 +1,11 @@
 import styled from 'styled-components'
 
-export const MobileContainer = styled.section`
-  @media (min-width: 1150px) {
-    display: none !important;
-  }
-  background: #edf0f2;
-  display: flex;
-  flex-direction: column;
-  padding-top: 32px;
-  align-items: center;
-`
-
 export const Container = styled.section`
   padding: 0 24px;
   @media screen and (max-width: 680px) {
     padding: 0 4px;
   }
-  background: #dce2e6;
+  background: #f7f7f7;
   height: 100vh;
   display: flex;
   justify-content: center;
