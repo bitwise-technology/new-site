@@ -1,12 +1,9 @@
 import React from 'react'
 import { useLanguage } from '../../../contexts/LanguagesContext'
-import useMediaQuery from '../../../helpers/hooks/useMediaQuery'
 import strings from '../../../languages/language'
 import { Container, GridContainer, Img, Title } from './styles'
 
 const SectionFour = () => {
-  const matcheMobile = useMediaQuery('(min-width: 790px)')
-
   const { selectedLanguage } = useLanguage()
   const bitwiseInfoStrings = strings[selectedLanguage].partners
 

@@ -16,10 +16,15 @@ export const Layout = styled.div`
   display: flex;
   background-color: #fff;
   height: 100%;
-  width: 100%;
+
   z-index: 10;
+  @media screen and (min-width: 900px) {
+    width: 1124px;
+  }
 
   @media screen and (max-width: 900px) {
+    width: 100%;
+
     /* background-color: red; */
     flex-direction: column;
     justify-content: center;
@@ -118,7 +123,7 @@ export const Left = styled.div`
   flex: 2;
   display: flex;
   padding-top: 80px;
-  padding-left: 10vw;
+  /* padding-left: 10vw; */
   position: relative;
   flex-direction: column;
   justify-content: start;
