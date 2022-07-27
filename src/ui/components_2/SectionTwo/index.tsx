@@ -1,16 +1,7 @@
 import React from 'react'
 import { useLanguage } from '../../../contexts/LanguagesContext'
 import strings from '../../../languages/language'
-import {
-  Center,
-  Container,
-  Image,
-  Left,
-  MobileContainer,
-  Right,
-  Sub,
-  Title
-} from './styles'
+import { Center, Container, Image, Left, Right, Sub, Title } from './styles'
 
 const SectionTwo = () => {
   const { selectedLanguage } = useLanguage()
