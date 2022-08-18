@@ -44,24 +44,6 @@ const SectionThree = () => {
           )}
         </Center>
       </Container>
-      {/* <MobileContainer>
-        <Title data-aos="fade-up">Transformação Digital</Title>
-        <Sub data-aos="fade-up">
-          Contamos com especialistas nas áreas de{' '}
-          <b>
-            User Experience, User Interface, Project Management, Arquitetos,
-            DevOps e Desenvolvedores,{' '}
-          </b>
-          atuando com metodologias ágeis e constante acompanhamento de
-          performance.
-        </Sub>
-        <Image
-          data-aos="fade-up"
-          width={328}
-          src="/img/VecteezyPeople.svg"
-          alt="Logo da bitwise"
-        />
-      </MobileContainer> */}
     </>
   )
 }

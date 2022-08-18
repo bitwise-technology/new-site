@@ -12,6 +12,22 @@ export const Container = styled.section`
   }
 `
 
+export const MediaMobile = styled.span`
+  width: 100%;
+
+  @media screen and (min-width: 900px) {
+    display: none;
+  }
+`
+
+export const MediaDesktop = styled.div`
+  display: flex;
+  width: 100%;
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+`
+
 export const Layout = styled.div`
   display: flex;
   background-color: #fff;
