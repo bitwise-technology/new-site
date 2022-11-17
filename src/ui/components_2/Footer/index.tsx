@@ -1,6 +1,5 @@
-import React, { useEffect, useMemo } from 'react'
+import { useMemo } from 'react'
 import { useLanguage } from '../../../contexts/LanguagesContext'
-import useMediaQuery from '../../../helpers/hooks/useMediaQuery'
 import {
   Button,
   Container,
@@ -20,7 +19,6 @@ import {
 } from './styles'
 
 const Footer = () => {
-  const matcheMobile = useMediaQuery('(max-width: 900px)')
   const { selectedLanguage } = useLanguage()
 
   const infoStrings = useMemo(() => {
@@ -117,7 +115,9 @@ const Footer = () => {
               >
                 {bitwiseInfoStrings.left.button}
               </LeftButton>
-              <Links>
+              <Links style={{
+                marginTop: 32
+              }}>
                 <a
                   href="https://api.whatsapp.com/send?phone=5515991722580&text=Ol%C3%A1%2C%20tenho%20interesse%20nos%20trabalhos%20da%20Bitwise!"
                   target={'_blank'}
@@ -175,6 +175,48 @@ const Footer = () => {
                   />
                 </a>
               </Links>
+              <div
+                style={{
+                  display: 'flex',
+                  zIndex: 1000,
+                  
+                  justifyContent: 'space-around',
+                  marginTop: 32,
+                  alignItems: 'center'
+                }}
+              >
+                <div style={{
+                }}>
+                  <a
+                    target="_blank"
+                    href="https://www.goodfirms.co/company/bitwise-technology"
+                    style={{
+                      zIndex: 1000
+                    }}
+                  >
+                    <img
+                      style={{ width: 180 }}
+                      src="https://assets.goodfirms.co/badges/blue-button/top-software-development-companies.svg"
+                      alt="GoodFirms Badge"
+                    />
+                  </a>
+                </div>
+                <div
+                  style={{
+                  }}
+                >
+                  <a
+                    target="_blank"
+                    href="https://www.goodfirms.co/company/bitwise-technology"
+                  >
+                    <img
+                      style={{ width: 180 }}
+                      src="https://assets.goodfirms.co/badges/white-button/app-development.svg"
+                      alt="GoodFirms Badge"
+                    />
+                  </a>
+                </div>
+              </div>
             </div>
             <img width={380} src="/img/3d.svg" />
           </Left>
@@ -211,7 +253,45 @@ const Footer = () => {
             >
               {bitwiseInfoStrings.left.button}
             </LeftButton>
-            <Links>
+            <div
+              style={{
+                display: 'flex',
+                zIndex: 1000
+              }}
+            >
+              <div>
+                <a
+                  target="_blank"
+                  href="https://www.goodfirms.co/company/bitwise-technology"
+                  style={{
+                    zIndex: 1000
+                  }}
+                >
+                  <img
+                    style={{ width: 180 }}
+                    src="https://assets.goodfirms.co/badges/blue-button/top-software-development-companies.svg"
+                    alt="GoodFirms Badge"
+                  />
+                </a>
+              </div>
+              <div
+                style={{
+                  marginLeft: 4
+                }}
+              >
+                <a
+                  target="_blank"
+                  href="https://www.goodfirms.co/company/bitwise-technology"
+                >
+                  <img
+                    style={{ width: 180 }}
+                    src="https://assets.goodfirms.co/badges/white-button/app-development.svg"
+                    alt="GoodFirms Badge"
+                  />
+                </a>
+              </div>
+            </div>
+            {/* <Links>
               <a
                 href="https://api.whatsapp.com/send?phone=5515991722580&text=Ol%C3%A1%2C%20tenho%20interesse%20nos%20trabalhos%20da%20Bitwise!"
                 target={'_blank'}
@@ -268,7 +348,7 @@ const Footer = () => {
                   alt=""
                 />
               </a>
-            </Links>
+            </Links> */}
             <LeftImg src="/img/3d.svg" />
           </Left>
           <Right>
