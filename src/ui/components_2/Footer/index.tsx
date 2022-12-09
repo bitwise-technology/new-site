@@ -1,5 +1,3 @@
-import { useMemo } from 'react'
-import { useLanguage } from '../../../contexts/LanguagesContext'
 import {
   Button,
   Container,
@@ -17,6 +15,9 @@ import {
   Right,
   Title
 } from './styles'
+
+import { useLanguage } from '../../../contexts/LanguagesContext'
+import { useMemo } from 'react'
 
 const Footer = () => {
   const { selectedLanguage } = useLanguage()
@@ -115,9 +116,11 @@ const Footer = () => {
               >
                 {bitwiseInfoStrings.left.button}
               </LeftButton>
-              <Links style={{
-                marginTop: 32
-              }}>
+              <Links
+                style={{
+                  marginTop: 32
+                }}
+              >
                 <a
                   href="https://api.whatsapp.com/send?phone=5515991722580&text=Ol%C3%A1%2C%20tenho%20interesse%20nos%20trabalhos%20da%20Bitwise!"
                   target={'_blank'}
@@ -179,20 +182,20 @@ const Footer = () => {
                 style={{
                   display: 'flex',
                   zIndex: 1000,
-                  
+
                   justifyContent: 'space-around',
                   marginTop: 32,
                   alignItems: 'center'
                 }}
               >
-                <div style={{
-                }}>
+                <div style={{}}>
                   <a
                     target="_blank"
                     href="https://www.goodfirms.co/company/bitwise-technology"
                     style={{
                       zIndex: 1000
                     }}
+                    rel="noreferrer"
                   >
                     <img
                       style={{ width: 180 }}
@@ -201,13 +204,11 @@ const Footer = () => {
                     />
                   </a>
                 </div>
-                <div
-                  style={{
-                  }}
-                >
+                <div style={{}}>
                   <a
                     target="_blank"
                     href="https://www.goodfirms.co/company/bitwise-technology"
+                    rel="noreferrer"
                   >
                     <img
                       style={{ width: 180 }}
@@ -266,6 +267,7 @@ const Footer = () => {
                   style={{
                     zIndex: 1000
                   }}
+                  rel="noreferrer"
                 >
                   <img
                     style={{ width: 180 }}
@@ -282,6 +284,7 @@ const Footer = () => {
                 <a
                   target="_blank"
                   href="https://www.goodfirms.co/company/bitwise-technology"
+                  rel="noreferrer"
                 >
                   <img
                     style={{ width: 180 }}

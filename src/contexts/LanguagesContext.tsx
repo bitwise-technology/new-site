@@ -1,14 +1,15 @@
 import {
-  createContext,
   Dispatch,
   SetStateAction,
+  createContext,
   useCallback,
   useContext,
   useEffect,
   useState
 } from 'react'
-import moment from 'moment-timezone'
+
 import ct from 'countries-and-timezones'
+import moment from 'moment-timezone'
 
 type Languages = 'pt-BR' | 'en-EN'
 
@@ -26,11 +27,13 @@ export const LanguagesContext = createContext<ILanguagesContext>({
 
 interface LanguagesContextProps {
   value?: ILanguagesContext
+  defaultLanguage?: Languages
 }
 
 const LanguagesContextProvider: React.FC<LanguagesContextProps> = ({
   children,
-  value = { selectedLanguage: 'pt-BR' }
+  value = { selectedLanguage: 'pt-BR' },
+  defaultLanguage
 }) => {
   const timeZone = moment.tz.guess()
 
@@ -40,7 +43,9 @@ const LanguagesContextProvider: React.FC<LanguagesContextProps> = ({
 
   const language = country === 'BR' ? 'pt-BR' : 'en-EN'
 
-  const [selectedLanguage, setSelectedLanguage] = useState<Languages>(language)
+  const [selectedLanguage, setSelectedLanguage] = useState<Languages>(
+    defaultLanguage ? defaultLanguage : language
+  )
 
   const toggleSelect = useCallback(() => {
     setSelectedLanguage(selectedLanguage === 'pt-BR' ? 'en-EN' : 'pt-BR')

@@ -1,5 +1,6 @@
-import { Link as ReactItem } from 'react-scroll'
 import styled, { css } from 'styled-components'
+
+import { Link as ReactItem } from 'react-scroll'
 interface Props {
   typeProp: number
 }
@@ -35,7 +36,7 @@ export const MobileMenu = styled.button`
   }
 `
 
-export const Link = styled.a<Props>`
+export const StyledLink = styled.a<Props>`
   margin-right: 12px;
   cursor: pointer;
   ${(p) =>

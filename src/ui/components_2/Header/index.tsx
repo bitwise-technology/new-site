@@ -1,20 +1,20 @@
-import React, { useEffect, useState } from 'react'
-import { useLanguage } from '../../../contexts/LanguagesContext'
-import useMediaQuery from '../../../helpers/hooks/useMediaQuery'
 import {
   Button,
   Container,
-  Curtain,
   Left,
-  Link,
   Logo,
   Menu,
   MenuItem,
   MobileMenu,
-  Right
+  Right,
+  StyledLink
 } from './styles'
+import { useEffect, useState } from 'react'
 
+import Router from 'next/router'
 import strings from '../../../languages/language'
+import { useLanguage } from '../../../contexts/LanguagesContext'
+import useMediaQuery from '../../../helpers/hooks/useMediaQuery'
 
 type Language = 'pt-BR' | 'en-EN'
 
@@ -26,23 +26,38 @@ const LanguageButton = ({ color = '#fff' }) => {
   }
   return (
     <div style={{ color, marginRight: 12, fontSize: 16 }}>
-      <span
-        style={{
-          cursor: 'pointer'
+      <a
+        onClick={(e) => {
+          e.preventDefault()
+          localStorage.setItem('@lang', 'pt')
+          Router.push('/pt')
         }}
-        onClick={() => handleSelectedLanguage('pt-BR')}
       >
-        PT
-      </span>{' '}
+        <span
+          style={{
+            cursor: 'pointer'
+          }}
+        >
+          PT
+        </span>
+      </a>{' '}
       |{' '}
-      <span
-        style={{
-          cursor: 'pointer'
+      <a
+        onClick={(e) => {
+          e.preventDefault()
+          localStorage.setItem('@lang', 'en')
+          Router.push('/en')
         }}
-        onClick={() => handleSelectedLanguage('en-EN')}
       >
-        EN
-      </span>
+        <span
+          style={{
+            cursor: 'pointer'
+          }}
+          onClick={() => handleSelectedLanguage('en-EN')}
+        >
+          EN
+        </span>
+      </a>
     </div>
   )
 }
@@ -114,41 +129,41 @@ const Header = () => {
           {matcheMobile ? (
             <Right>
               {matcheLaptop && (
-                <Link
+                <StyledLink
                   href="https://api.whatsapp.com/send?phone=5515991722580&text=Ol%C3%A1%2C%20tenho%20interesse%20nos%20trabalhos%20da%20Bitwise!"
                   target={'_blank'}
                   rel="noreferrer"
                   typeProp={backgroundTransparacy}
                 >
                   <img width={16} height={16} src="/img/whatsapp.svg" alt="" />
-                </Link>
+                </StyledLink>
               )}
 
               {matcheLaptop && (
-                <Link
+                <StyledLink
                   href="mailto:manoela@bitwise.ltda"
                   typeProp={backgroundTransparacy}
                 >
                   <img width={16} height={16} src="/img/mail.svg" alt="" />
-                </Link>
+                </StyledLink>
               )}
 
-              <Link
+              <StyledLink
                 href="https://www.linkedin.com/company/bitwisetechnology/mycompany/"
                 target={'_blank'}
                 rel="noreferrer"
                 typeProp={backgroundTransparacy}
               >
                 <img width={16} height={16} src="/img/linkedIn.svg" alt="" />
-              </Link>
-              <Link
+              </StyledLink>
+              <StyledLink
                 href="https://www.instagram.com/bitwisetechnology/"
                 target={'_blank'}
                 rel="noreferrer"
                 typeProp={backgroundTransparacy}
               >
                 <img width={16} height={16} src="/img/instagram.svg" alt="" />
-              </Link>
+              </StyledLink>
 
               <LanguageButton
                 color={backgroundTransparacy === 0 ? '#fff' : '#000'}
