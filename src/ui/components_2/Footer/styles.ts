@@ -231,6 +231,7 @@ export const LeftDesc = styled.p`
 export const LeftImg = styled.img`
   position: absolute;
   /* width: 70%; */
+  user-select: none;
   bottom: 0;
   right: -160px;
 
@@ -246,6 +247,7 @@ export const LeftImg = styled.img`
 export const AddressContainer = styled.div`
   margin-top: 8px;
   color: white;
+  z-index: 10001;
   .address {
     padding-block: 12px;
     display: flex;
