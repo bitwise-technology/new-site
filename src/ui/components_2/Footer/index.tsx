@@ -1,4 +1,5 @@
 import {
+  AddressContainer,
   Button,
   Container,
   Desc,
@@ -16,6 +17,7 @@ import {
   Title
 } from './styles'
 
+import { IoLocationOutline } from 'react-icons/io5'
 import { useLanguage } from '../../../contexts/LanguagesContext'
 import { useMemo } from 'react'
 
@@ -235,6 +237,26 @@ const Footer = () => {
               {bitwiseInfoStrings.right.button}
               <img style={{ marginLeft: 8 }} src="/img/arrow-right.svg" />
             </Button>
+            <AddressContainer>
+              <div className="address">
+                <div>
+                  <IoLocationOutline />
+                </div>
+                <p>
+                  Horário Cenci, 75 - Parque Campolim - Sorocaba/SP Andar 3 -
+                  Salas 306 e 308 Edifício Westpoint
+                </p>
+              </div>
+              <div className="address">
+                <div>
+                  <IoLocationOutline />
+                </div>
+                <p>
+                  23123 FL-7 Suite 315, Office 2 Boca Raton, FL 33428, United
+                  States
+                </p>
+              </div>
+            </AddressContainer>
           </Right>
         </Layout>
       </MediaMobile>
@@ -368,6 +390,26 @@ const Footer = () => {
               {bitwiseInfoStrings.right.button}
               <img src="/img/arrow-right.svg" style={{ marginLeft: 8 }} />
             </Button>
+            <AddressContainer>
+              <div className="address">
+                <div>
+                  <IoLocationOutline />
+                </div>
+                <p>
+                  Horário Cenci, 75 - Parque Campolim - Sorocaba/SP Andar 3 -
+                  Salas 306 e 308 Edifício Westpoint
+                </p>
+              </div>
+              <div className="address">
+                <div>
+                  <IoLocationOutline />
+                </div>
+                <p>
+                  23123 FL-7 Suite 315, Office 2 Boca Raton, FL 33428, United
+                  States
+                </p>
+              </div>
+            </AddressContainer>
           </Right>
         </Layout>
         <div style={{ flex: 1, backgroundColor: '#640055' }}></div>

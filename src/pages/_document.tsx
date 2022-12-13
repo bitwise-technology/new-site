@@ -1,10 +1,12 @@
+/* eslint-disable react/no-unknown-property */
 import Document, {
-  Html,
+  DocumentContext,
   Head,
+  Html,
   Main,
-  NextScript,
-  DocumentContext
+  NextScript
 } from 'next/document'
+
 import { ServerStyleSheet } from 'styled-components'
 
 export default class MyDocument extends Document {
@@ -37,7 +39,16 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="pt-BR">
-        <Head />
+        <Head>
+          <meta
+            name="adopt-website-id"
+            content="05211a6a-4493-4521-9d04-7fceb7202a0b"
+          />
+          <script
+            src="//tag.goadopt.io/injector.js?website_code=05211a6a-4493-4521-9d04-7fceb7202a0b"
+            className="adopt-injector"
+          ></script>
+        </Head>
         <body>
           <Main />
           <NextScript />

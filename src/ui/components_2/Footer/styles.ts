@@ -242,3 +242,28 @@ export const LeftImg = styled.img`
     width: 60%;
   }
 `
+
+export const AddressContainer = styled.div`
+  margin-top: 8px;
+  color: white;
+  .address {
+    padding-block: 12px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+
+    svg {
+      font-size: 24px;
+    }
+
+    p {
+      padding-inline: 8px;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    margin-top: 0px;
+    padding-block: 12px;
+    padding-inline: 24px;
+  }
+`
