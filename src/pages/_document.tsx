@@ -52,6 +52,12 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <script
+            type="text/javascript"
+            async
+            src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/ebf24d52-97b5-4728-90e3-f11688ec6077-loader.js
+"
+          ></script>
         </body>
       </Html>
     )
